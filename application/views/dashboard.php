@@ -125,41 +125,6 @@
     </section>
     <!-- END section -->
 
-    <section class="site-section element-animate">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 order-md-2">
-            <div class="block-16">
-              <figure>
-                <img src="<?php echo base_url()?>assets/images/img_1.jpg" alt="Image placeholder" class="img-fluid">
-                <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
-
-                <!-- <a href="https://vimeo.com/45830194" class="button popup-vimeo" data-aos="fade-right" data-aos-delay="700"><span class="ion-ios-play"></span></a> -->
-
-              </figure>
-            </div>
-          </div>
-          <div class="col-md-6 order-md-1">
-
-            <div class="block-15">
-              <div class="heading">
-                <h2>Welcome to University</h2>
-              </div>
-              <div class="text mb-5">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum incidunt nulla nemo eius molestiae architecto beatae asperiores doloribus animi.</p>
-              </div>
-              <p><a href="#" class="btn btn-primary reverse py-2 px-4">Read More</a></p>
-              
-            </div>
-
-          </div>
-          
-        </div>
-
-      </div>
-    </section>
-    <!-- END section -->
-
     <section class="site-section pt-3 element-animate">
       <div class="container">
         <div class="row">
@@ -214,61 +179,7 @@
         <div class="row">
           <div class="col-lg-6">
             <figure><img src="<?php echo base_url()?>assets/images/img_2_b.jpg" alt="Image placeholder" class="img-fluid"></figure>
-          </div>
-          <div class="col-lg-5 ml-auto">
-            <div class="block-15">
-              <div class="heading">
-                <h2>Education is Life</h2>
-              </div>
-              <div class="text mb-5">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum incidunt.</p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="block-18 d-flex align-items-center">
-                  <div class="icon mr-4">
-                    <span class="flaticon-student"></span>
-                  </div>
-                  <div class="text">
-                    <strong class="number" data-number="12921">0</strong>
-                    <span>Students</span>
-                  </div>
-                </div>
-
-                <div class="block-18 d-flex align-items-center">
-                  <div class="icon mr-4">
-                    <span class="flaticon-university"></span>
-                  </div>
-                  <div class="text">
-                    <strong class="number" data-number="51">0</strong>
-                    <span>Schools</span>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-md-6">
-                <div class="block-18 d-flex align-items-center">
-                  <div class="icon mr-4">
-                    <span class="flaticon-books"></span>
-                  </div>
-                  <div class="text">
-                    <strong class="number" data-number="3902">0</strong>
-                    <span>Books</span>
-                  </div>
-                </div>
-
-                <div class="block-18 d-flex align-items-center">
-                  <div class="icon mr-4">
-                    <span class="flaticon-mortarboard"></span>
-                  </div>
-                  <div class="text">
-                    <strong class="number" data-number="1921">0</strong>
-                    <span>Graduates</span>
-                  </div>
-                </div>
-                
+          </div>     
               </div>
             </div>
 
@@ -277,17 +188,6 @@
       </div>
     </section>
     <!-- END section -->
-
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-          <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Popular Courses</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-            <p><a href="#" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Enroll Now</a></p>
-          </div>
-        </div>
-      </div>
       <div class="container-fluid block-11 element-animate">
         <div class="nonloop-block-11 owl-carousel">
           <div class="item">
@@ -638,15 +538,9 @@
       </div>
     </div>
   
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3>University</h3>
-            <p>Perferendis eum illum voluptatibus dolore tempora consequatur minus asperiores temporibus.</p>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Quick Link</h3>
+    
+      <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+          <h3 class="heading">Quick Link</h3>
             <div class="row">
               <div class="col-md-6">
                 <ul class="list-unstyled">
@@ -666,39 +560,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Blog</h3>
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="#">Consectetur Adipisicing Elit</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="#">Dolore Tempora Consequatur</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="#">Perferendis eum illum</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-          </div>
+         
+           
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <h3 class="heading">Contact Information</h3>
             <div class="block-23">
