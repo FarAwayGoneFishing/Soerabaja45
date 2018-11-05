@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Free Education Template by Colorlib</title>
+    <title>Percetakan Online</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -26,7 +26,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="index.html">University</a>
+          <a class="navbar-brand absolute" href="index.html">SOERABAJA'45</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,44 +34,36 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link active" href="index.html">Beranda</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="courses.html">HTML</a>
-                  <a class="dropdown-item" href="courses.html">WordPress</a>
-                  <a class="dropdown-item" href="courses.html">Laravel</a>
-                  <a class="dropdown-item" href="courses.html">JavaScript</a>
-                  <a class="dropdown-item" href="courses.html">Python</a>
+                  <a class="dropdown-item" href="courses.html">Pemesanan</a>
+                  <a class="dropdown-item" href="courses.html">Notifikasi</a>
+                  <a class="dropdown-item" href="courses.html">Peraturan</a>
                 </div>
 
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">HTML</a>
-                  <a class="dropdown-item" href="#">WordPress</a>
-                  <a class="dropdown-item" href="#">Laravel</a>
-                  <a class="dropdown-item" href="#">JavaScript</a>
-                  <a class="dropdown-item" href="#">Python</a>
+                  <a class="dropdown-item" href="#">Galeri</a>
+                  <a class="dropdown-item" href="#">Lokasi</a>
                 </div>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
+                <a class="nav-link" href="tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="kontak">Kontak</a>
               </li>
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="login.html">Login</a> / <a href="register.html">Register</a>
+                <a href="admin">Masuk Akun</a> / <a href="register">Daftar Akun</a>
               </li>
             </ul>
             
@@ -88,34 +80,30 @@
   
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h2 class="heading text-center mb-4">Find Oneline Courses That Suits You</h2>
+                <h2 class="heading text-center mb-4">CV. Soerabaja45 Indovista</h2>
                 <form action="" method="post" class="d-block d-lg-flex mb-4">
                   <div class="fields d-block d-lg-flex">
-                    <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Keyword search..."></div>
+                    <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Ketikkan..."></div>
                     <div class="select-wrap one-third">
                       <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                       <select name="" id="" class="form-control">
-                        <option value="">Category Course</option>
-                        <option value="">Laravel</option>
-                        <option value="">PHP</option>
-                        <option value="">JavaScript</option>
-                        <option value="">Python</option>
+                        <option value="">Percetakan</option>
+                        <option value="">Banner</option>
                       </select>
                     </div>
                     <div class="select-wrap one-third">
                       <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                       <select name="" id="" class="form-control">
-                        <option value="">Difficulty</option>
-                        <option value="">Beginner</option>
-                        <option value="">Intermediate</option>
-                        <option value="">Advance</option>
+                        <option value="">Garment</option>
+                        <option value="">Pin</option>
+                        <option value="">Gantungan Kunci</option>
                       </select>
                     </div>
                   </div>
-                  <input type="submit" class="search-submit btn btn-primary" value="Search">  
+                  <input type="submit" class="search-submit btn btn-primary" value="Pencarian">  
                 </form>
-                <p class="text-center mb-5">We have more than 500 courses to improve your skills</p>
-                <p class="text-center"><a href="#" class="btn py-3 px-5">Register Now</a></p>
+                <p class="text-center mb-5">Jalan Jawa No.28, Sumbersari, Kabupaten Jember ,Jawa Timur, 68121, Indonesia</p>
+                <p class="text-center"><a href="#" class="btn py-3 px-5">Daftarkan Akun Anda Sekarang</a></p>
               </div>
             </div>
             
