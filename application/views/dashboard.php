@@ -63,7 +63,7 @@
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="admin">Masuk Akun</a> / <a href="register">Daftar Akun</a>
+                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
               </li>
             </ul>
             

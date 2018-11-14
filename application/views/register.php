@@ -101,24 +101,36 @@
           <div class="col-md-7">
             <div class="form-wrap">
               <h2 class="mb-5">Register new account</h2>
-              <form action="#" method="post">
+              <form action="Register" method="post">
                   
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <label for="name">Email Address</label>
-                      <input type="text" id="name" class="form-control py-2">
+                      <label for="name">Nama Lengkap</label>
+                      <input type="text" id="nama" class="form-control py-2">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Nomor HP</label>
+                      <input type="password" id="hp" class="form-control py-2 ">
+                    </div>
+                  </div>
+				  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Alamat</label>
+                      <input type="password" id="alamat" class="form-control py-2 ">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="name">Password</label>
-                      <input type="password" id="name" class="form-control py-2 ">
+                      <input type="password" id="password" class="form-control py-2">
                     </div>
                   </div>
-                  <div class="row mb-5">
+				  <div class="row mb-5">
                     <div class="col-md-12 form-group">
                       <label for="name">Re-type Password</label>
-                      <input type="password" id="name" class="form-control py-2">
+                      <input type="password" id="repassword" class="form-control py-2">
                     </div>
                   </div>
                   
