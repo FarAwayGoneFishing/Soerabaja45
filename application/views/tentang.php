@@ -1,22 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Free Education Template by Colorlib</title>
+    <title>Percetakan Online</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="<?php echo base_url()?>assets/https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
   </head>
   <body>
     
@@ -24,7 +25,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="<?php echo base_url()?>assets/index.html">University</a>
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,44 +33,35 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="<?php echo base_url()?>assets/index.html">Home</a>
+                <a class="nav-link active" href="dashboard">Beranda</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="<?php echo base_url()?>assets/courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/courses.html">HTML</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/courses.html">WordPress</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/courses.html">Laravel</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/courses.html">JavaScript</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/courses.html">Python</a>
+                  <a class="dropdown-item" href="courses">Digital Offset</a>
+                  <a class="dropdown-item" href="courses.html">Offset</a>
                 </div>
 
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="<?php echo base_url()?>assets/#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/#">HTML</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/#">WordPress</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/#">Laravel</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/#">JavaScript</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>assets/#">Python</a>
+                  <a class="dropdown-item" href="#">Galeri</a>
+                  <a class="dropdown-item" href="#">Lokasi</a>
                 </div>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>assets/blog.html">Blog</a>
+                <a class="nav-link" href="tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>assets/about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>assets/contact.html">Contact</a>
+                <a class="nav-link" href="kontak">Kontak</a>
               </li>
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="<?php echo base_url()?>assets/login.html">Login</a> / <a href="<?php echo base_url()?>assets/register.html">Register</a>
+                <a href="admin">Masuk Akun</a> / <a href="register">Daftar Akun</a>
               </li>
             </ul>
             
@@ -79,296 +71,144 @@
     </header>
     <!-- END header -->
 
-    <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url('<?php echo base_url()?>assets/images/big_image_2.jpg');">
-      <div class="container">
-        <div class="row align-items-center justify-content-center site-hero-sm-inner">
-          <div class="col-md-7 text-center">
-  
-            <div class="mb-5 element-animate">
-              <h1 class="mb-2">About Us</h1>
-              <p class="bcrumb"><a href="<?php echo base_url()?>assets/index.html">Home</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">About Us</span></p>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
+   
     <!-- END section -->
 
-    <section class="site-section element-animate">
+    <section class="site-section bg-light element-animate" id="section-counter">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 order-md-2">
-            <div class="block-16">
-              <figure>
-                <img src="<?php echo base_url()?>assets/images/img_1.jpg" alt="Image placeholder" class="img-fluid">
-              </figure>
-            </div>
-          </div>
-          <div class="col-md-6 order-md-1">
+          <div class="col-lg-6">
+            <figure>
+              <img src="http://localhost/Soerabaja45/assets/images/tempat.jpg" alt="Image placeholder" class="img-fluid"></figure>
+             <a href="https://www.youtube.com/watch?v=Bx323BLGdsk" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
 
+          </div>
+          <div class="col-lg-5 ml-auto">
             <div class="block-15">
               <div class="heading">
-                <h2>Company History</h2>
+                <h2>Profil Soerabaja'45</h2>
               </div>
               <div class="text mb-5">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum incidunt nulla nemo eius molestiae architecto beatae asperiores doloribus animi.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat aliquid blanditiis eum asperiores obcaecati, id officiis voluptate sint est excepturi quam itaque dicta delectus. Consequuntur, blanditiis maxime? Cupiditate, cum.</p>
-              <p>Porro cupiditate doloremque nihil architecto, id nisi tenetur obcaecati, harum nulla aut ipsam sunt ullam eos, ipsa odit voluptatibus veniam. Amet itaque incidunt cumque tenetur, omnis repellat non dolorem nostrum.</p>
-              
+                <p>Bismillah, Assalamu'alaykum teman-teman</p>
+
+                    <p>Bingung cari tempat percetakan yang bagus?
+                    Mau nyetak dengan banyak harga diskon?</p>
+
+                    <p>AYOOO DATENG KE SOERABAJA'45
+
+                    disini kamu bisa nyetak apapun yang kamu mau loh</p> 
+
+                    <p>Mulai dari kertas(brosur, buku, majalah, kalender, pamflet, dll),
+                    Kain(hem, kaos, jaket),
+                    Sampe vinil(banner, spanduk, stiker)</p>
+
+                    <p>Pokoknya lengkapppp deh</p> 
+
+                    <p>TUNGGU APA LAGI? AYO NYETAK DI SOERABAJA'45</p>
+
+                    <p>Jalan Jawa 12A, Jember, Jawa Timur (Jember)</p>
+                    <p>Jalan Kol. Soediono no.3 Bondowoso, Jawa Timur (Bondowoso)
+                    </p>
               </div>
-              
             </div>
 
-          </div>
-          
-        </div>
+            
+                  </div>
+                </div>
+                
+              </div>
+            </div>
 
-      </div>
-    </section>
-    <!-- END section -->
-
-    <section class="site-section pt-3 element-animate">
-      <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-          <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">School Services</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="media block-6 d-block">
-              <div class="icon mb-3"><span class="flaticon-book"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Knowledge is power</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit mess.</p>
-                <p><a href="<?php echo base_url()?>assets/#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
-              </div>
-            </div> 
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="media block-6 d-block">
-              <div class="icon mb-3"><span class="flaticon-student"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Senior High School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit mess.</p>
-                <p><a href="<?php echo base_url()?>assets/#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
-              </div>
-            </div> 
-          </div>
-          
-          <div class="col-md-6 col-lg-3">
-            <div class="media block-6 d-block">
-              <div class="icon mb-3"><span class="flaticon-diploma"></span></div>
-              <div class="media-body">
-                <h3 class="heading">College of Arts &amp; Sciences</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit mess.</p>
-                <p><a href="<?php echo base_url()?>assets/#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
-              </div>
-            </div> 
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="media block-6 d-block">
-              <div class="icon mb-3"><span class="flaticon-professor"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Unmatched Proffessor</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit mess.</p>
-                <p><a href="<?php echo base_url()?>assets/#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
-              </div>
-            </div> 
           </div>
         </div>
       </div>
     </section>
-    <!-- END section -->
-
-    <div class="container site-section element-animate">
-      <div class="row justify-content-center mb-5 element-animate">
-          <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Why Choose Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-          </div>
-        </div>
-      <div class="block-3 d-md-flex pt-5">
-        <div class="image" style="background-image: url('<?php echo base_url()?>assets/images/img_1.jpg'); "></div>
-        <div class="text">
-          <h4 class="subheading">Nice text here</h4>
-          <h2 class="heading">Excellent Teachers</h2>
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-        </div>
-      </div>
-      <div class="block-3 d-md-flex">
-        <div class="image order-2" style="background-image: url('<?php echo base_url()?>assets/images/img_2.jpg'); "></div>
-        <div class="text order-1">
-          <h4 class="subheading">Nice text here</h4>
-          <h2 class="heading">Outstanding Facilities</h2>
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-        </div>
-      </div>
-      <div class="block-3 d-md-flex">
-        <div class="image" style="background-image: url('<?php echo base_url()?>assets/images/img_3.jpg'); "></div>
-        <div class="text">
-          <h4 class="subheading">Nice text here</h4>
-          <h2 class="heading">World Class Education</h2>
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="site-section element-animate">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-7 text-center section-heading">
-              <h2 class="text-primary heading">Frequently Ask Questions</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-            </div>
-          </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="accordion block-8" id="accordion">
-              <div class="accordion-item">
-                <h3 class="mb-0 heading">
-                  <a class="btn-block" data-toggle="collapse" href="<?php echo base_url()?>assets/#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">What is the name of your company<span class="icon"></span></a>
-                </h3>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="body-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae cumque perspiciatis aperiam accusantium facilis provident aspernatur nisi optio debitis dolorum, est eum eligendi vero aut ad necessitatibus nulla sit labore doloremque magnam! Ex molestiae, dolor tempora, ad fuga minima enim mollitia consequuntur, necessitatibus praesentium eligendi officia recusandae culpa tempore eaque quasi ullam magnam modi quidem in amet. Quod debitis error placeat, tempore quasi aliquid eaque vel facilis culpa voluptate.</p>
-                  </div>
-                </div>
-              </div> <!-- .accordion-item -->
-              
-              <div class="accordion-item">
-                <h3 class="mb-0 heading">
-                  <a class="btn-block" data-toggle="collapse" href="<?php echo base_url()?>assets/#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">How much pay for 3  months?<span class="icon"></span></a>
-                </h3>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="body-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
-                  </div>
-                </div>
-              </div> <!-- .accordion-item -->
-
-              <div class="accordion-item">
-                <h3 class="mb-0 heading">
-                  <a class="btn-block" data-toggle="collapse" href="<?php echo base_url()?>assets/#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">Do I need to register?  <span class="icon"></span></a>
-                </h3>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="body-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
-                  </div>
-                </div>
-              </div> <!-- .accordion-item -->
-
-              <div class="accordion-item">
-                <h3 class="mb-0 heading">
-                  <a class="btn-block" data-toggle="collapse" href="<?php echo base_url()?>assets/#collapseFour" role="button" aria-expanded="false" aria-controls="collapseFour">Who should I contact in case of support.<span class="icon"></span></a>
-                </h3>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="body-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
-                  </div>
-                </div>
-              </div> <!-- .accordion-item -->
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     
+    <!-- END section -->
+
+    <!-- END section -->
+
+    
+    <!-- END section -->
+
+    
+
     <div class="py-5 block-22">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
-            <h2 class="heading">Create cool websites</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusantium optio und.</p>
+            <h2 class="heading"></h2>
+            <p></p>
           </div>
           <div class="col-md-6">
             <form action="#" class="subscribe">
               <div class="form-group">
-                <input type="email" class="form-control email" placeholder="Enter email">
-                <input type="submit" class="btn btn-primary submit" value="Subscribe">
+                <!--<input type="email" class="form-control email" placeholder="Enter email">
+                <input type="submit" class="btn btn-primary submit" value="Subscribe"> -->
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-
-    
   
     <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3>University</h3>
-            <p>Perferendis eum illum voluptatibus dolore tempora consequatur minus asperiores temporibus.</p>
+          <div class="col-md-4">
+            <center><h3>SOERABAJA'45</h3></center>
+            <p>Perusahaan percetakan dan garment yang menyediakan produk atau barang yang dapat dipesan secara online dan costumer dapat mengedit produk yang akan di pesan </p>
           </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Quick Link</h3>
+          <div class="col-md-2">
+            <center><h3 class="heading">Tautan</h3></center>
             <div class="row">
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="<?php echo base_url()?>assets/#">Home</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">About Us</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Courses</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Pages</a></li>
+                  <li><a href="dashboard">Beranda</a></li>
+                  <p><li><a href="tentang">Tentang</a></li></p>
+                  <p><li><a href="kontak">Kontak</a></li></p>
                 </ul>
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="<?php echo base_url()?>assets/#">News</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Support</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Contact</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Privacy</a></li>
+                  <li><a href="#">Digital Offset</a></li>
+                  <p><li><a href="#">Offset</a></li></p>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Blog</h3>
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="<?php echo base_url()?>assets/#">Consectetur Adipisicing Elit</a></h3>
-                <div class="meta">
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="<?php echo base_url()?>assets/#">Dolore Tempora Consequatur</a></h3>
-                <div class="meta">
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="<?php echo base_url()?>assets/#">Perferendis eum illum</a></h3>
-                <div class="meta">
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Contact Information</h3>
-            <div class="block-23">
-              <ul>
-                <li><span class="icon ion-android-pin"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                <li><a href="<?php echo base_url()?>assets/#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="<?php echo base_url()?>assets/#"><span class="icon ion-android-mail"></span><span class="text">info@yourdomain.com</span></a></li>
-                <li><span class="icon ion-android-time"></span><span class="text">Monday &mdash; Friday 8:00am - 5:00pm</span></li>
+          
+          <div class="col-md-6">
+            <center><h3 class="heading">Informasi Kontak</h3></center>
+            <div class="row block-23">
+              <div class="col-md-5">
+                <ul>
+                <li><span class="icon ion-android-pin"></span><span class="text">Jalan Jawa No.28
+Sumbersari
+Kabupaten Jember
+Jawa Timur 68121
+Indonesia</span></li>
+                <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text"><p>0811-3661-927</p>
+<p>(0331) 333000</p></span></a></li>
+                <li><a href="#"><span class="icon ion-android-mail"></span><span class="text" style="word-break: break-all;">orderonline.sby45@gmail.com</span></a></li>
               </ul>
+              </div>
+              <div class="col-md-7">
+                <ul>
+                  <li><span class="icon ion-android-time"></span><span class="text"><p><b>Jam Buka</b></p>
+
+<p>Sen:  07.00–21.00</p>
+<p>Sel:  07.00–21.00</p>
+<p>Rab:  07.00–21.00</p>
+<p>Kam:  07.00–21.00</p>
+<p>Jum:  07.00–11.00, 12.30–21.00</p>
+<p>Sab:  07.00–21.00</p>
+<p>Min:  13.00–21.00</span></li>
+              </ul>
+                
+              </div>
+              
+                
             </div>
           </div>
         </div>
@@ -376,14 +216,11 @@
           <div class="col-md-12 text-center copyright">
             
             <p class="float-md-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="<?php echo base_url()?>assets/https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | FAR AWAY TEAM </p>
             <p class="float-md-right">
-              <a href="<?php echo base_url()?>assets/#" class="fa fa-facebook p-2"></a>
-              <a href="<?php echo base_url()?>assets/#" class="fa fa-twitter p-2"></a>
-              <a href="<?php echo base_url()?>assets/#" class="fa fa-linkedin p-2"></a>
-              <a href="<?php echo base_url()?>assets/#" class="fa fa-instagram p-2"></a>
-
+             <a href="https://www.facebook.com/soerabaja45official/" class="fa fa-facebook p-2"></a>
+              <a href="https://www.youtube.com/channel/UCOYNDHL3btOOdoAotspKhlw" class="fa fa-youtube p-2"></a>
+              <a href="https://www.instagram.com/soerabaja_45/" class="fa fa-instagram p-2"></a>
             </p>
           </div>
         </div>
