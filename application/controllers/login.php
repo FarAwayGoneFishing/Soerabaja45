@@ -12,11 +12,11 @@ class Login extends CI_Controller {
 
  	public function index(){
 		if(isset($_POST['btn_log'])){
-			$this->model->username = $_POST['txt_username'];
-			$this->model->password = $_POST['txt_password'];
+			$this->model->username = $_POST['username'];
+			$this->model->password = $_POST['password'];
 			if ($this->model->cek_log()==TRUE) {
 				$this->session->set_userdata('user', $this->model->id_user);
-				$this->session->set_userdata('nama', $this->model->nama_lengkap);
+				$this->session->set_userdata('nama', $this->model->nama_user);
 				redirect('Dashboard');
 			}
 			else{

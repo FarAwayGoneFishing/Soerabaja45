@@ -40,13 +40,13 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
+                                <img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="150" height="150" alt="Soerabaja45">
                             </a>
                         </div>
                         <div class="login-form">
                             <form action="" method="post">
                                 <div class="form-group">
-                                    <label>Email Address</label>
+                                    <label>Email</label>
                                     <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
@@ -55,15 +55,16 @@
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember">Remember Me
+                                        <input type="checkbox" name="remember">Ingat Aku
                                     </label>
                                     <label>
-                                        <a href="#">Forgotten Password?</a>
-                                    </label>
+                                        <a href="#">Lupa Password?</a>
+                                    </label>	
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
-                                <div class="social-login-content">
-                                </div>
+								<label>
+									<b><p style="color: red; font-size: 16px;"><?php echo $model->notif;?></p></b>
+									</label>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit" name="btn_log">sign in</button>
                             </form>
                         </div>
                     </div>

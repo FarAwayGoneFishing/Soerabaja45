@@ -38,8 +38,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="courses">Digital Offset</a>
-                  <a class="dropdown-item" href="courses.html">Offset</a>
+                  <a class="dropdown-item" href="#">Digital Offset</a>
+                  <a class="dropdown-item" href="#">Offset</a>
                 </div>
 
               </li>
@@ -79,29 +79,9 @@
             <div class="mb-5 element-animate">
               <div class="block-17">
                 <h2 class="heading text-center mb-4">CV. Soerabaja45 Indovista</h2>
-                <form action="" method="post" class="d-block d-lg-flex mb-4">
-                  <div class="fields d-block d-lg-flex">
-                    <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Ketikkan..."></div>
-                    <div class="select-wrap one-third">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                        <option value="">Percetakan</option>
-                        <option value="">Banner</option>
-                      </select>
-                    </div>
-                    <div class="select-wrap one-third">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                        <option value="">Garment</option>
-                        <option value="">Pin</option>
-                        <option value="">Gantungan Kunci</option>
-                      </select>
-                    </div>
-                  </div>
-                  <input type="submit" class="search-submit btn btn-primary" value="Pencarian">  
-                </form>
+                
                 <p class="text-center mb-5">Jalan Jawa No.28, Sumbersari, Kabupaten Jember ,Jawa Timur, 68121, Indonesia</p>
-                <p class="text-center"><a href="#" class="btn py-3 px-5">Daftarkan Akun Anda Sekarang</a></p>
+                <p class="text-center"><a href="register" class="btn py-3 px-5">Daftarkan Akun Anda Sekarang</a></p>
               </div>
             </div>
             
@@ -396,11 +376,6 @@
 
           <div class="row">
             <div class="col-md-4 feature-item">
-            <h5>CEK STATUS PESANAN</h5>
-            <p><img class="alignnone size-full wp-image-50" src="http://localhost/Soerabaja45/assets/images/a4.png" alt="cetak murah satuan hingga ribuan" width="100" height="100"></p>
-            <p>Tanpa perlu menghubungi CS, kini anda dapat melacak status pesanan anda sendiri </p>
-            </div>
-            <div class="col-md-4 feature-item">
             <h5>PILIHAN DESAIN MENARIK</h5>
             <p><img class="alignnone size-full wp-image-48" src="http://localhost/Soerabaja45/assets/images/a5.png" alt="cetak murah bagus" width="100" height="100"></p>
             <p>Anda dapat langsung mengirim desain anda. Belum punya desain? Pilih template desain yang telah kami sediakan atau anda dapat berhubungan langsung dengan tim desain kami.</p>
@@ -409,11 +384,6 @@
             <h5>LAYANAN CEPAT</h5>
             <p><img class="alignnone size-full wp-image-46" src="http://localhost/Soerabaja45/assets/images/a2.png" alt="gratis konsultasi desain cetak murah" width="100" height="100"></p>
             <p>Nikmati pelayanan online dari jam 08.00- 16.00 yang selalu aktiv</p>
-            </div>
-            <div class="col-md-4 feature-item">
-            <h5>PENGIRIMAN</h5>
-            <p><img class="alignnone size-full wp-image-46" src="http://localhost/Soerabaja45/assets/images/a7.png" alt="gratis konsultasi desain cetak murah" width="100" height="100"></p>
-            <p>Anda dapat menunggu pesanan anda sendiri di rumah dan kantor, nikmati layanan pengiriman di seluruh wilayah Indonesia.</p>
             </div>
             <div class="col-md-4 feature-item">
             <h5>PILIHAN PRODUK</h5>

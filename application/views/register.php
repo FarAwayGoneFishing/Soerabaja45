@@ -38,8 +38,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="courses">Digital Offset</a>
-                  <a class="dropdown-item" href="courses.html">Offset</a>
+                  <a class="dropdown-item" href="#">Digital Offset</a>
+                  <a class="dropdown-item" href="#">Offset</a>
                 </div>
 
               </li>
@@ -61,7 +61,7 @@
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="admin">Masuk Akun</a> / <a href="register">Daftar Akun</a>
+                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
               </li>
             </ul>
             
@@ -73,36 +73,12 @@
 
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url('http://localhost/Soerabaja45/assets/images/imgnew.jpg');">
       <div class="container">
-        <div class="row align-items-center justify-content-center site-hero-inner">
-          <div class="col-md-10">
+        <div class="row align-items-center justify-content-center site-hero-sm-inner">
+          <div class="col-md-7 text-center">
   
             <div class="mb-5 element-animate">
-              <div class="block-17">
-                <h2 class="heading text-center mb-4">CV. Soerabaja45 Indovista</h2>
-                <form action="" method="post" class="d-block d-lg-flex mb-4">
-                  <div class="fields d-block d-lg-flex">
-                    <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Ketikkan..."></div>
-                    <div class="select-wrap one-third">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                        <option value="">Percetakan</option>
-                        <option value="">Banner</option>
-                      </select>
-                    </div>
-                    <div class="select-wrap one-third">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                        <option value="">Garment</option>
-                        <option value="">Pin</option>
-                        <option value="">Gantungan Kunci</option>
-                      </select>
-                    </div>
-                  </div>
-                  <input type="submit" class="search-submit btn btn-primary" value="Pencarian">  
-                </form>
-                <p class="text-center mb-5">Jalan Jawa No.28, Sumbersari, Kabupaten Jember ,Jawa Timur, 68121, Indonesia</p>
-                <p class="text-center"><a href="#" class="btn py-3 px-5">Daftarkan Akun Anda Sekarang</a></p>
-              </div>
+              <h1 class="mb-2">Daftar Akun</h1>
+              <p class="bcrumb"><a href="<?php echo base_url()?>dashboard">Beranda</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Daftar Akun</span></p>
             </div>
             
           </div>
@@ -123,37 +99,37 @@
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="name">Nama Lengkap</label>
-                      <input type="text" id="nama" class="form-control py-2">
+                      <input type="text" name="nama" class="form-control py-2">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="name">Nomor HP</label>
-                      <input type="text" id="hp" class="form-control py-2 ">
+                      <input type="text" name="hp" class="form-control py-2 ">
                     </div>
                   </div>
 				  <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="name">Alamat</label>
-                      <input type="text" id="alamat" class="form-control py-2 ">
+                      <input type="text" name="alamat" class="form-control py-2 ">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="name">Password</label>
-                      <input type="password" id="password" class="form-control py-2">
+                      <input type="password" name="password" class="form-control py-2">
                     </div>
                   </div>
 				  <div class="row mb-5">
                     <div class="col-md-12 form-group">
                       <label for="name">Ulang Password</label>
-                      <input type="password" id="repassword" class="form-control py-2">
+                      <input type="password" name="repassword" class="form-control py-2">
                     </div>
                   </div>
                   
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="submit" value="Daftar" class="btn btn-primary px-5 py-2">
+                      <input type="submit" value="Daftar" name="btnSubmit" class="btn btn-primary px-5 py-2">
                     </div>
                   </div>
                 </form>
@@ -163,6 +139,25 @@
       </div>
     </section>
     
+	<div class="py-5 block-22">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
+            <h2 class="heading"></h2>
+            <p></p>
+          </div>
+          <div class="col-md-6">
+            <form action="#" class="subscribe">
+              <div class="form-group">
+                <!--<input type="email" class="form-control email" placeholder="Enter email">
+                <input type="submit" class="btn btn-primary submit" value="Subscribe"> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+	
      <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">

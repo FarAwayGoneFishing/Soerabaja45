@@ -24,7 +24,7 @@ class Login_model extends CI_Model{
 			$row = $query->row_array();
 			foreach ($query1->result() as $row1)
 {
-        	$this->level = $row1->nama;
+        	$this->username = $row1->nama_user;
 			$this->id_user = $row1->id_user;
 }
 			return $row['username'] == 1;

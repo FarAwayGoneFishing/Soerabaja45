@@ -7,19 +7,21 @@ class register extends CI_Controller {
 		$this->load->model('Register_Model');
 		$this->model = $this->Register_Model;
 		$this->load->library('session');
-		$this->load->helper('url');
+		$this->load->helper(array('url'));
 	}
 
  	function index(){
 		if(isset($_POST['btnSubmit'])){
+			if($this->input->post('password') == $this->input->post('repassword')){
 			$data = $this->model->input(array(
-			'nama' => $this->input->post('nama'),
-			'no.telp' => $this->input->post('hp'),
+			'nama_user' => $this->input->post('nama'),
+			'no_telp' => $this->input->post('hp'),
 			'alamat' => $this->input->post('alamat'),
 			'password' => $this->input->post('password')
 	));
 			redirect('login');
-		} else{
+		}
+	} else{
 		$this->load->view('register');
 	}
 	}

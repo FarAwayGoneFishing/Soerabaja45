@@ -24,7 +24,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="index.html">SOERABAJA'45</a>
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,14 +32,13 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Beranda</a>
+                <a class="nav-link active" href="dashboard">Beranda</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
+                <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="courses.html">Pemesanan</a>
-                  <a class="dropdown-item" href="courses.html">Notifikasi</a>
-                  <a class="dropdown-item" href="courses.html">Peraturan</a>
+                  <a class="dropdown-item" href="#">Digital Offset</a>
+                  <a class="dropdown-item" href="#">Offset</a>
                 </div>
 
               </li>
@@ -71,14 +70,14 @@
     </header>
     <!-- END header -->
 
-    <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url('<?php echo base_url()?>assets/images/big_image_2.jpg');">
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url('http://localhost/Soerabaja45/assets/images/imgnew.jpg');">
       <div class="container">
         <div class="row align-items-center justify-content-center site-hero-sm-inner">
           <div class="col-md-7 text-center">
   
             <div class="mb-5 element-animate">
               <h1 class="mb-2">Masuk Akun</h1>
-              <p class="bcrumb"><a href="<?php echo base_url()?>assets/index.html">Beranda</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Masuk Akun</span></p>
+              <p class="bcrumb"><a href="<?php echo base_url()?>dashboard">Beranda</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Masuk Akun</span></p>
             </div>
             
           </div>
@@ -97,19 +96,21 @@
                 <div class="row">
                   <div class="col-md-12 form-group">
                     <label for="name">Nama User</label>
-                    <input type="text" id="name" class="form-control py-2">
+                    <input type="text" name="username" class="form-control py-2">
                   </div>
                 </div>
                 <div class="row mb-5">
                   <div class="col-md-12 form-group">
                     <label for="name">Password</label>
-                    <input type="password" id="name" class="form-control py-2">
+                    <input type="password" name="password" class="form-control py-2">
                   </div>
                 </div>
-                
+                <label>
+					<b><p style="color: red; font-size: 16px;"><?php echo $model->notif;?></p></b>
+				</label>
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="submit" value="Login" class="btn btn-primary px-5 py-2">
+                    <input type="submit" value="Login" name="btn_log" class="btn btn-primary px-5 py-2">
                   </div>
                 </div>
               </form>
@@ -118,77 +119,83 @@
         </div>
       </div>
     </section>
+	
+	<div class="py-5 block-22">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
+            <h2 class="heading"></h2>
+            <p></p>
+          </div>
+          <div class="col-md-6">
+            <form action="#" class="subscribe">
+              <div class="form-group">
+                <!--<input type="email" class="form-control email" placeholder="Enter email">
+                <input type="submit" class="btn btn-primary submit" value="Subscribe"> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <footer class="site-footer border-top">
+    <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3>SOERABAJA'45</h3>
-            <p>Perferendis eum illum voluptatibus dolore tempora consequatur minus asperiores temporibus.</p>
+          <div class="col-md-4">
+            <center><h3>SOERABAJA'45</h3></center>
+            <p>Perusahaan percetakan dan garment yang menyediakan produk atau barang yang dapat dipesan secara online dan costumer dapat mengedit produk yang akan di pesan </p>
           </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Quick Link</h3>
+          <div class="col-md-2">
+            <center><h3 class="heading">Tautan</h3></center>
             <div class="row">
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="<?php echo base_url()?>assets/#">Home</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">About Us</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Courses</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Pages</a></li>
+                  <li><a href="dashboard">Beranda</a></li>
+                  <p><li><a href="tentang">Tentang</a></li></p>
+                  <p><li><a href="kontak">Kontak</a></li></p>
                 </ul>
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="<?php echo base_url()?>assets/#">News</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Support</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Contact</a></li>
-                  <li><a href="<?php echo base_url()?>assets/#">Privacy</a></li>
+                  <li><a href="#">Digital Offset</a></li>
+                  <p><li><a href="#">Offset</a></li></p>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Blog</h3>
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="<?php echo base_url()?>assets/#">Consectetur Adipisicing Elit</a></h3>
-                <div class="meta">
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="<?php echo base_url()?>assets/#">Dolore Tempora Consequatur</a></h3>
-                <div class="meta">
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="<?php echo base_url()?>assets/#">Perferendis eum illum</a></h3>
-                <div class="meta">
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="<?php echo base_url()?>assets/#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Contact Information</h3>
-            <div class="block-23">
-              <ul>
-                <li><span class="icon ion-android-pin"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                <li><a href="<?php echo base_url()?>assets/#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="<?php echo base_url()?>assets/#"><span class="icon ion-android-mail"></span><span class="text">info@yourdomain.com</span></a></li>
-                <li><span class="icon ion-android-time"></span><span class="text">Monday &mdash; Friday 8:00am - 5:00pm</span></li>
+          
+          <div class="col-md-6">
+            <center><h3 class="heading">Informasi Kontak</h3></center>
+            <div class="row block-23">
+              <div class="col-md-5">
+                <ul>
+                <li><span class="icon ion-android-pin"></span><span class="text">Jalan Jawa No.28
+Sumbersari
+Kabupaten Jember
+Jawa Timur 68121
+Indonesia</span></li>
+                <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text"><p>0811-3661-927</p>
+<p>(0331) 333000</p></span></a></li>
+                <li><a href="#"><span class="icon ion-android-mail"></span><span class="text" style="word-break: break-all;">orderonline.sby45@gmail.com</span></a></li>
               </ul>
+              </div>
+              <div class="col-md-7">
+                <ul>
+                  <li><span class="icon ion-android-time"></span><span class="text"><p><b>Jam Buka</b></p>
+
+<p>Sen:  07.00–21.00</p>
+<p>Sel:  07.00–21.00</p>
+<p>Rab:  07.00–21.00</p>
+<p>Kam:  07.00–21.00</p>
+<p>Jum:  07.00–11.00, 12.30–21.00</p>
+<p>Sab:  07.00–21.00</p>
+<p>Min:  13.00–21.00</span></li>
+              </ul>
+                
+              </div>
+              
+                
             </div>
           </div>
         </div>
@@ -196,19 +203,17 @@
           <div class="col-md-12 text-center copyright">
             
             <p class="float-md-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="<?php echo base_url()?>assets/https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | FAR AWAY TEAM </p>
             <p class="float-md-right">
-              <a href="<?php echo base_url()?>assets/#" class="fa fa-facebook p-2"></a>
-              <a href="<?php echo base_url()?>assets/#" class="fa fa-twitter p-2"></a>
-              <a href="<?php echo base_url()?>assets/#" class="fa fa-linkedin p-2"></a>
-              <a href="<?php echo base_url()?>assets/#" class="fa fa-instagram p-2"></a>
-
+              <a href="https://www.facebook.com/soerabaja45official/" class="fa fa-facebook p-2"></a>
+              <a href="https://www.youtube.com/channel/UCOYNDHL3btOOdoAotspKhlw" class="fa fa-youtube p-2"></a>
+              <a href="https://www.instagram.com/soerabaja_45/" class="fa fa-instagram p-2"></a>
             </p>
           </div>
         </div>
       </div>
     </footer>
+
     <!-- END footer -->
     
     <!-- loader -->

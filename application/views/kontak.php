@@ -38,8 +38,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="courses">Digital Offset</a>
-                  <a class="dropdown-item" href="courses.html">Offset</a>
+                  <a class="dropdown-item" href="#">Digital Offset</a>
+                  <a class="dropdown-item" href="#">Offset</a>
                 </div>
 
               </li>
@@ -61,7 +61,7 @@
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="admin">Masuk Akun</a> / <a href="register">Daftar Akun</a>
+                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
               </li>
             </ul>
             
