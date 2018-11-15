@@ -39,7 +39,7 @@
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="#">Offset</a>
+                  <a class="dropdown-item" href="courses.html">Offset</a>
                 </div>
 
               </li>
@@ -71,75 +71,130 @@
     </header>
     <!-- END header -->
 
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url('http://localhost/Soerabaja45/assets/images/imgnew.jpg');">
+   
+    <!-- END section -->
+
+    <div class="site-section bg-light">
       <div class="container">
-        <div class="row align-items-center justify-content-center site-hero-sm-inner">
-          <div class="col-md-7 text-center">
-  
-            <div class="mb-5 element-animate">
-              <h1 class="mb-2">Daftar Akun</h1>
-              <p class="bcrumb"><a href="<?php echo base_url()?>dashboard">Beranda</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Daftar Akun</span></p>
-            </div>
-            
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-7 text-center section-heading">
+            <h2 class="text-primary heading">Produk Digital Offset</h2>
+            <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- END header -->
+      <div class="container-fluid block-11 element-animate">
+        <div class="nonloop-block-11 owl-carousel">
+          
 
-    
-    <section class="site-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7">
-            <div class="form-wrap">
-              <h2 class="mb-5">Membuat Akun Baru</h2>
-              <form action="Register" method="post">
-                  
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Nama Lengkap</label>
-                      <input type="text" name="nama" class="form-control py-2">
+          <div class="item">
+            <div class="block-19">
+                <figure>
+                  <img src="http://localhost/Soerabaja45/assets/images/img20.jpg" alt="Image" class="img-fluid">
+                </figure>
+                <div class="text">
+                 <center><h2 class="heading"><a href="#">Kalender</a></h2></center>
+                  <p class="mb-4">Tahun Baru nih...? </p>
+<p>Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...</p>
+<p>Pasti butuh Kalender terbaru kan</p>
+<p>Cocok...!</p>
+<p>Soerabaja'45 lagi ADA PROMO KALENDER !</p>
+<p>Harga hanya Rp 1.000'an</p>
+<p>Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh </p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
                     </div>
+                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Nomor HP</label>
-                      <input type="text" name="hp" class="form-control py-2 ">
-                    </div>
-                  </div>
-				  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Alamat</label>
-                      <input type="text" name="alamat" class="form-control py-2 ">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Password</label>
-                      <input type="password" name="password" class="form-control py-2">
-                    </div>
-                  </div>
-				  <div class="row mb-5">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Ulang Password</label>
-                      <input type="password" name="repassword" class="form-control py-2">
-                    </div>
-                  </div>
-                  
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input type="submit" value="Daftar" name="btnSubmit" class="btn btn-primary px-5 py-2">
-                    </div>
-                  </div>
-                </form>
+                </div>
               </div>
           </div>
+
+          <div class="item">
+            <div class="block-19">
+                <figure>
+                  <img src="http://localhost/Soerabaja45/assets/images/img21.jpg" alt="Image" class="img-fluid">
+                </figure>
+                <div class="text">
+                 <center><h2 class="heading"><a href="#">Brosur</a></h2></center>
+                  <p class="mb-4">Tidak perlu keluar uang banyak untuk bikin brosur promosi usaha Anda. Yes, cukup 250 rb sdh bisa dapat 1000 lbr brosur fullcolor dg kertas artpaper 120gr ukrn A5 1 sisi. 
+Soal desain, jgn khawatir, kami punya banyak desainer handal yg siap membantu Anda.
+Silahkan hubungi CS online kami
+WA 0811 366 1927
+Senin-sabtu jam 08.00 - 16.00</p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="item">
+            <div class="block-19">
+              <figure>
+                <img src="http://localhost/Soerabaja45/assets/images/img2.jpg" alt="Image" class="img-fluid">
+              </figure>
+              <div class="text">
+                <center><h2 class="heading"><a href="#">ID Card</a></h2></center>
+                  <p class="mb-4">Beri kesan pertama melalui kartu nama yang mewakili diri anda!
+
+                  Sekarang cetak kartu nama hanya 22.000 per box! 
+                  sesuaikan kebutuhan anda dengan memilih berbagai spesifikasi dari kami!
+
+                  Anda dapat tentukan spesifkasi produk mulai dari bahan, ukuran, pilihan sisi dan siku! Tunggu apalagi! Pesan sekarang sebelum kebanjiran orderan..</p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="item">
+            <div class="block-19">
+                <figure>
+                  <img src="http://localhost/Soerabaja45/assets/images/img90.jpg" alt="Image" class="img-fluid">
+                </figure>
+                <div class="text">
+                  <center><h2 class="heading"><a href="#">Pin Peniti</a></h2></center>
+                  <p class="mb-4">Harga Rp 4.250/pcs</p>
+                    <p>Minimal order 10 pcs</p>
+                    <p>Diameter 4.4 cm</p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                  </div>
+                </div>
+              </div>
+          </div> -->
+
+
         </div>
       </div>
-    </section>
+
+      
+    </div>
     
-	<div class="py-5 block-22">
+    <!-- END section -->
+
+    <!-- END section -->
+
+    
+    <!-- END section -->
+
+    
+
+    <div class="py-5 block-22">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
@@ -157,8 +212,8 @@
         </div>
       </div>
     </div>
-	
-     <footer class="site-footer">
+  
+    <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4">
@@ -224,7 +279,7 @@ Indonesia</span></li>
             <p class="float-md-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | FAR AWAY TEAM </p>
             <p class="float-md-right">
-              <a href="https://www.facebook.com/soerabaja45official/" class="fa fa-facebook p-2"></a>
+             <a href="https://www.facebook.com/soerabaja45official/" class="fa fa-facebook p-2"></a>
               <a href="https://www.youtube.com/channel/UCOYNDHL3btOOdoAotspKhlw" class="fa fa-youtube p-2"></a>
               <a href="https://www.instagram.com/soerabaja_45/" class="fa fa-instagram p-2"></a>
             </p>
@@ -232,8 +287,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
       </div>
     </footer>
-
-
     <!-- END footer -->
     
     <!-- loader -->
