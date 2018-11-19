@@ -38,7 +38,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="#">Digital Offset</a>
+                  <a class="dropdown-item" href="digoffset">Digital Offset</a>
                   <a class="dropdown-item" href="#">Offset</a>
                 </div>
 
@@ -282,25 +282,7 @@
             </div>
           </div>
 
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="http://localhost/Soerabaja45/assets/images/img8.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <center><h2 class="heading"><a href="#">X Banner</a></h2></center>
-                  <p class="mb-4">X banner dapat memudahkan kebutuhan anda dalam hal promosi dan kebutuhan anda di bidang lain.</p>
-                  <p>Pengguanaan batang penyangga memudahkan anda dalam hal pemasangan.</p>
-                  <p> Kini anda dapat membawanya dalam kegaitan apapun tanpa takut ribet! Pesan sekarang!</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           
         </div>
       </div>
@@ -356,6 +338,7 @@
           </div>
         </div>
         
+        <div class="element-animate">
         <div class="row">
           <div class="col-md-4 feature-item">
           <h5>HEMAT WAKTU</h5>
@@ -396,7 +379,8 @@
                 </div>
               </div>
             </div>  
-		</div>
+
+            </div>
           </div>
         </div>
       </div>
