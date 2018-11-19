@@ -5,9 +5,36 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->load->library('session');
 		$this->load->helper('url');
+		$this->load->model('Dashboard_Model');
+		$this->model = $this->Dashboard_Model;
 	}
+	
+	
  	public function index(){
-  		$this->load->view('Dashboard');
+		$data = array('data' => $this->model->data());
+  		$this->load->view('Dashboard', $data);
+ 	}
+	public function digoffset(){
+		$data = array('data' => $this->model->data_digoffset());
+  		$this->load->view('Dashboard2');
+ 	}
+	public function offset(){
+		$data = array('data' => $this->model->data_offset());
+  		$this->load->view('Dashboard3');
+ 	}
+		public function riwayat(){
+		$data = array('data' => $this->model->data_riwayat());
+  		$this->load->view('Riwayat');
+ 	}
+	
+	
+	public function Detail(){
+		$data = array('data' => $this->model->detail());
+  		$this->load->view('Detail');
+ 	}
+	public function Verifikasi(){
+		$data = array('data' => $this->model->detail());
+  		$this->load->view('Detail');
  	}
 
 }
