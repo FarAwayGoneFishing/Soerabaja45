@@ -101,7 +101,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
+                        <li>
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
@@ -112,7 +112,7 @@
 								<li>
                                     <a href="Dashboard/digoffset">Digital Offset</a>
                                 </li>
-                                <li>
+                                <li class="active has-sub">
                                     <a href="Dashboard/offset">Offset</a>
                                 </li>
                                 <li>
@@ -293,7 +293,6 @@
                                                 <th>Tanggal</th>
                                                 <th>Estimasi waktu</th>
                                                 <th>Produk</th>
-												<th>Jenis</th>
                                                 <th class="text-right">Kertas</th>
                                                 <th class="text-right">Ukuran</th>
 												<th class="text-right">Warna</th>
@@ -309,7 +308,6 @@
                                                 <td>2018-09-29 05:57</td>
                                                 <td>100398</td>
                                                 <td>iPhone X 64Gb Grey</td>
-												<td>yo</td>
                                                 <td class="text-right">$999.00</td>
                                                 <td class="text-right">1</td>
                                                 <td class="text-right">$999.00</td>
@@ -322,7 +320,6 @@
                                                 <td>2018-09-28 01:22</td>
                                                 <td>100397</td>
                                                 <td>Samsung S8 Black</td>
-												<td>yo</td>
                                                 <td class="text-right">$756.00</td>
                                                 <td class="text-right">1</td>
                                                 <td class="text-right">$756.00</td>

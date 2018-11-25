@@ -328,7 +328,7 @@
         
     <!-- END .block-2 -->
 
-
+	<div class="element-animated">	  
     <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
@@ -379,6 +379,7 @@
                 </div>
               </div>
             </div>  
+
             </div>
           </div>
         </div>

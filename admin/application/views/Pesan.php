@@ -80,11 +80,10 @@
                             <a href="Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
-                  
                     </ul>
                 </div>
             </nav>
@@ -101,7 +100,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
+                        <li>
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
@@ -128,11 +127,10 @@
                             <a href="Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
-                        </li>
-                            
+                        </li>    
                     </ul>
                 </nav>
             </div>
@@ -282,62 +280,80 @@
             <div class="main-content">
                 <div class="section__content section__content--p20">
                     <div class="container-fluid">
-                        
+                                                   
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Pesanan</h2>
-                                <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>Tanggal</th>
-                                                <th>Estimasi waktu</th>
-                                                <th>Produk</th>
-												<th>Jenis</th>
-                                                <th class="text-right">Kertas</th>
-                                                <th class="text-right">Ukuran</th>
-												<th class="text-right">Warna</th>
-												<th class="text-right">Jumlah</th>
-                                                <th class="text-right">Total Harga</th>
-												<th class="text-right">Detail</th>
-												<th class="text-right">Verifikasi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-											
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>iPhone X 64Gb Grey</td>
-												<td>yo</td>
-                                                <td class="text-right">$999.00</td>
-                                                <td class="text-right">1</td>
-                                                <td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="#" role="button">Detail</a></td>
-												<td class="text-right"><a class="btn btn-success" href="#" role="button">Bayar</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-28 01:22</td>
-                                                <td>100397</td>
-                                                <td>Samsung S8 Black</td>
-												<td>yo</td>
-                                                <td class="text-right">$756.00</td>
-                                                <td class="text-right">1</td>
-                                                <td class="text-right">$756.00</td>
-												<td class="text-right">$756.00</td>
-												<td class="text-right">$756.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="#" role="button">Detail</a></td>
-												<td class="text-right"><a class="btn btn-success" href="#" role="button">Bayar</a></td>
-                                            </tr>
-                                            
-                                        </tbody>
-                                    </table>
+                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                                    <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
+                                        <div class="bg-overlay bg-overlay--blue"></div>
+                                        <h3>
+                                            <i class="zmdi zmdi-comment-text"></i>Pesan Dari Konsumen</h3> 
+                                    </div>
+                                    <div class="au-task js-list-load">
+                                       
+                                        <div class="au-task-list js-scrollbar3">
+                                            <div class="au-task__item au-task__item--success">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
+                                                    </h5>
+                                                    <span class="time">10:00 AM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item au-task__item--success">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Create new task for Dashboard</a>
+                                                    </h5>
+                                                    <span class="time">11:00 AM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item ">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
+                                                    </h5>
+                                                    <span class="time">02:00 PM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item ">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Create new task for Dashboard</a>
+                                                    </h5>
+                                                    <span class="time">03:30 PM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item au-task__item--danger js-load-item">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
+                                                    </h5>
+                                                    <span class="time">10:00 AM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item au-task__item--warning js-load-item">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Create new task for Dashboard</a>
+                                                    </h5>
+                                                    <span class="time">11:00 AM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                           
-                  </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
