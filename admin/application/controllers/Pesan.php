@@ -11,7 +11,7 @@ class Pesan extends CI_Controller {
  	public function index(){
 		$id = NULL;
 		$data = array('data' => $this->model->data($id));
-  		$this->load->view('Pesan', Data);
+  		$this->load->view('Pesan', $data);
  	}
 
 }

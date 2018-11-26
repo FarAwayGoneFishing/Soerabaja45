@@ -58,30 +58,30 @@
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="Dashboard">Daftar Pesanan</a>
+                                    <a href="<?php echo base_url()?>/Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>/Dashboard/digoffset">Digital Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>/Dashboard/offset">Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Riwayat">Riwayat Transaksi</a>
+                                    <a href="<?php echo base_url()?>/Riwayat">Riwayat Transaksi</a>
                                 </li>
                             </ul>
                         </li>
                          <li>
-                            <a href="Digoffset">
+                            <a href="<?php echo base_url()?>/Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
-                            <a href="Offset">
+                            <a href="<?php echo base_url()?>/Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
                         <li>
-                            <a href="Pesan">
+                            <a href="<?php echo base_url()?>/Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
                   
@@ -106,30 +106,30 @@
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="Dashboard">Daftar Pesanan</a>
+                                    <a href="<?php echo base_url()?>/Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="Dashboard/digoffset">Digital Offset</a>
-                                </li>
-                                <li class="active has-sub">
-                                    <a href="Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>/Dashboard/digoffset">Digital Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Riwayat">Riwayat Transaksi</a>
+                                    <a href="<?php echo base_url()?>/Dashboard/offset">Offset</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url()?>/Riwayat">Riwayat Transaksi</a>
                                 </li>
                             </ul>
                         </li>
                          <li>
-                            <a href="Digoffset">
+                            <a href="<?php echo base_url()?>/Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
-                            <a href="Offset">
+                            <a href="<?php echo base_url()?>/Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
                         <li>
-                            <a href="Pesan">
+                            <a href="<?php echo base_url()?>/Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
                             
@@ -236,24 +236,18 @@
                                 </div>
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                        </div>
+                                        
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#"><?php echo $_SESSION['nama']; ?></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                                    </a>
-                                                </div>
+                                                
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#"><?php echo $_SESSION['nama']; ?></a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email"><?php echo $_SESSION['email']; ?></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -285,7 +279,7 @@
                         
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Pesanan</h2>
+                                <h2 class="title-1 m-b-25">Daftar Pesanan Offset</h2>
                                 <div class="table-responsive table--no-card m-b-40">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
@@ -313,7 +307,7 @@
                                                 <td class="text-right">$999.00</td>
 												<td class="text-right">$999.00</td>
 												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="#" role="button">Detail</a></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>/Dashboard/Detail" role="button">Detail</a></td>
 												<td class="text-right"><a class="btn btn-success" href="#" role="button">Bayar</a></td>
                                             </tr>
                                             <tr>
@@ -325,7 +319,7 @@
                                                 <td class="text-right">$756.00</td>
 												<td class="text-right">$756.00</td>
 												<td class="text-right">$756.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="#" role="button">Detail</a></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>/Dashboard/Detail" role="button">Detail</a></td>
 												<td class="text-right"><a class="btn btn-success" href="#" role="button">Bayar</a></td>
                                             </tr>
                                             

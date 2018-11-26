@@ -4,6 +4,7 @@ class Login_Model extends CI_Model{
 	public $password;
 	public $id_admin;
 	public $nama_user;
+	public $email1;
 	public $notif = "";
 
 
@@ -26,6 +27,7 @@ class Login_Model extends CI_Model{
 {
         	$this->nama_user = $row1->nama_user;
 			$this->id_admin = $row1->id_admin;
+			$this->email1 = $row1->email;
 }
 			return $row['username'] == 1;
 	}

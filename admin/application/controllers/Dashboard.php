@@ -29,7 +29,8 @@ class Dashboard extends CI_Controller {
 	
 	
 	public function Detail(){
-		$data = array('data' => $this->model->detail());
+		$id = $this->uri->segment(4);
+		$data = array('data' => $this->model->detail($id));
   		$this->load->view('Detail');
  	}
 	public function Verifikasi(){
