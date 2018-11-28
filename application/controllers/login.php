@@ -16,7 +16,7 @@ class Login extends CI_Controller {
 			$this->model->password = $_POST['password'];
 			if ($this->model->cek_log()==TRUE) {
 				$this->session->set_userdata('user', $this->model->id_user);
-				$this->session->set_userdata('nama', $this->model->nama_user);
+				$this->session->set_userdata('nama', $this->model->username);
 				redirect('Dashboard');
 			}
 			else{

@@ -13,7 +13,7 @@ class Login_model extends CI_Model{
 	}
 
 	public function cek_log(){
-		$sql = sprintf("SELECT COUNT(*) AS username FROM tb_user WHERE username = '%s' AND password='%s'",
+		$sql = sprintf("SELECT COUNT(*) AS user FROM tb_user WHERE username = '%s' AND password='%s'",
 			$this->username,
 			$this->password);
 		$sql1 = sprintf("SELECT * FROM tb_user WHERE username = '%s' AND password='%s'",
@@ -27,7 +27,7 @@ class Login_model extends CI_Model{
         	$this->username = $row1->nama_user;
 			$this->id_user = $row1->id_user;
 }
-			return $row['username'] == 1;
+			return $row['user'] == 1;
 	}
 
 }
