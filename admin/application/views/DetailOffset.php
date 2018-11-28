@@ -72,11 +72,11 @@
                                 </li>
                             </ul>
                         </li>
-                         <li class="active has-sub">
+                         <li>
                             <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
@@ -100,11 +100,11 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li>
+                        <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
+                               <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
@@ -119,11 +119,11 @@
                                 </li>
                             </ul>
                         </li>
-                         <li class="active has-sub">
+                         <li>
                             <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
@@ -277,30 +277,43 @@
                         
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Produk Digital Offset</h2>
+                                <h2 class="title-1 m-b-25">Daftar Produk Offset</h2>
                                 <div class="table-responsive table--no-card m-b-40">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
-                                            <tr>
+                                           <tr>
                                                 <th>Id Produk</th>
                                                 <th>Nama</th>
                                                 <th>Kertas</th>
                                                 <th class="text-right">Ukuran</th>
-												<th class="text-right">Detail Harga</th>
-                                                
+												<th class="text-right">Jumlah</th>
+												<th class="text-right">Harga</th>
+                                                <th class="text-right">Pilihan</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-											<?php foreach($data as $row){ ?>
+											
                                             <tr>
-                                                <td><?php echo $row->id_produk ?></td>
-                                                <td><?php echo $row->nama_produk ?></td>
-                                                <td><?php echo $row->kertas ?></td>
-                                                <td class="text-right"><?php echo $row->ukuran ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail/1" role="button">Detail</a></td>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>100398</td>
+                                                <td>iPhone X 64Gb Grey</td>
+                                                <td class="text-right">$999.00</td>
+												<td class="text-right">$999.00</td>
+												<td class="text-right">$999.00</td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail" role="button">Ubah Harga</a></td>
                                                 
                                             </tr>
-                                           <?php }; ?>
+                                            <tr>
+                                                <td>2018-09-28 01:22</td>
+                                                <td>100397</td>
+                                                <td>Samsung S8 Black</td>
+                                                <td class="text-right">$756.00</td>
+												<td class="text-right">$999.00</td>
+												<td class="text-right">$999.00</td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail" role="button">Ubah Harga</a></td>
+                                                
+                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>

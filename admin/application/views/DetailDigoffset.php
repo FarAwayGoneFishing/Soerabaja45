@@ -286,21 +286,33 @@
                                                 <th>Nama</th>
                                                 <th>Kertas</th>
                                                 <th class="text-right">Ukuran</th>
-												<th class="text-right">Detail Harga</th>
-                                                
+												<th class="text-right">Jumlah</th>
+												<th class="text-right">Harga</th>
+                                                <th class="text-right">Pilihan</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-											<?php foreach($data as $row){ ?>
+											
                                             <tr>
-                                                <td><?php echo $row->id_produk ?></td>
-                                                <td><?php echo $row->nama_produk ?></td>
-                                                <td><?php echo $row->kertas ?></td>
-                                                <td class="text-right"><?php echo $row->ukuran ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail/1" role="button">Detail</a></td>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>100398</td>
+                                                <td>iPhone X 64Gb Grey</td>
+                                                <td class="text-right">$999.00</td>
+												<td class="text-right">$999.00</td>
+												<td class="text-right">$999.00</td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail" role="button">Ubah Harga</a></td>
                                                 
                                             </tr>
-                                           <?php }; ?>
+                                            <tr>
+                                                <td>2018-09-28 01:22</td>
+                                                <td>100397</td>
+                                                <td>Samsung S8 Black</td>
+                                                <td class="text-right">$756.00</td>
+												<td class="text-right">$999.00</td>
+												<td class="text-right">$999.00</td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail" role="button">Ubah Harga</a></td>
+                                                
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>

@@ -58,30 +58,30 @@
                                 <i class="fas fa-tachometer-alt"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="Dashboard">Daftar Pesanan</a>
+                                    <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset</a>
                                 </li>
                                 <li class="active has-sub">
-                                    <a href="Riwayat">Riwayat Transaksi</a>
+                                    <a href="<?php echo base_url()?>Dashboard/Riwayat">Riwayat Transaksi</a>
                                 </li>
                             </ul>
                         </li>
                          <li>
-                            <a href="Digoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
-                            <a href="Offset">
+                            <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
                         <li>
-                            <a href="Pesan">
+                            <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
                     </ul>
@@ -105,30 +105,30 @@
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                <li>
-                                    <a href="Dashboard">Daftar Pesanan</a>
+                                    <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset</a>
                                 </li>
                                 <li class="active has-sub">
-                                    <a href="Riwayat">Riwayat Transaksi</a>
+                                    <a href="<?php echo base_url()?>Dashboard/Riwayat">Riwayat Transaksi</a>
                                 </li>
                             </ul>
                         </li>
                          <li>
-                            <a href="Digoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
-                            <a href="Offset">
+                            <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
                         <li>
-                            <a href="Pesan">
+                            <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
                     </ul>
@@ -570,13 +570,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

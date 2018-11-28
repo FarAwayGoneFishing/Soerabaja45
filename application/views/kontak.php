@@ -78,7 +78,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 pr-md-5">
-            <form action="#" method="post">
+            <form action="Kontak/pesan" method="post">
                   <div class="row">
                     <div class="col-md-4 form-group">
                       <label for="name">Nama</label>
@@ -98,7 +98,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="submit" value="Kirim Pesan" class="btn btn-primary">
+                      <input type="submit" name="btnSubmit" value="Kirim Pesan" class="btn btn-primary">
                     </div>
                   </div>
                 </form>

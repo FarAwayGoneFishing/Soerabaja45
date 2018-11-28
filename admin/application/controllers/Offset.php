@@ -12,6 +12,11 @@ class Offset extends CI_Controller {
 		$data = array('data' => $this->model->data());
   		$this->load->view('Offset', $data);
  	}
+	
+	public function detail($id){
+		$data = array('data' => $this->model->detail($id));
+  		$this->load->view('DetailOffset', $data);
+ 	}
 
 }
 

@@ -58,30 +58,30 @@
                                 <i class="fas fa-tachometer-alt"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="Dashboard">Daftar Pesanan</a>
+                                    <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Riwayat">Riwayat Transaksi</a>
+                                    <a href="<?php echo base_url()?>Dashboard/Riwayat">Riwayat Transaksi</a>
                                 </li>
                             </ul>
                         </li>
                          <li>
-                            <a href="Digoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li class="active has-sub">
-                            <a href="Offset">
+                            <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
                         <li>
-                            <a href="Pesan">
+                            <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
                     </ul>
@@ -104,31 +104,31 @@
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="Dashboard">Daftar Pesanan</a>
+                               <li>
+                                    <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Riwayat">Riwayat Transaksi</a>
+                                    <a href="<?php echo base_url()?>Dashboard/Riwayat">Riwayat Transaksi</a>
                                 </li>
                             </ul>
                         </li>
                          <li>
-                            <a href="Digoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li class="active has-sub">
-                            <a href="Offset">
+                            <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
                         <li>
-                            <a href="Pesan">
+                            <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
                     </ul>
@@ -281,43 +281,32 @@
                                 <div class="table-responsive table--no-card m-b-40">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
-                                            <tr>
+                                           <tr>
                                                 <th>Id Produk</th>
                                                 <th>Nama</th>
                                                 <th>Kertas</th>
                                                 <th class="text-right">Ukuran</th>
+												<th class="text-right">Detail Harga</th>
                                                 
                                             </tr>
                                         </thead>
                                         <tbody>
-											
+											<?php foreach($data as $row){ ?>
                                             <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>iPhone X 64Gb Grey</td>
-                                                <td class="text-right">$999.00</td>
+                                                 <td><?php echo $row->id_produk ?></td>
+                                                <td><?php echo $row->nama_produk ?></td>
+                                                <td><?php echo $row->kertas ?></td>
+                                                <td class="text-right"><?php echo $row->ukuran ?></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail/1" role="button">Detail</a></td>
                                                 
                                             </tr>
-                                            <tr>
-                                                <td>2018-09-28 01:22</td>
-                                                <td>100397</td>
-                                                <td>Samsung S8 Black</td>
-                                                <td class="text-right">$756.00</td>
-                                                
-                                            </tr>
-                                            
+                                            <?php }; ?>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
 						</div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

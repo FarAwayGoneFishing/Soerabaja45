@@ -55,9 +55,9 @@
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Daftar Pesanan</a>
+                                <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
+                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
@@ -72,7 +72,7 @@
                                 </li>
                             </ul>
                         </li>
-                         <li class="active has-sub">
+                         <li>
                             <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
@@ -80,10 +80,10 @@
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
-                        </li>
+                        </li>      
                     </ul>
                 </div>
             </nav>
@@ -104,7 +104,7 @@
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
+                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
@@ -119,7 +119,7 @@
                                 </li>
                             </ul>
                         </li>
-                         <li class="active has-sub">
+                         <li>
                             <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
@@ -127,10 +127,10 @@
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
-                        </li>
+                        </li>      
                     </ul>
                 </nav>
             </div>
@@ -232,7 +232,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="account-wrap">
+                               <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         
                                         <div class="content">
@@ -274,38 +274,71 @@
             <div class="main-content">
                 <div class="section__content section__content--p20">
                     <div class="container-fluid">
-                        
+                                                   
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Produk Digital Offset</h2>
-                                <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>Id Produk</th>
-                                                <th>Nama</th>
-                                                <th>Kertas</th>
-                                                <th class="text-right">Ukuran</th>
-												<th class="text-right">Detail Harga</th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-											<?php foreach($data as $row){ ?>
-                                            <tr>
-                                                <td><?php echo $row->id_produk ?></td>
-                                                <td><?php echo $row->nama_produk ?></td>
-                                                <td><?php echo $row->kertas ?></td>
-                                                <td class="text-right"><?php echo $row->ukuran ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail/1" role="button">Detail</a></td>
-                                                
-                                            </tr>
-                                           <?php }; ?>
-                                        </tbody>
-                                    </table>
+                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                                    <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
+                                        <div class="bg-overlay bg-overlay--blue"></div>
+                                        <h3>
+                                            <i class="zmdi zmdi-comment-text"></i>Pesan Dari Konsumen</h3> 
+                                    </div>
+                                    <div class="au-task js-list-load">
+                                       
+                                        <div class="au-task-list js-scrollbar3">
+                                            <div class="au-task__item au-task__item--success">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
+                                                    </h5>
+                                                    <span class="time">10:00 AM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item au-task__item--success">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Create new task for Dashboard</a>
+                                                    </h5>
+                                                    <span class="time">11:00 AM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item ">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
+                                                    </h5>
+                                                    <span class="time">02:00 PM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item ">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Create new task for Dashboard</a>
+                                                    </h5>
+                                                    <span class="time">03:30 PM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item au-task__item--danger js-load-item">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
+                                                    </h5>
+                                                    <span class="time">10:00 AM</span>
+                                                </div>
+                                            </div>
+                                            <div class="au-task__item au-task__item--warning js-load-item">
+                                                <div class="au-task__item-inner">
+                                                    <h5 class="task">
+                                                        <a href="#">Create new task for Dashboard</a>
+                                                    </h5>
+                                                    <span class="time">11:00 AM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-						</div>
+                        </div>
                         
                     </div>
                 </div>
