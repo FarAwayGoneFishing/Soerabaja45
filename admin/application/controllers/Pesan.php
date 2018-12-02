@@ -7,6 +7,10 @@ class Pesan extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('Pesan_Model');
 		$this->model = $this->Pesan_Model;
+		if(isset($_SESSION['user'])){
+			
+		}else{
+			redirect('Login');}
 	}
  	public function index(){
 		$id = "admin";

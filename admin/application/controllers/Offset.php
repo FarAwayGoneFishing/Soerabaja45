@@ -7,6 +7,10 @@ class Offset extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('Offset_Model');
 		$this->model = $this->Offset_Model;
+		if(isset($_SESSION['user'])){
+			
+		}else{
+			redirect('Login');}
 	}
  	public function index(){
 		$data = array('data' => $this->model->data());

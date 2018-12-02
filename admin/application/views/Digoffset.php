@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>Produk Digital Offset</title>
 
     <!-- Fontfaces CSS-->
     <link href="<?php echo base_url('assetsa/css/font-face.css')?>" rel="stylesheet" media="all">
@@ -251,13 +251,13 @@
                                             <div class="account-dropdown__body">
 												
                                                 <div class="account-dropdown__item">
-                                                    <a href="#">
+                                                    <a href="<?php echo base_url()?>Account">
                                                         <i class="zmdi zmdi-account"></i>Account</a>
                                                 </div>
                                                 
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
+                                                <a href="<?php echo base_url()?>Login/logout">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>

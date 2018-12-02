@@ -7,6 +7,10 @@ class Dashboard extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('Dashboard_Model');
 		$this->model = $this->Dashboard_Model;
+		if(isset($_SESSION['user'])){
+			
+		}else{
+			redirect('Login');}
 	}
 	
 	
