@@ -17,6 +17,8 @@ class Login extends CI_Controller {
 			if ($this->model->cek_log()==TRUE) {
 				$this->session->set_userdata('user', $this->model->id_admin);
 				$this->session->set_userdata('nama', $this->model->nama_user);
+				$this->session->set_userdata('email', $this->model->email);
+				$this->session->set_userdata('telpon', $this->model->no_telp);
 				redirect('Dashboard');
 			}
 			else{
@@ -30,10 +32,8 @@ class Login extends CI_Controller {
 	}
 
 	public function logout(){
-		if ($this->session->has_userdata('user')) {
 			$this->session->sess_destroy();
 			redirect('Login');
-		}
 	}
 }
 ?>

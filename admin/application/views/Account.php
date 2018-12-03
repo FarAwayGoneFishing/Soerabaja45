@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
-    <title>Daftar Pesanan Digital Offset</title>
+    <title>Account</title>
 
     <!-- Fontfaces CSS-->
     <link href="<?php echo base_url('assetsa/css/font-face.css')?>" rel="stylesheet" media="all">
@@ -55,7 +55,7 @@
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Daftar Pesanan</a>
+                                <i class="fas fa-tachometer-alt"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
@@ -73,7 +73,7 @@
                             </ul>
                         </li>
                          <li>
-                            <a href="<?php echo base_url()?>/igoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
@@ -84,7 +84,6 @@
                             <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
-                  
                     </ul>
                 </div>
             </nav>
@@ -101,7 +100,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li>
+                        <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
@@ -121,7 +120,7 @@
                             </ul>
                         </li>
                          <li>
-                            <a href="<?php echo base_url()?>/igoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
@@ -132,7 +131,6 @@
                             <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
                         </li>
-                            
                     </ul>
                 </nav>
             </div>
@@ -277,46 +275,10 @@
                 <div class="section__content section__content--p20">
                     <div class="container-fluid">
                         
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Pesanan Digital Offset</h2>
-                                <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>Tanggal</th>
-                                                <th>Estimasi waktu</th>
-                                                <th>Produk</th>
-                                                <th class="text-right">Kertas</th>
-                                                <th class="text-right">Ukuran</th>
-												<th class="text-right">Warna</th>
-												<th class="text-right">Jumlah</th>
-                                                <th class="text-right">Total Harga</th>
-												<th class="text-right">Detail</th>
-												<th class="text-right">Verifikasi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-											<?php foreach($data as $row){ ?>
-                                            <tr>
-                                                <td><?php echo $row->tanggal ?></td>
-                                                <td><?php echo $row->estimasi ?></td>
-                                                <td><?php echo $row->nama_produk ?></td>
-                                                <td class="text-right"><?php echo $row->kertas ?></td>
-                                                <td class="text-right"><?php echo $row->ukuran ?></td>
-                                                <td class="text-right"><?php echo $row->tambah_warna ?></td>
-												<td class="text-right"><?php echo $row->jumlah_pesan ?></td>
-												<td class="text-right"><?php echo $row->total_harga ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail" role="button">Detail</a></td>
-												<td class="text-right"><a class="btn btn-success" href="#" role="button">Bayar</a></td>
-                                            </tr>
-                                            <?php }; ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                           
-                  </div>
+                       
+                        
+                    </div>
+                </div>
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->

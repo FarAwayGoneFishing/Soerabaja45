@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>Pesan</title>
 
     <!-- Fontfaces CSS-->
     <link href="<?php echo base_url('assetsa/css/font-face.css')?>" rel="stylesheet" media="all">
@@ -58,32 +58,32 @@
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="Dashboard">Daftar Pesanan</a>
+                                    <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Riwayat">Riwayat Transaksi</a>
+                                    <a href="<?php echo base_url()?>Dashboard/Riwayat">Riwayat Transaksi</a>
                                 </li>
                             </ul>
                         </li>
                          <li>
-                            <a href="Digoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
-                            <a href="Offset">
+                            <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
                         <li class="active has-sub">
-                            <a href="Pesan">
+                            <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
-                        </li>
+                        </li>  
                     </ul>
                 </div>
             </nav>
@@ -105,32 +105,32 @@
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="Dashboard">Daftar Pesanan</a>
+                                    <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset</a>
                                 </li>
                                 <li>
-                                    <a href="Riwayat">Riwayat Transaksi</a>
+                                    <a href="<?php echo base_url()?>Dashboard/Riwayat">Riwayat Transaksi</a>
                                 </li>
                             </ul>
                         </li>
                          <li>
-                            <a href="Digoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
-                            <a href="Offset">
+                            <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
                         <li class="active has-sub">
-                            <a href="Pesan">
+                            <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
-                        </li>    
+                        </li>      
                     </ul>
                 </nav>
             </div>
@@ -232,38 +232,32 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="account-wrap">
+                               <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                        </div>
+                                        
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#"><?php echo $_SESSION['nama']; ?></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                                    </a>
-                                                </div>
+                                                
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#"><?php echo $_SESSION['nama']; ?></a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email"><?php echo $_SESSION['email']; ?></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
 												
                                                 <div class="account-dropdown__item">
-                                                    <a href="#">
+                                                    <a href="<?php echo base_url()?>Account">
                                                         <i class="zmdi zmdi-account"></i>Account</a>
                                                 </div>
                                                 
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
+                                                <a href="<?php echo base_url()?>Login/logout">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
@@ -290,68 +284,24 @@
                                             <i class="zmdi zmdi-comment-text"></i>Pesan Dari Konsumen</h3> 
                                     </div>
                                     <div class="au-task js-list-load">
-                                       
+                                       <?php foreach($data as $row){ ?>
                                         <div class="au-task-list js-scrollbar3">
                                             <div class="au-task__item au-task__item--success">
                                                 <div class="au-task__item-inner">
                                                     <h5 class="task">
-                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
+														<?php $art = substr($row->isi,0,100); ?>
+                                                        <a href="<?php echo base_url()?>Pesan/detail/<?php echo $row->id_pesan; ?>"><?php echo $art; ?></a>
                                                     </h5>
-                                                    <span class="time">10:00 AM</span>
+                                                    <span class="time"><?php echo $row->waktu; ?></span>
                                                 </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--success">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">11:00 AM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item ">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                    </h5>
-                                                    <span class="time">02:00 PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item ">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">03:30 PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--danger js-load-item">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                    </h5>
-                                                    <span class="time">10:00 AM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--warning js-load-item">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">11:00 AM</span>
-                                                </div>
-                                            </div>
+                                            </div> 
                                         </div>
+										<?php }; ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -78,30 +78,27 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 pr-md-5">
-            <form action="#" method="post">
+            <form action="Kontak/pesan" method="post">
                   <div class="row">
                     <div class="col-md-4 form-group">
                       <label for="name">Nama</label>
-                      <input type="text" id="name" class="form-control py-2">
+                      <input type="text" id="name" name="nama" class="form-control py-2">
                     </div>
                     <div class="col-md-4 form-group">
                       <label for="phone">No. Telp</label>
-                      <input type="text" id="phone" class="form-control py-2">
+                      <input type="text" id="phone" name="telpon" class="form-control py-2">
                     </div>
-                    <div class="col-md-4 form-group">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" class="form-control py-2">
-                    </div>
+                    
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="message">Tulis Pesan</label>
-                      <textarea name="message" id="message" class="form-control py-2" cols="30" rows="8"></textarea>
+                      <textarea name="isi" id="message" class="form-control py-2" cols="30" rows="8"></textarea>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="submit" value="Kirim Pesan" class="btn btn-primary">
+                      <input type="submit" name="btnSubmit" value="Kirim Pesan" class="btn btn-primary">
                     </div>
                   </div>
                 </form>

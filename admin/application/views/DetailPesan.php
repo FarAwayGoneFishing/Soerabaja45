@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
-    <title>Daftar Pesanan Digital Offset</title>
+    <title>Pesan</title>
 
     <!-- Fontfaces CSS-->
     <link href="<?php echo base_url('assetsa/css/font-face.css')?>" rel="stylesheet" media="all">
@@ -57,7 +57,7 @@
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
+                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
@@ -73,18 +73,17 @@
                             </ul>
                         </li>
                          <li>
-                            <a href="<?php echo base_url()?>/igoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
-                        </li>
-                  
+                        </li>      
                     </ul>
                 </div>
             </nav>
@@ -105,7 +104,7 @@
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                               <li>
+                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
@@ -121,18 +120,17 @@
                             </ul>
                         </li>
                          <li>
-                            <a href="<?php echo base_url()?>/igoffset">
+                            <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
                         <li>
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
-                        <li>
+                        <li class="active has-sub">
                             <a href="<?php echo base_url()?>Pesan">
                                 <i class="far fa-check-square"></i>Pesan Konsumen</a>
-                        </li>
-                            
+                        </li>      
                     </ul>
                 </nav>
             </div>
@@ -234,7 +232,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="account-wrap">
+                               <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         
                                         <div class="content">
@@ -276,47 +274,62 @@
             <div class="main-content">
                 <div class="section__content section__content--p20">
                     <div class="container-fluid">
-                        
+                                                   
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Pesanan Digital Offset</h2>
-                                <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>Tanggal</th>
-                                                <th>Estimasi waktu</th>
-                                                <th>Produk</th>
-                                                <th class="text-right">Kertas</th>
-                                                <th class="text-right">Ukuran</th>
-												<th class="text-right">Warna</th>
-												<th class="text-right">Jumlah</th>
-                                                <th class="text-right">Total Harga</th>
-												<th class="text-right">Detail</th>
-												<th class="text-right">Verifikasi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-											<?php foreach($data as $row){ ?>
-                                            <tr>
-                                                <td><?php echo $row->tanggal ?></td>
-                                                <td><?php echo $row->estimasi ?></td>
-                                                <td><?php echo $row->nama_produk ?></td>
-                                                <td class="text-right"><?php echo $row->kertas ?></td>
-                                                <td class="text-right"><?php echo $row->ukuran ?></td>
-                                                <td class="text-right"><?php echo $row->tambah_warna ?></td>
-												<td class="text-right"><?php echo $row->jumlah_pesan ?></td>
-												<td class="text-right"><?php echo $row->total_harga ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail" role="button">Detail</a></td>
-												<td class="text-right"><a class="btn btn-success" href="#" role="button">Bayar</a></td>
-                                            </tr>
-                                            <?php }; ?>
-                                        </tbody>
-                                    </table>
+                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                                    <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
+                                        <div class="bg-overlay bg-overlay--blue"></div>
+                                        <h3>
+                                            <i class="zmdi zmdi-comment-text"></i>Pesan Dari Konsumen</h3> 
+                                    </div>
+                                    <div class="au-card">
+                                            <div class="au-chat__title">
+                                                <div class="au-chat-info">
+                                                    <span class="nick">
+                                                        <a><?php echo $data[0]->nama ?></a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="au-chat__content">
+												<?php foreach($data as $data){
+														if($data->kepada == "admin"){ ?>
+                                                <div class="recei-mess-wrap">
+                                                    <span class="mess-time"><?php echo $data->waktu ?></span>
+                                                    <div class="recei-mess__inner">
+                                                        <div class="recei-mess-list">
+															
+                                                            <div class="recei-mess"><?php echo $data->isi ?></div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+												<?php }else{ ?>
+                                                <div class="send-mess-wrap">
+                                                    <span class="mess-time"><?php echo $data->waktu ?></span>
+                                                    <div class="send-mess__inner">
+                                                        <div class="send-mess-list">
+                                                            <div class="send-mess"><?php echo $data->isi ?></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+												<?php };}; ?>
+                                            </div>
+                                            <div class="au-chat-textfield">
+                                                <form action="../balas/<?php echo $data->id_pesan; ?>" class="au-form-icon" method="post">
+                                                    <input name="isi" class="au-input au-input--full au-input--h65" type="text" placeholder="Tulis Pesan">
+                                                    <button name="btnSubmit" class="au-input-icon">
+                                                        <i class="zmdi zmdi-mail-send"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
-                           
-                  </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
