@@ -39,7 +39,7 @@
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="courses">Digital Offset</a>
-                  <a class="dropdown-item" href="courses.html">Offset</a>
+                  <a class="dropdown-item" href="courses">Offset</a>
                 </div>
 
               </li>
