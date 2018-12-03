@@ -283,59 +283,47 @@
                                         <h3>
                                             <i class="zmdi zmdi-comment-text"></i>Pesan Dari Konsumen</h3> 
                                     </div>
-                                    <div class="au-task js-list-load">
-                                       
-                                        <div class="au-task-list js-scrollbar3">
-                                            <div class="au-task__item au-task__item--success">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                    </h5>
-                                                    <span class="time">10:00 AM</span>
+                                    <div class="au-card">
+                                            <div class="au-chat__title">
+                                                <div class="au-chat-info">
+                                                    <span class="nick">
+                                                        <a><?php echo $data[0]->nama ?></a>
+                                                    </span>
                                                 </div>
                                             </div>
-                                            <div class="au-task__item au-task__item--success">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">11:00 AM</span>
+                                            <div class="au-chat__content">
+												<?php foreach($data as $data){
+														if($data->kepada == "admin"){ ?>
+                                                <div class="recei-mess-wrap">
+                                                    <span class="mess-time"><?php echo $data->waktu ?></span>
+                                                    <div class="recei-mess__inner">
+                                                        <div class="recei-mess-list">
+															
+                                                            <div class="recei-mess"><?php echo $data->isi ?></div>
+                                                            
+                                                        </div>
+                                                    </div>
                                                 </div>
+												<?php }else{ ?>
+                                                <div class="send-mess-wrap">
+                                                    <span class="mess-time"><?php echo $data->waktu ?></span>
+                                                    <div class="send-mess__inner">
+                                                        <div class="send-mess-list">
+                                                            <div class="send-mess"><?php echo $data->isi ?></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+												<?php };}; ?>
                                             </div>
-                                            <div class="au-task__item ">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                    </h5>
-                                                    <span class="time">02:00 PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item ">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">03:30 PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--danger js-load-item">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                    </h5>
-                                                    <span class="time">10:00 AM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--warning js-load-item">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">11:00 AM</span>
-                                                </div>
+                                            <div class="au-chat-textfield">
+                                                <form action="../balas/<?php echo $data->id_pesan; ?>" class="au-form-icon" method="post">
+                                                    <input name="isi" class="au-input au-input--full au-input--h65" type="text" placeholder="Tulis Pesan">
+                                                    <button name="btnSubmit" class="au-input-icon">
+                                                        <i class="zmdi zmdi-mail-send"></i>
+                                                    </button>
+                                                </form>
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

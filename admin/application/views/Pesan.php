@@ -284,57 +284,19 @@
                                             <i class="zmdi zmdi-comment-text"></i>Pesan Dari Konsumen</h3> 
                                     </div>
                                     <div class="au-task js-list-load">
-                                       
+                                       <?php foreach($data as $row){ ?>
                                         <div class="au-task-list js-scrollbar3">
                                             <div class="au-task__item au-task__item--success">
                                                 <div class="au-task__item-inner">
                                                     <h5 class="task">
-                                                        <a href="<?php echo base_url()?>Pesan/detail/1">Meeting about plan for Admin Template 2018</a>
+														<?php $art = substr($row->isi,0,100); ?>
+                                                        <a href="<?php echo base_url()?>Pesan/detail/<?php echo $row->id_pesan; ?>"><?php echo $art; ?></a>
                                                     </h5>
-                                                    <span class="time">10:00 AM</span>
+                                                    <span class="time"><?php echo $row->waktu; ?></span>
                                                 </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--success">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">11:00 AM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item ">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                    </h5>
-                                                    <span class="time">02:00 PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item ">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">03:30 PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--danger js-load-item">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Meeting about plan for Admin Template 2018</a>
-                                                    </h5>
-                                                    <span class="time">10:00 AM</span>
-                                                </div>
-                                            </div>
-                                            <div class="au-task__item au-task__item--warning js-load-item">
-                                                <div class="au-task__item-inner">
-                                                    <h5 class="task">
-                                                        <a href="#">Create new task for Dashboard</a>
-                                                    </h5>
-                                                    <span class="time">11:00 AM</span>
-                                                </div>
-                                            </div>
+                                            </div> 
                                         </div>
+										<?php }; ?>
                                     </div>
                                 </div>
                             </div>

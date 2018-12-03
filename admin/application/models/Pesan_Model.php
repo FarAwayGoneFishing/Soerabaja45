@@ -8,7 +8,11 @@ class Pesan_Model extends CI_Model{
 	
 	public function detail($id){
 		$query = $this->db->query("SELECT * FROM tb_pesan WHERE id_pesan = '$id'");
-		return $query->result();	
+		foreach ($query->result() as $data){
+			$pipi = $data->nama;
+		}
+		$query1 = $this->db->query("SELECT * FROM tb_pesan WHERE nama = '$pipi' OR kepada = '$pipi'");
+		return $query1->result();
 	}
 	
 	public function input($data = array()){
@@ -21,7 +25,7 @@ class Pesan_Model extends CI_Model{
 	}
 	
 	function get_user($id){
-		$query = $this->db->query("SELECT nama FROM tb_pesan WHERE id_pesan = '$id'");
+		$query = $this->db->query("SELECT * FROM tb_pesan WHERE id_pesan = '$id'");
 		foreach ($query->result() as $data){
 			$pipi = $data->nama;
 		}

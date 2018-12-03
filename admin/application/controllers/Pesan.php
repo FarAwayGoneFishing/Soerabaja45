@@ -23,8 +23,7 @@ class Pesan extends CI_Controller {
   		$this->load->view('DetailPesan', $data);
 	}
 	
-	public function balas(){
-		$id = $_POST['id'];
+	public function balas($id){
 		$kepada = $this->model->get_user($id);
 		if(isset($_POST['btnSubmit'])){
 			$data = $this->model->input(array(
