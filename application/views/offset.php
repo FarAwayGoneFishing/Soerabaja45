@@ -38,8 +38,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="courses.html">Offset</a>
+                  <a class="dropdown-item" href="courses.html">Digital Offset</a>
+                  <a class="dropdown-item" href="offset">Offset</a>
                 </div>
 
               </li>
@@ -90,16 +90,15 @@
            <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img5.jpg" alt="Image" class="img-fluid">
+                  <img src="http://localhost/Soerabaja45/assets/images/img5.jpg" width="450" height="405" alt="Image">
                 </figure>
                 <div class="text">
-                 <center><h2 class="heading"><a href="#">Sertifikat</a></h2></center>
-                  <p class="mb-4">Cetak sertifikatmu sendiri..
-   Cetak sertifikat kini nggak perlu ribet dan nggak perlu lama lagi menunggu
-   So.. ,buat kamu yang sudah kepepet deadline buat cetak sertifikat
-   Langsung saja hubungi atau datang di Kantor Kami, di JL.Jawa 12 A, SUMBERSARI, JEMBER
-   Harga mulai Rp 2.500/lembar
-   Order bersama kami insyaAllah terbaik dan memuaskan deh </p>
+                 <center><h2 style="font-family:verdana;"class="heading"><a href="#">Sertifikat</a></h2></center>
+                  <p class="mb-4">Cetak sertifikatmu sendiri..</p> 
+  <p>Cetak sertifikat kini nggak perlu ribet dan nggak perlu lama lagi menunggu</p> 
+  <p>So.. ,buat kamu yang sudah kepepet deadline buat cetak sertifikat</p> 
+  <p>Langsung saja hubungi atau datang di Kantor Kami, di JL.Jawa 12 A,SUMBERSARI,JEMBER</p> 
+  <p>Harga mulai Rp 2.500/lembar. Order bersama kami insyaAllah terbaik dan memuaskan deh</p> 
                   <div class="meta d-flex align-items-center">
                     <div class="number">
                       <span></span>
@@ -114,14 +113,13 @@
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img22.jpeg" alt="Image" class="img-fluid">
+                  <img src="http://localhost/Soerabaja45/assets/images/img22.jpeg" width="450" height="405" alt="Image">
                 </figure>
                 <div class="text">
-                 <center><h2 class="heading"><a href="#">Slip</a></h2></center>
-                  <p class="mb-4">Tidak perlu bingung dalam mencetak slip untuk rekapan gaji karyawan. 
+                 <center><h2 style="font-family:verdana;"class="heading"><a href="#">Slip</a></h2></center>
+                 <p class="mb-4">Tidak perlu bingung dalam mencetak slip untuk rekapan gaji karyawan. 
     Dan juga mencetak dalam jumlah banyak.Kini Soerabaja'45 bisa membantu anda.
-    Silahkan hubungi CS online kami. 
-    WA 0811 366 1927</p>
+    Silahkan hubungi CS online kami WA 0811 366 1927</p>
                   <div class="meta d-flex align-items-center">
                     <div class="number">
                       <span></span>
@@ -138,10 +136,10 @@
           <div class="item">
             <div class="block-19">
               <figure>
-                <img src="http://localhost/Soerabaja45/assets/images/img23.jpg" alt="Image" class="img-fluid">
+                <img src="http://localhost/Soerabaja45/assets/images/img23.jpg" width="450" height="405" alt="Image">
               </figure>
               <div class="text">
-                <center><h2 class="heading"><a href="#">Tiket</a></h2></center>
+                <center><h2 style="font-family:verdana;"class="heading"><a href="#">Tiket</a></h2></center>
                   <p class="mb-4">Cetak Tiket ala sticker hanya di Soerabaja'45..
     Bisa desain sendiri dan gak perlu bingung jika belum punya desain. 
     Kami siap membuat desain tiket sesuai dengan keinginan Customer.
