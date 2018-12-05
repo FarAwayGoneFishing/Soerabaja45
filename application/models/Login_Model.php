@@ -3,7 +3,7 @@ class Login_Model extends CI_Model{
 	public $username;
 	public $password;
 	public $id_user;
-	public $nama;
+	public $nama_user;
 	public $notif = "";
 
 
@@ -24,7 +24,7 @@ class Login_Model extends CI_Model{
 			$row = $query->row_array();
 			foreach ($query1->result() as $row1)
 {
-        	$this->username = $row1->nama_user;
+        	$this->nama_user = $row1->nama_user;
 			$this->id_user = $row1->id_user;
 }
 			return $row['user'] == 1;

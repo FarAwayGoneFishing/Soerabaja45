@@ -202,7 +202,7 @@
 									<form method="get" action="">
                                         <label>Filter</label><br>
                                         <!-- <div class="rs-select2--light rs-select2--sm"> -->
-                                        <select class="js-select2" name="filter" id="filter">
+                                        <select name="filter" id="filter">
                                             <option value="">Pilih</option>
                                             <option value="1">Per Tanggal</option>
                                             <option value="2">Per Bulan</option>
@@ -243,8 +243,9 @@
                                                 }
                                                 ?>
                                             </select>
-                                            <br />
+                                            
                                         </div>
+										<br />
                                         <button type="submit" class="btn btn-info">Tampilkan</button>
                                         <a href="<?php echo base_url('Dashboard/Riwayat'); ?>">Reset Filter</a>
                                     </form>
@@ -269,7 +270,7 @@
                                                 <td><?php echo $row->nama_produk ?></td>
 												<td class="text-right"><?php echo $row->jumlah_pesan ?></td>
 												<td class="text-right"><?php echo $row->total_harga ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail" role="button">Detail</a></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail/<?php echo $row->id_pesan ?>" role="button">Detail</a></td>
                                             </tr>
                                             <?php }; ?>
                                         </tbody>

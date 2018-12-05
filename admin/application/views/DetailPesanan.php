@@ -197,44 +197,123 @@
                         
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Produk Digital Offset</h2>
-                                <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>Id Produk</th>
-                                                <th>Nama</th>
-                                                <th>Kertas</th>
-                                                <th class="text-right">Ukuran</th>
-												<th class="text-right">Jumlah</th>
-												<th class="text-right">Harga</th>
-                                                <th class="text-right">Pilihan</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-											
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>iPhone X 64Gb Grey</td>
-                                                <td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail" role="button">Ubah Harga</a></td>
-                                                
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-28 01:22</td>
-                                                <td>100397</td>
-                                                <td>Samsung S8 Black</td>
-                                                <td class="text-right">$756.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail" role="button">Ubah Harga</a></td>
-                                                
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h3 class="text-center title-2">Detail Pesanan</h3>
+                                        </div>
+                                        <hr>
+										<?php foreach($data as $data){ ?>
+<!--                                        <form action="" method="post" novalidate="novalidate">-->
+                                            <div class="form-group col-lg-3">
+                                                <label class="control-label mb-1">Nama</label>
+                                                <input id="nama" name="nama" type="text" class="form-control" value="<?php echo $data->nama_user ?>" readonly>
+                                            </div>
+                                            <div class="form-group col-lg-3">
+                                                <label class="control-label mb-1">Waktu Pesan</label>
+                                                <input id="waktu" name="waktu" type="text" class="form-control" value="<?php echo $data->tanggal ?>" readonly>
+                                            </div>
+                                            <div class="form-group col-lg-3">
+                                                <label class="control-label mb-1">Produk yang dipesan</label>
+                                                <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->nama_produk ?>" readonly>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-1">Jenis Produk</label>
+                                                        <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->jenis_produk ?>" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label class="control-label mb-1">Harga /pcs</label>
+                                                    <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->harga ?>" readonly>
+                                                </div>
+                                            </div>
+											<div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                       <label class="control-label mb-1">Kertas</label>
+                                                       <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->kertas ?>" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label class="control-label mb-1">Jumlah yang dipesan</label>
+                                                    <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->jumlah_pesan ?>" readonly>
+                                                </div>
+                                            </div>
+											<div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-1">Ukuran</label>
+                                                        <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->ukuran ?>" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label class="control-label mb-1">Total Harga</label>
+                                                    <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->total_harga ?>" readonly>
+                                                </div>
+												<div class="col-lg-3">
+                                                    <label class="control-label mb-1">Estimasi Waktu</label>
+                                                    <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->estimasi ?>" readonly>
+                                                </div>
+												<div class="col-lg-3">
+                                                    <label class="control-label mb-1">Status Bayar</label>
+                                                    <input id="status" name="status" type="text" class="form-control" value="<?php echo $data->status_bayar ?>" readonly>
+                                                </div>
+                                            </div>
+											<div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                       <label class="control-label mb-1">Tambah Warna</label>
+                                                       <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->tambah_warna ?>" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label class="control-label mb-1">Deskripsi</label>
+													<textarea id="produk" name="produk" type="text" class="form-control" readonly><?php echo $data->deskripsi ?></textarea>
+                                                </div>
+                                            </div>
+											<div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                       <label class="control-label mb-1">Jasa Desain</label>
+                                                       <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->jasa_desain ?>" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label class="control-label mb-1">Desain yang Diminta</label>
+													<textarea id="produk" name="produk" type="text" class="form-control" readonly><?php echo $data->desain_yang_diminta ?></textarea>
+                                                </div>
+                                            </div>
+											<br/><br/>
+											<br/><br/>
+											<br/><br/>
+										
+											<div class="row">
+                                                <div class="col-lg-3">
+                                                    <div>
+                                                		<a id="button" class="btn btn-lg btn-danger btn-block" role="button" href="<?php echo base_url()?>Dashboard/delete/<?php echo $data->id_pesan ?>">
+															Hapus
+                                                		</a>
+                                            		</div>
+                                                </div>
+												<div class="col-lg-3"></div>
+												<div class="col-lg-3"></div>
+                                                <div class="col-lg-3">
+                                                    <div>
+                                                		
+												<?php if($data->status_bayar == "belum"){ ?>
+													<a class="btn btn-lg btn-success btn-block" href="<?php echo base_url()?>Dashboard/bayar/<?php echo $data->id_pesan ?>" role="button">Bayar</a>
+												<?php }else if($data->status_bayar == "lunas"){ ?>
+													<a class="btn btn-lg btn-success btn-block" href="<?php echo base_url()?>Dashboard/selesai/<?php echo $data->id_pesan ?>" role="button">Selesai</a>
+												<?php }else {};?>
+														
+                                            		</div>
+                                                </div>
+                                            </div>
+                                            <?php }; ?>
+<!--                                        </form>-->
+                                    </div>
                                 </div>
                             </div>
 						</div>

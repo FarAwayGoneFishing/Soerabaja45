@@ -1,5 +1,6 @@
 <?php
 class Dashboard_Model extends CI_Model{
+	public $status;
 
 	public function data(){
 		$query = $this->db->query("SELECT * FROM tb_pemesanan JOIN tb_user JOIN tb_harga JOIN tb_produk JOIN tb_kertas WHERE tb_pemesanan.id_user = tb_user.id_user AND tb_pemesanan.id_harga = tb_harga.id_harga AND tb_harga.id_produk = tb_produk.id_produk AND tb_produk.id_kertas = tb_kertas.id_kertas AND tb_pemesanan.status_bayar != 'Selesai' ");
@@ -22,7 +23,7 @@ class Dashboard_Model extends CI_Model{
 	}
 	
 	public function detail($id){
-		$query = $this->db->query("SELECT * FROM tb_pemesanan JOIN tb_user JOIN tb_harga JOIN tb_produk JOIN tb_kertas WHERE tb_pemesanan.id_harga = tb_harga.id_harga AND tb_harga.id_produk = tb_produk.id_produk AND tb_produk.id_kertas = tb_kertas.id_kertas AND tb_pemesanan.id_user = '$id' ");
+		$query = $this->db->query("SELECT * FROM tb_pemesanan JOIN tb_user JOIN tb_harga JOIN tb_produk JOIN tb_kertas WHERE tb_pemesanan.id_harga = tb_harga.id_harga AND tb_harga.id_produk = tb_produk.id_produk AND tb_produk.id_kertas = tb_kertas.id_kertas AND tb_pemesanan.id_user = tb_user.id_user AND tb_pemesanan.id_pesan = '$id' ");
 		return $query->result();	
 	}
 	
@@ -88,6 +89,25 @@ class Dashboard_Model extends CI_Model{
         $this->db->group_by('YEAR(tanggal)'); // Group berdasarkan tahun pada field tgl
         return $this->db->get()->result(); // Ambil data pada tabel transaksi sesuai kondisi diatas
     }
+	
+	public function bayar($id){
+		$sql=sprintf("UPDATE tb_pemesanan SET status_bayar='%s' WHERE id_pesan='$id' ",
+			$this->status);
+	
+		$this->db->query($sql);
+	}
+	
+	public function selesai($id){
+		$sql=sprintf("UPDATE tb_pemesanan SET status_bayar='%s' WHERE id_pesan='$id' ",
+			$this->status);
+	
+		$this->db->query($sql);
+	}
+	
+	public function delete($id){
+		$sql=sprintf("DELETE FROM tb_pemesanan WHERE id_pesan='$id'");
+		$this->db->query($sql);
+	}
 
 }
 ?>

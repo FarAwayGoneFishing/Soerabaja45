@@ -25,7 +25,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,13 +33,13 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="dashboard">Beranda</a>
+                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="offset">Offset</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
                 </div>
 
               </li>
@@ -53,23 +53,29 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="tentang">Tentang Kami</a>
+                <a class="nav-link" href="<?php echo base_url()?>Tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="kontak">Kontak</a>
+                <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-				<?php if(isset($_SESSION["id_user"])){
-				echo '<a href="login/logout">Keluar</a>';
-				}else {
+				<?php if(isset($_SESSION["id_user"])){ ?>
+				  
+				<li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
+                	<div class="dropdown-menu" aria-labelledby="dropdown04">
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
+						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
+                	</div>
+              	</li>
+				
+				<?php }else {
                 echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
-				}
-				?>
-			</li>
+				}?>
             </ul>
-            
           </div>
         </div>
       </nav>

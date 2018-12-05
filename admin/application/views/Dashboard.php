@@ -220,8 +220,13 @@
                                                 <td><?php echo $row->nama_produk ?></td>
 												<td class="text-right"><?php echo $row->jumlah_pesan ?></td>
 												<td class="text-right"><?php echo $row->total_harga ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail" role="button">Detail</a></td>
-												<td class="text-right"><a class="btn btn-success" href="#" role="button">Bayar</a></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail/<?php echo $row->id_pesan ?>" role="button">Detail</a></td>
+												
+												<?php if($row->status_bayar == "belum"){ ?>
+													<td class="text-right"><a class="btn btn-success" href="<?php echo base_url()?>Dashboard/bayar/<?php echo $row->id_pesan ?>" role="button">Bayar</a></td>
+												<?php }else{ ?>
+													<td class="text-right"><a class="btn btn-success" href="<?php echo base_url()?>Dashboard/selesai/<?php echo $row->id_pesan ?>" role="button">Selesai</a></td>
+												<?php }; ?>
                                             </tr>
                                             <?php }; ?>
                                         </tbody>

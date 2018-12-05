@@ -58,14 +58,30 @@ class Dashboard extends CI_Controller {
  	}
 	
 	
-	public function Detail(){
-		$id = $this->uri->segment(4);
+	public function Detail($id){
 		$data = array('data' => $this->model->detail($id));
-  		$this->load->view('Detail', $data);
+  		$this->load->view('DetailPesanan', $data);
  	}
 	public function Verifikasi(){
-		$data = array('data' => $this->model->detail());
-  		$this->load->view('Detail');
+		$data = array('data' => $this->model->bayar());
+  		$this->load->view('Dashboard');
+ 	}
+	
+	public function bayar($id){
+			$this->model->status = "lunas";
+			$this->model->bayar($id);
+			redirect('Dashboard');
+ 	}
+	
+	public function selesai($id){
+			$this->model->status = "Selesai";
+			$this->model->selesai($id);
+			redirect('Dashboard');
+ 	}
+	
+	public function delete($id){
+		$this->model->delete($id);
+		redirect('Dashboard');
  	}
 
 }

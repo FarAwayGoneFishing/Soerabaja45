@@ -82,89 +82,55 @@
     </header>
     <!-- END header -->
 
-   
-    <!-- END section -->
+    <!-- END header -->
 
-    <div class="site-section bg-light">
+    
+    <section class="site-section">
       <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-          <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Popular Courses</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-            <p><a href="#" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Enroll Now</a></p>
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <div class="form-wrap">
+              <h2 class="mb-5">Ganti Password</h2>
+              <form action="<?php echo base_url()?>Akun/gantiPassword" method="post">
+                  
+                  <div class="row">  
+                    <div class="col-md-12 form-group">
+                      <label for="name">Password Lama</label>
+                      <input type="password" name="passnow" class="form-control py-2">
+                    </div>
+                  </div>
+				  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Password Baru</label>
+                      <input type="password" name="passnew" class="form-control py-2 ">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Ketik Ulang Password</label>
+                      <input type="password" name="repass" class="form-control py-2 ">
+                    </div>
+				  </div>
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input type="submit" value="Simpan" name="btnSubmit" class="btn btn-primary px-5 py-2">
+                    </div>
+                  </div>
+				  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label>
+						<b><p style="color: red; font-size: 16px;"><?php echo $model->notif;?></p></b>
+					</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid block-11 element-animate">
-        <div class="nonloop-block-11 owl-carousel">
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span>2,219/6,000</span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span>2,219/6,000</span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Introduction to CSS</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>1,903/3,000</span>
-                  </div>
-                  <div class="price text-right"><span>$10.99</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-              </div>
-            </div>
-          </div>
+    </section>
     
-    <!-- END section -->
-
-    <!-- END section -->
-
-    
-    <!-- END section -->
-
-    
-
-    <div class="py-5 block-22">
+	<div class="py-5 block-22">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
@@ -182,8 +148,8 @@
         </div>
       </div>
     </div>
-  
-    <footer class="site-footer">
+	
+     <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4">
@@ -249,7 +215,7 @@ Indonesia</span></li>
             <p class="float-md-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | FAR AWAY TEAM </p>
             <p class="float-md-right">
-             <a href="https://www.facebook.com/soerabaja45official/" class="fa fa-facebook p-2"></a>
+              <a href="https://www.facebook.com/soerabaja45official/" class="fa fa-facebook p-2"></a>
               <a href="https://www.youtube.com/channel/UCOYNDHL3btOOdoAotspKhlw" class="fa fa-youtube p-2"></a>
               <a href="https://www.instagram.com/soerabaja_45/" class="fa fa-instagram p-2"></a>
             </p>
@@ -257,6 +223,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
       </div>
     </footer>
+
+
     <!-- END footer -->
     
     <!-- loader -->
