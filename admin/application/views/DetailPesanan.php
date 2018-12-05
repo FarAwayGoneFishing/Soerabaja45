@@ -72,11 +72,11 @@
                                 </li>
                             </ul>
                         </li>
-                         <li>
+                         <li class="active has-sub">
                             <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
-                        <li class="active has-sub">
+                        <li>
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
@@ -100,7 +100,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li>
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-primary">5</span></a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
@@ -123,7 +123,7 @@
                             <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
-                        <li class="active has-sub">
+                        <li>
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
@@ -197,11 +197,11 @@
                         
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Produk Offset</h2>
+                                <h2 class="title-1 m-b-25">Daftar Produk Digital Offset</h2>
                                 <div class="table-responsive table--no-card m-b-40">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
-                                           <tr>
+                                            <tr>
                                                 <th>Id Produk</th>
                                                 <th>Nama</th>
                                                 <th>Kertas</th>
@@ -220,7 +220,7 @@
                                                 <td class="text-right">$999.00</td>
 												<td class="text-right">$999.00</td>
 												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail" role="button">Ubah Harga</a></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail" role="button">Ubah Harga</a></td>
                                                 
                                             </tr>
                                             <tr>
@@ -230,10 +230,9 @@
                                                 <td class="text-right">$756.00</td>
 												<td class="text-right">$999.00</td>
 												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail" role="button">Ubah Harga</a></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail" role="button">Ubah Harga</a></td>
                                                 
                                             </tr>
-                                            
                                         </tbody>
                                     </table>
                                 </div>

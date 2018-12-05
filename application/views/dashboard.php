@@ -61,7 +61,7 @@
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-				<?php if(isset($_SESSION["nama"])){
+				<?php if(isset($_SESSION["id_user"])){
 				echo '<a href="login/logout">Keluar</a>';
 				}else {
                 echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';

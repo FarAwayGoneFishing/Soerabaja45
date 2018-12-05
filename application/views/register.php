@@ -97,9 +97,18 @@
               <form action="Register" method="post">
                   
                   <div class="row">
+					  <label>
+						<b><p style="color: red; font-size: 16px;"><?php echo $model->notif;?></p></b>
+					</label>
                     <div class="col-md-12 form-group">
                       <label for="name">Nama Lengkap</label>
                       <input type="text" name="nama" class="form-control py-2">
+                    </div>
+                  </div>
+				  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Username</label>
+                      <input type="text" name="username" class="form-control py-2 ">
                     </div>
                   </div>
                   <div class="row">

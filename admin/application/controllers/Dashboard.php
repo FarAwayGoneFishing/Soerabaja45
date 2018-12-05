@@ -27,7 +27,33 @@ class Dashboard extends CI_Controller {
   		$this->load->view('Dashboard3', $data);
  	}
 		public function riwayat(){
-		$data = array('data' => $this->model->data_riwayat());
+		if(isset($_GET['filter']) && ! empty($_GET['filter'])){ // Cek apakah user telah memilih filter dan klik tombol tampilkan
+                $filter = $_GET['filter']; // Ambil data filder yang dipilih user
+                if($filter == '1'){ // Jika filter nya 1 (per tanggal)
+                    $tgl = $_GET['tanggal'];
+                    
+                    $transaksi = $this->model->view_by_date($tgl); // Panggil fungsi view_by_date yang ada di TransaksiModel
+
+                }else if($filter == '2'){ // Jika filter nya 2 (per bulan)
+                    $bulan = $_GET['bulan'];
+                    $tahun = $_GET['tahun'];
+                    $nama_bulan = array('', 'Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember');
+                    
+                    $transaksi = $this->model->view_by_month($bulan, $tahun); // Panggil fungsi view_by_month yang ada di TransaksiModel
+
+                }else{ // Jika filter nya 3 (per tahun)
+                    $tahun = $_GET['tahun'];
+                    
+                    $transaksi = $this->model->view_by_year($tahun); // Panggil fungsi view_by_year yang ada di TransaksiModel
+                }
+                
+        }else{ // Jika user tidak mengklik tombol tampilkan
+            $transaksi = $this->model->data_riwayat();
+            // Panggil fungsi view_all yang ada di TransaksiModel
+        }
+			
+		$data['option_tahun'] = $this->model->option_tahun();
+		$data['row'] = $this->model->data_riwayat();
   		$this->load->view('Riwayat', $data);
  	}
 	

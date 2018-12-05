@@ -100,11 +100,11 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li>
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Daftar Pesanan</a>
+                                <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-primary">5</span></a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                               <li>
+                                <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
@@ -129,8 +129,9 @@
                         </li>
                         <li>
                             <a href="<?php echo base_url()?>Pesan">
-                                <i class="far fa-check-square"></i>Pesan Konsumen</a>
+                                <i class="far fa-check-square"></i>Pesan Konsumen <span class="badge badge-success">2</span></a>
                         </li>
+                            
                     </ul>
                 </nav>
             </div>
@@ -151,87 +152,6 @@
                                 </button>
                             </form>
                             <div class="header-button">
-                                <div class="noti-wrap">
-                                    
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-email"></i>
-                                        <span class="quantity">1</span>
-                                        <div class="email-dropdown js-dropdown">
-                                            <div class="email__title">
-                                                <p>You have 3 New Emails</p>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="images/icon/avatar-06.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, 3 min ago</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="images/icon/avatar-05.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, Yesterday</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__item">
-                                                <div class="image img-cir img-40">
-                                                    <img src="images/icon/avatar-04.jpg" alt="Cynthia Harvey" />
-                                                </div>
-                                                <div class="content">
-                                                    <p>Meeting about new dashboard...</p>
-                                                    <span>Cynthia Harvey, April 12,,2018</span>
-                                                </div>
-                                            </div>
-                                            <div class="email__footer">
-                                                <a href="#">See all emails</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-notifications"></i>
-                                        <span class="quantity">3</span>
-                                        <div class="notifi-dropdown js-dropdown">
-                                            <div class="notifi__title">
-                                                <p>You have 3 Notifications</p>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c1 img-cir img-40">
-                                                    <i class="zmdi zmdi-email-open"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>You got a email notification</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c2 img-cir img-40">
-                                                    <i class="zmdi zmdi-account-box"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>Your account has been blocked</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c3 img-cir img-40">
-                                                    <i class="zmdi zmdi-file-text"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>You got a new file</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__footer">
-                                                <a href="#">All notifications</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         
@@ -279,29 +199,74 @@
                             <div class="col-lg-12">
                                 <h2 class="title-1 m-b-25">Daftar Pesanan Offset</h2>
                                 <div class="table-responsive table--no-card m-b-40">
+									<form method="get" action="">
+                                        <label>Filter</label><br>
+                                        <!-- <div class="rs-select2--light rs-select2--sm"> -->
+                                        <select class="js-select2" name="filter" id="filter">
+                                            <option value="">Pilih</option>
+                                            <option value="1">Per Tanggal</option>
+                                            <option value="2">Per Bulan</option>
+                                            <option value="3">Per Tahun</option>
+                                        </select><div class="dropDownSelect2"></div>
+                                        <br />
+                                        <div id="form-tanggal">
+                                            <label>Tanggal</label><br>
+                                            <input type="text" name="tanggal" class="input-tanggal" />
+                                            <br />
+                                        </div>
+                                        <div id="form-bulan">
+                                            <label>Bulan</label><br>
+                                            <select name="bulan">
+                                                <option value="">Pilih</option>
+                                                <option value="1">Januari</option>
+                                                <option value="2">Februari</option>
+                                                <option value="3">Maret</option>
+                                                <option value="4">April</option>
+                                                <option value="5">Mei</option>
+                                                <option value="6">Juni</option>
+                                                <option value="7">Juli</option>
+                                                <option value="8">Agustus</option>
+                                                <option value="9">September</option>
+                                                <option value="10">Oktober</option>
+                                                <option value="11">November</option>
+                                                <option value="12">Desember</option>
+                                            </select>
+                                            <br />
+                                        </div>
+                                        <div id="form-tahun">
+                                            <label>Tahun</label><br>
+                                            <select name="tahun">
+                                                <option value="">Pilih</option>
+                                                <?php
+                                                foreach($option_tahun as $data){ // Ambil data tahun dari model yang dikirim dari controller
+                                                    echo '<option value="'.$data->tahun.'">'.$data->tahun.'</option>';
+                                                }
+                                                ?>
+                                            </select>
+                                            <br />
+                                        </div>
+                                        <button type="submit" class="btn btn-info">Tampilkan</button>
+                                        <a href="<?php echo base_url('Dashboard/Riwayat'); ?>">Reset Filter</a>
+                                    </form>
+									<hr>
+									
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
                                             <tr>
-                                                <th>Tanggal</th>
-                                                <th>Estimasi waktu</th>
+                                                <th>No.</th>
+												<th>Nama</th>
                                                 <th>Produk</th>
-                                                <th class="text-right">Kertas</th>
-                                                <th class="text-right">Ukuran</th>
-												<th class="text-right">Warna</th>
 												<th class="text-right">Jumlah</th>
                                                 <th class="text-right">Total Harga</th>
 												<th class="text-right">Detail</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-											<?php foreach($data as $row){ ?>
+											<?php $no = "1"; foreach($row as $row){ ?>
                                             <tr>
-                                                <td><?php echo $row->tanggal ?></td>
-                                                <td><?php echo $row->estimasi ?></td>
+                                                <td><?php echo $no; $no = $no+1;  ?></td>
+												<td><?php echo $row->nama_user ?></td>
                                                 <td><?php echo $row->nama_produk ?></td>
-                                                <td class="text-right"><?php echo $row->kertas ?></td>
-                                                <td class="text-right"><?php echo $row->ukuran ?></td>
-                                                <td class="text-right"><?php echo $row->tambah_warna ?></td>
 												<td class="text-right"><?php echo $row->jumlah_pesan ?></td>
 												<td class="text-right"><?php echo $row->total_harga ?></td>
 												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail" role="button">Detail</a></td>
@@ -321,11 +286,36 @@
 
     </div>
 
-    <!-- Jquery JS-->
-    <script src="<?php echo base_url('assetsa/vendor/jquery-3.2.1.min.js')?>"></script>
+		<!-- Jquery JS-->
+    <script src="<?php echo base_url('assetsa/vendor/jquery-3.3.1.js')?>" type="text/javascript"></script>
+	<script src="<?php echo base_url('assetsa/vendor/jquery-ui.js')?>" type="text/javascript"></script>
     <!-- Bootstrap JS-->
-    <script src="<?php echo base_url('assetsa/vendor/bootstrap-4.1/popper.min.js')?>"></script>
-    <script src="<?php echo base_url('assetsa/vendor/bootstrap-4.1/bootstrap.min.js')?>"></script>
+    <script src="<?php echo base_url('assetsa/vendor/bootstrap-4.1/popper.min.js')?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assetsa/vendor/bootstrap-4.1/bootstrap.min.js')?>" type="text/javascript"></script>
+		
+    <script>
+    $(document).ready(function(){ // Ketika halaman selesai di load
+        $('.input-tanggal').datepicker({
+            dateFormat: 'yy-mm-dd' // Set format tanggalnya jadi yyyy-mm-dd
+        });
+        $('#form-tanggal, #form-bulan, #form-tahun').hide(); // Sebagai default kita sembunyikan form filter tanggal, bulan & tahunnya
+        $('#filter').change(function(){ // Ketika user memilih filter
+            if($(this).val() == '1'){ // Jika filter nya 1 (per tanggal)
+                $('#form-bulan, #form-tahun').hide(); // Sembunyikan form bulan dan tahun
+                $('#form-tanggal').show(); // Tampilkan form tanggal
+            }else if($(this).val() == '2'){ // Jika filter nya 2 (per bulan)
+                $('#form-tanggal').hide(); // Sembunyikan form tanggal
+                $('#form-bulan, #form-tahun').show(); // Tampilkan form bulan dan tahun
+            }else{ // Jika filternya 3 (per tahun)
+                $('#form-tanggal, #form-bulan').hide(); // Sembunyikan form tanggal dan bulan
+                $('#form-tahun').show(); // Tampilkan form tahun
+            }
+            $('#form-tanggal input, #form-bulan select, #form-tahun select').val(''); // Clear data pada textbox tanggal, combobox bulan & tahun
+        })
+    })     
+   </script>
+
+    
     <!-- Vendor JS       -->
     <script src="<?php echo base_url('assetsa/vendor/slick/slick.min.js')?>">
     </script>
