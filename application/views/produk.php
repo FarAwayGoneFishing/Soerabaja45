@@ -38,8 +38,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="courses">Digital Offset</a>
-                  <a class="dropdown-item" href="courses">Offset</a>
+                  <a class="dropdown-item" href="digoffset">Digital Offset</a>
+                  <a class="dropdown-item" href="offset">Offset</a>
                 </div>
 
               </li>
@@ -47,8 +47,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">Galeri</a>
-                  <a class="dropdown-item" href="#">Lokasi</a>
+                  <a class="dropdown-item" href="galeri">Galeri</a>
+                  <a class="dropdown-item" href="lokasi">Lokasi</a>
                 </div>
 
               </li>
@@ -61,7 +61,7 @@
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="admin">Masuk Akun</a> / <a href="register">Daftar Akun</a>
+                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
               </li>
             </ul>
             
@@ -191,8 +191,8 @@
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">Digital Offset</a></li>
-                  <p><li><a href="#">Offset</a></li></p>
+                  <li><a href="digoffset">Digital Offset</a></li>
+                  <p><li><a href="offset">Offset</a></li></p>
                 </ul>
               </div>
             </div>

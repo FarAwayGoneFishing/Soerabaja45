@@ -25,7 +25,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,7 +33,7 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
+                <a class="nav-link active" href="dashboard">Beranda</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
@@ -47,35 +47,24 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">Galeri</a>
-                  <a class="dropdown-item" href="#">Lokasi</a>
+                  <a class="dropdown-item" href="galeri">Galeri</a>
+                  <a class="dropdown-item" href="lokasi">Lokasi</a>
                 </div>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>Tentang">Tentang Kami</a>
+                <a class="nav-link" href="tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
+                <a class="nav-link" href="kontak">Kontak</a>
               </li>
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-				<?php if(isset($_SESSION["id_user"])){ ?>
-				  
-				<li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
-                	<div class="dropdown-menu" aria-labelledby="dropdown04">
-                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
-                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
-                	</div>
-              	</li>
-				
-				<?php }else {
-                echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
-				}?>
+                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
+              </li>
             </ul>
+            
           </div>
         </div>
       </nav>
@@ -89,102 +78,19 @@
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Produk Offset</h2>
-            <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
+            <h2 class="text-primary heading">Lokasi</h2>
+            <p>Soerabaja'45</p>
           </div>
         </div>
       </div>
       <div class="container-fluid block-11 element-animate">
         <div class="nonloop-block-11 owl-carousel">
-          
 
-           <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img5.jpg" width="450" height="405" alt="Image">
-                </figure>
-                <div class="text">
-                 <center><h2 style="font-family:verdana;"class="heading"><a href="#">Sertifikat</a></h2></center>
-                  <p class="mb-4">Cetak sertifikatmu sendiri..</p> 
-  <p>Cetak sertifikat kini nggak perlu ribet dan nggak perlu lama lagi menunggu</p> 
-  <p>So.. ,buat kamu yang sudah kepepet deadline buat cetak sertifikat</p> 
-  <p>Langsung saja hubungi atau datang di Kantor Kami, di JL.Jawa 12 A,SUMBERSARI,JEMBER</p> 
-  <p>Harga mulai Rp 2.500/lembar. Order bersama kami insyaAllah terbaik dan memuaskan deh</p> 
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                    <div class="price text-left"><del class="mr-3"></del><span>Detail</span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img22.jpeg" width="450" height="405" alt="Image">
-                </figure>
-                <div class="text">
-                 <center><h2 style="font-family:verdana;"class="heading"><a href="#">Slip</a></h2></center>
-                 <p class="mb-4">Tidak perlu bingung dalam mencetak slip untuk rekapan gaji karyawan. 
-    Dan juga mencetak dalam jumlah banyak.Kini Soerabaja'45 bisa membantu anda.
-    Silahkan hubungi CS online kami WA 0811 366 1927</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                    <div class="price text-left"><del class="mr-3"></del><span>Detail</span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d987.331987466518!2d113.71554423787829!3d-8.169677526293784!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfcda8f9a10b745e0!2sSoerabaja45+Cab.+Jawa!5e0!3m2!1sid!2sid!4v1543291713420" width="1300" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 
 
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="http://localhost/Soerabaja45/assets/images/img23.jpg" width="450" height="405" alt="Image">
-              </figure>
-              <div class="text">
-                <center><h2 style="font-family:verdana;"class="heading"><a href="#">Tiket</a></h2></center>
-                  <p class="mb-4">Cetak Tiket ala sticker hanya di Soerabaja'45..
-    Bisa desain sendiri dan gak perlu bingung jika belum punya desain. 
-    Kami siap membuat desain tiket sesuai dengan keinginan Customer.
-    Pesan sekarang sebelum kebanjiran orderan..</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                    <div class="price text-left"><del class="mr-3"></del><span>Detail</span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!--<div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img90.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <center><h2 class="heading"><a href="#">Pin Peniti</a></h2></center>
-                  <p class="mb-4">Harga Rp 4.250/pcs</p>
-                    <p>Minimal order 10 pcs</p>
-                    <p>Diameter 4.4 cm</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
-                  </div>
-                </div>
-              </div>
-          </div> -->
 
 
         </div>

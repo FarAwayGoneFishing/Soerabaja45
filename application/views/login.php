@@ -1,22 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Login</title>
+    <title>Percetakan Online</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="<?php echo base_url()?>assets/https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
   </head>
   <body>
     
@@ -46,8 +47,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">Galeri</a>
-                  <a class="dropdown-item" href="#">Lokasi</a>
+                  <a class="dropdown-item" href="galeri">Galeri</a>
+                  <a class="dropdown-item" href="lokasi">Lokasi</a>
                 </div>
 
               </li>
@@ -158,8 +159,8 @@
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">Digital Offset</a></li>
-                  <p><li><a href="#">Offset</a></li></p>
+                  <li><a href="digoffset">Digital Offset</a></li>
+                  <p><li><a href="offset">Offset</a></li></p>
                 </ul>
               </div>
             </div>

@@ -47,8 +47,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">Galeri</a>
-                  <a class="dropdown-item" href="#">Lokasi</a>
+                  <a class="dropdown-item" href="galeri">Galeri</a>
+                  <a class="dropdown-item" href="lokasi">Lokasi</a>
                 </div>
 
               </li>
@@ -61,13 +61,8 @@
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-				<?php if(isset($_SESSION["nama"])){
-				echo '<a href="login/logout">Keluar</a>';
-				}else {
-                echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
-				}
-				?>
-			</li>
+                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
+              </li>
             </ul>
             
           </div>
@@ -83,9 +78,9 @@
   
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h2 class="heading text-center mb-4">CV. Soerabaja45 Indovista</h2>
+                <h2 class="heading text-center mb-4" style="color: orange;">CV. Soerabaja45 Indovista</h2>
                 
-                <p class="text-center mb-5">Jalan Jawa No.28, Sumbersari, Kabupaten Jember ,Jawa Timur, 68121, Indonesia</p>
+                <p class="text-center mb-5" style="color: orange;">Jalan Jawa No.28, Sumbersari, Kabupaten Jember ,Jawa Timur, 68121, Indonesia</p>
                 <p class="text-center"><a href="register" class="btn py-3 px-5">Daftarkan Akun Anda Sekarang</a></p>
               </div>
             </div>
@@ -333,7 +328,7 @@
         
     <!-- END .block-2 -->
 
-	<div class="element-animated">	  
+
     <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
@@ -384,7 +379,6 @@
                 </div>
               </div>
             </div>  
-
             </div>
           </div>
         </div>
@@ -429,8 +423,8 @@
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">Digital Offset</a></li>
-                  <p><li><a href="#">Offset</a></li></p>
+                  <li><a href="digoffset">Digital Offset</a></li>
+                  <p><li><a href="offset">Offset</a></li></p>
                 </ul>
               </div>
             </div>
