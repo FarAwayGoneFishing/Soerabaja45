@@ -13,16 +13,23 @@ class register extends CI_Controller {
  	function index(){
 		if(isset($_POST['btnSubmit'])){
 			if($this->input->post('password') == $this->input->post('repassword')){
-			$data = $this->model->input(array(
-			'nama_user' => $this->input->post('nama'),
-			'no_telp' => $this->input->post('hp'),
-			'alamat' => $this->input->post('alamat'),
-			'password' => $this->input->post('password')
-	));
-			redirect('login');
-		}
+				$data = $this->model->input(array(
+				'id_user' => $this->model->get_id(),
+				'nama_user' => $this->input->post('nama'),
+				'username' => $this->input->post('username'),
+				'no_telp' => $this->input->post('hp'),
+				'alamat' => $this->input->post('alamat'),
+				'password' => $this->input->post('password')
+				));
+				redirect('login');
+			}
+			else{
+				$this->model->notif = "Password yang dimasukan tidak sama !!!";
+				$this->load->view('register', ['model'=>$this->model]);
+				
+			}
 	} else{
-		$this->load->view('register');
+		$this->load->view('register', ['model'=>$this->model]);
 	}
 	}
 }

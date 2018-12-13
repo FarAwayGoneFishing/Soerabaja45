@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
-    <title>Detail Produk</title>
+    <title>Account</title>
 
     <!-- Fontfaces CSS-->
     <link href="<?php echo base_url('assetsa/css/font-face.css')?>" rel="stylesheet" media="all">
@@ -76,7 +76,7 @@
                             <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
-                        <li class="active has-sub">
+                        <li>
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
@@ -123,7 +123,7 @@
                             <a href="<?php echo base_url()?>Digoffset">
                                 <i class="fas fa-copy"></i>Produk Digital Offset</a>
                         </li>
-                        <li class="active has-sub">
+                        <li>
                             <a href="<?php echo base_url()?>Offset">
                                 <i class="fas fa-calendar"></i>Produk Offset</a>
                         </li>
@@ -194,52 +194,53 @@
             <div class="main-content">
                 <div class="section__content section__content--p20">
                     <div class="container-fluid">
-                        
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Daftar Produk Offset</h2>
-                                <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                           <tr>
-                                                <th>Id Produk</th>
-                                                <th>Nama</th>
-                                                <th>Kertas</th>
-                                                <th class="text-right">Ukuran</th>
-												<th class="text-right">Jumlah</th>
-												<th class="text-right">Harga</th>
-                                                <th class="text-right">Pilihan</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-											
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>iPhone X 64Gb Grey</td>
-                                                <td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail" role="button">Ubah Harga</a></td>
-                                                
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-28 01:22</td>
-                                                <td>100397</td>
-                                                <td>Samsung S8 Black</td>
-                                                <td class="text-right">$756.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail" role="button">Ubah Harga</a></td>
-                                                
-                                            </tr>
-                                            
-                                        </tbody>
-                                    </table>
+                        <div class="col-lg-8">
+                               <div class="card">
+                                    <div class="card-header">
+                                        <strong>Ganti</strong> Password
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="gantiPassword" method="post" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Password anda</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="password" name="passnow" placeholder="Password anda Sekarang..." class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Password Baru</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="password" name="passnew" placeholder="Password baru..." class="form-control">
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Masukan Lagi</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="password" name="repass" placeholder="Masukan lagi password baru anda..." class="form-control">
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+												<div class="col col-md-8">
+													<label>
+														<b><p style="color: red; font-size: 16px;"><?php echo $model->notif;?></p></b>
+													</label>
+												</div>
+											</div>
+                                        		<button id="save-button" type="submit" name="btnSubmit" class="btn btn-sm btn-info">
+                                             		<span>Simpan</span>
+                                        		</button>
+                                    		
+                                        </form>
+                                    </div>
+                                    
                                 </div>
                             </div>
-						</div>
-                        
                     </div>
                 </div>
             </div>

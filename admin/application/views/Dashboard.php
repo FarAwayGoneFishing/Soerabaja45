@@ -164,10 +164,17 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
+<<<<<<< HEAD
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
                                     <a href="index.html">Dashboard 1</a>
+=======
+                                <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-primary">5</span></a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li class="active has-sub">
+                                    <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
+>>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
                                 </li>
                                 <li>
                                     <a href="index2.html">Dashboard 2</a>
@@ -197,6 +204,7 @@
                                 <i class="fas fa-calendar-alt"></i>Calendar</a>
                         </li>
                         <li>
+<<<<<<< HEAD
                             <a href="map.html">
                                 <i class="fas fa-map-marker-alt"></i>Maps</a>
                         </li>
@@ -253,6 +261,10 @@
                                     <a href="typo.html">Typography</a>
                                 </li>
                             </ul>
+=======
+                            <a href="<?php echo base_url()?>Pesan">
+                                <i class="far fa-check-square"></i>Pesan Konsumen <span class="badge badge-success">2</span></a>
+>>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
                         </li>
                     </ul>
                 </nav>
@@ -274,6 +286,7 @@
                                 </button>
                             </form>
                             <div class="header-button">
+<<<<<<< HEAD
                                 <div class="noti-wrap">
                                     <div class="noti__item js-item-menu">
                                         <i class="zmdi zmdi-comment-more"></i>
@@ -386,6 +399,8 @@
                                         </div>
                                     </div>
                                 </div>
+=======
+>>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
@@ -592,6 +607,7 @@
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
                                             <tr>
+<<<<<<< HEAD
                                                 <th>date</th>
                                                 <th>order ID</th>
                                                 <th>name</th>
@@ -664,10 +680,37 @@
                                                 <td class="text-right">$10.00</td>
                                                 <td class="text-right">3</td>
                                                 <td class="text-right">$30.00</td>
+=======
+                                                <th>No.</th>
+												<th>Nama</th>
+                                                <th>Produk</th>
+												<th class="text-right">Jumlah</th>
+                                                <th class="text-right">Total Harga</th>
+												<th class="text-right">Detail</th>
+												<th class="text-right">Verifikasi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+											<?php $no = "1"; foreach($data as $row){ ?>
+                                            <tr>
+                                                <td><?php echo $no; $no = $no+1;  ?></td>
+												<td><?php echo $row->nama_user ?></td>
+                                                <td><?php echo $row->nama_produk ?></td>
+												<td class="text-right"><?php echo $row->jumlah_pesan ?></td>
+												<td class="text-right"><?php echo $row->total_harga ?></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail/<?php echo $row->id_pesan ?>" role="button">Detail</a></td>
+												
+												<?php if($row->status_bayar == "belum"){ ?>
+													<td class="text-right"><a class="btn btn-success" href="<?php echo base_url()?>Dashboard/bayar/<?php echo $row->id_pesan ?>" role="button">Bayar</a></td>
+												<?php }else{ ?>
+													<td class="text-right"><a class="btn btn-success" href="<?php echo base_url()?>Dashboard/selesai/<?php echo $row->id_pesan ?>" role="button">Selesai</a></td>
+												<?php }; ?>
+>>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
+<<<<<<< HEAD
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="title-1 m-b-25">Top countries</h2>
@@ -976,6 +1019,10 @@
                         </div>
                     </div>
                 </div>
+=======
+                            </div> 
+                  		</div>
+>>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
