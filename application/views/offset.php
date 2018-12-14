@@ -38,15 +38,9 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-<<<<<<< HEAD
-                  <a class="dropdown-item" href="digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="offset">Offset</a>
-=======
                   <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
                   <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
->>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
                 </div>
-
               </li>
 
               <li class="nav-item dropdown">
@@ -109,7 +103,7 @@
                   <img src="http://localhost/Soerabaja45/assets/images/img5.jpg" width="450" height="405" alt="Image">
                 </figure>
                 <div class="text">
-                 <center><h2 style="font-family:verdana;"class="heading"><a href="#">Sertifikat</a></h2></center>
+                 <center><h2 class="heading">Sertifikat</h2></center>
                   <p class="mb-4">Cetak sertifikatmu sendiri..</p> 
   <p>Cetak sertifikat kini nggak perlu ribet dan nggak perlu lama lagi menunggu</p> 
   <p>So.. ,buat kamu yang sudah kepepet deadline buat cetak sertifikat</p> 
@@ -119,8 +113,8 @@
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-left"><del class="mr-3"></del><span>Detail</span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                    <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Pesan</a></span></div>
                   </div>
                 </div>
               </div>
@@ -132,7 +126,7 @@
                   <img src="http://localhost/Soerabaja45/assets/images/img22.jpeg" width="450" height="405" alt="Image">
                 </figure>
                 <div class="text">
-                 <center><h2 style="font-family:verdana;"class="heading"><a href="#">Slip</a></h2></center>
+                  <center><h2 class="heading">Slip</h2></center>
                  <p class="mb-4">Tidak perlu bingung dalam mencetak slip untuk rekapan gaji karyawan. 
     Dan juga mencetak dalam jumlah banyak.Kini Soerabaja'45 bisa membantu anda.
     Silahkan hubungi CS online kami WA 0811 366 1927</p>
@@ -140,8 +134,8 @@
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-left"><del class="mr-3"></del><span>Detail</span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                     <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                     <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Pesan</a></span></div>
                   </div>
                 </div>
               </div>
@@ -155,7 +149,7 @@
                 <img src="http://localhost/Soerabaja45/assets/images/img23.jpg" width="450" height="405" alt="Image">
               </figure>
               <div class="text">
-                <center><h2 style="font-family:verdana;"class="heading"><a href="#">Tiket</a></h2></center>
+                <center><h2 class="heading">Kalender Meja</h2></center>
                   <p class="mb-4">Cetak Tiket ala sticker hanya di Soerabaja'45..
     Bisa desain sendiri dan gak perlu bingung jika belum punya desain. 
     Kami siap membuat desain tiket sesuai dengan keinginan Customer.
@@ -164,8 +158,8 @@
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-left"><del class="mr-3"></del><span>Detail</span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                    <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Pesan</a></span></div>
                 </div>
               </div>
             </div>

@@ -1,10 +1,8 @@
 <?php
-<<<<<<< HEAD
+
 class Register_model extends CI_Model{
-=======
 class Register_Model extends CI_Model{
 	public $notif = "";
->>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
 	
 	function input($data = array()){
 		return $this->db->insert('tb_user',$data);

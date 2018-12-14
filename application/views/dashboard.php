@@ -58,13 +58,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
-            </ul>
-            <ul class="navbar-nav absolute-right">
+              <ul class="navbar-nav absolute-right">
               <li>
-<<<<<<< HEAD
                 <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
               </li>
-=======
+            </ul>
+            
 				<?php if(isset($_SESSION["id_user"])){ ?>
 				  
 				<li class="nav-item dropdown">
@@ -78,8 +77,8 @@
 				
 				<?php }else {
                 echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
-				}?>
->>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
+        }?>
+
             </ul>
           </div>
         </div>
@@ -296,10 +295,7 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          
-          
+          </div>  
         </div>
       </div>
 
