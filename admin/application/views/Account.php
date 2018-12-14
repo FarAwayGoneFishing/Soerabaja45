@@ -26,6 +26,7 @@
     <link href="<?php echo base_url('assetsa/vendor/slick/slick.css')?>" rel="stylesheet" media="all">
     <link href="<?php echo base_url('assetsa/vendor/select2/select2.min.css')?>" rel="stylesheet" media="all">
     <link href="<?php echo base_url('assetsa/vendor/perfect-scrollbar/perfect-scrollbar.css')?>" rel="stylesheet" media="all">
+	<script src="<?php echo base_url('assetsa/ckeditor/ckeditor.js')?>"></script>
 
     <!-- Main CSS-->
     <link href="<?php echo base_url('assetsa/css/theme.css')?>" rel="stylesheet" media="all">
@@ -213,7 +214,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="cc-number" class="control-label mb-1">Nomor Telepon</label>
-                                                <input id="cc-number" name="telpon" type="tel" class="form-control" value="<?php echo $data[0]->no_telp; ?>">
+												<textarea id="yolo" name="telpon" class="form-control" value="<?php echo $data[0]->no_telp; ?>"></textarea>
                                             </div>
                                             <div>
                                                 <button id="save-button" type="submit" name="btnSubmit" class="btn btn-lg btn-info btn-block mb-1">
@@ -242,7 +243,20 @@
 
     </div>
 
-    <!-- Jquery JS-->
+	<script>
+
+	  	ClassicEditor
+    .create( document.querySelector( '#yolo' ) )
+    .then( editor => {
+        console.log( editor );
+    } )
+    .catch( error => {
+        console.error( error );
+    } );
+	
+	  </script>
+	
+	<!-- Jquery JS-->
     <script src="<?php echo base_url('assetsa/vendor/jquery-3.2.1.min.js')?>"></script>
     <!-- Bootstrap JS-->
     <script src="<?php echo base_url('assetsa/vendor/bootstrap-4.1/popper.min.js')?>"></script>

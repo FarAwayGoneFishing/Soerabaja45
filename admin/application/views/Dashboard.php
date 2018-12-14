@@ -92,6 +92,28 @@
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
+		 
+		<script>
+		/* AJAX request to checker */
+		function check(){
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo base_url()?>Dashboard/checker',
+				dataType: 'json',
+				data: {
+					counter:$('#belumCetak').data('counter')
+				}
+			}).done(function( response ) {
+				/* update counter */
+				$('#belumCetak').data('counter',response.current);
+				/* check if with response we got a new update */
+				if(response.update==true){
+					$('#belumCetak').html(response.badge);
+				}
+			});
+		}
+		</script>	
+		
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
@@ -103,7 +125,7 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-primary">5</span></a>
+                                <i class="fas fa-table"></i>Daftar Pesanan <span id="belumCetak" class="badge badge-primary" data-counter="<?php echo $data_badge;?>"><?php echo $data_badge; ?></span></a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li class="active has-sub">
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
@@ -241,8 +263,8 @@
 
     </div>
 
-    <!-- Jquery JS-->
-    <script src="<?php echo base_url('assetsa/vendor/jquery-3.2.1.min.js')?>"></script>
+   <!-- Jquery JS-->
+    	<script src="<?php echo base_url('assetsa/vendor/jquery-3.2.1.min.js')?>"></script>
     <!-- Bootstrap JS-->
     <script src="<?php echo base_url('assetsa/vendor/bootstrap-4.1/popper.min.js')?>"></script>
     <script src="<?php echo base_url('assetsa/vendor/bootstrap-4.1/bootstrap.min.js')?>"></script>

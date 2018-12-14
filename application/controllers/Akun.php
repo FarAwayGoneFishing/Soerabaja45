@@ -58,6 +58,30 @@ class Akun extends CI_Controller {
   			$this->load->view('CPass', ['model'=>$this->model]);
 		}	
  	}
+	
+	public function pesan($id){
+		$data = array('data' => $this->model->data_pesanS($id));
+  		$this->load->view('Pesan', $data);
+ 	}
+	
+	
+	public function balas($id){
+		$kepada = $this->model->get_user($id);
+		if(isset($_POST['btnSubmit'])){
+			$data = $this->model->input(array(
+			'nama' => $_SESSION['nama'],
+			'telpon' => $_SESSION['telpon'],
+			'kepada' => "admin",
+			'isi' => $this->input->post('isi')
+	));
+			redirect("Akun/detail/$id");
+		}
+	}
+	
+	public function delete($id){
+		$this->model->delete($id);
+		redirect('Akun/pesan');
+	}
 
 }
 

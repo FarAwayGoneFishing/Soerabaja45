@@ -15,9 +15,15 @@ class Dashboard extends CI_Controller {
 	
 	
  	public function index(){
-		$data = array('data' => $this->model->data());
+		$data = array('data' => $this->model->get_news(),
+					  'data_badge'=> $this->model->check_changes(),
+					 'jumlah1' => $this->model->jumlah());
   		$this->load->view('Dashboard', $data);
  	}
+	public function checker(){
+		return $this->model->checker();
+	}
+	
 	public function digoffset(){
 		$data = array('data' => $this->model->data_digoffset());
   		$this->load->view('Dashboard2', $data);
@@ -83,7 +89,7 @@ class Dashboard extends CI_Controller {
 		$this->model->delete($id);
 		redirect('Dashboard');
  	}
-
+	
 }
 
 ?>
