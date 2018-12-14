@@ -25,7 +25,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,13 +33,13 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
+                <a class="nav-link active" href="dashboard">Beranda</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
+                  <a class="dropdown-item" href="digoffset">Digital Offset</a>
+                  <a class="dropdown-item" href="offset">Offset</a>
                 </div>
 
               </li>
@@ -53,34 +53,22 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>Tentang">Tentang Kami</a>
+                <a class="nav-link" href="tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
+                <a class="nav-link" href="kontak">Kontak</a>
               </li>
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-				<?php if(isset($_SESSION["id_user"])){ ?>
-				  
-				<li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
-                	<div class="dropdown-menu" aria-labelledby="dropdown04">
-                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
-                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
-                	</div>
-              	</li>
-				
-				<?php }else {
-                echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
-				}?>
+                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
+              </li>
             </ul>
+            
           </div>
         </div>
       </nav>
-    </header>
-    <!-- END header -->
+    </header>    <!-- END header -->
 
    
     <!-- END section -->
@@ -89,71 +77,30 @@
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Popular Courses</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-            <p><a href="#" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Enroll Now</a></p>
+            <h2 class="text-primary heading">Produk Digital Offset</h2>
+            <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
           </div>
         </div>
       </div>
       <div class="container-fluid block-11 element-animate">
-        <div class="nonloop-block-11 owl-carousel">
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span>2,219/6,000</span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
+        
 
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span>2,219/6,000</span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
+          <h2 class="heading"></h2>
+                  <p class="mb-4">Tahun Baru nih...?
+Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...
+Pasti butuh Kalender terbaru kan
+Cocok...!
+Soerabaja'45 lagi ADA PROMO KALENDER !
+Harga hanya Rp 1.000'an
+Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh</p>
+                    <div class="price text-center"><del class="mr-3"></del><span><a class="btn btn-primary" href="pembayaran">Pesan</a></span></div>
 
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Introduction to CSS</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>1,903/3,000</span>
-                  </div>
-                  <div class="price text-right"><span>$10.99</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-              </div>
-            </div>
-          </div>
+
+        </div>
+      </div>
+
+      
+    </div>
     
     <!-- END section -->
 

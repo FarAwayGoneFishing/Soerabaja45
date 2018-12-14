@@ -47,8 +47,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">Galeri</a>
-                  <a class="dropdown-item" href="#">Lokasi</a>
+                  <a class="dropdown-item" href="galeri">Galeri</a>
+                  <a class="dropdown-item" href="lokasi">Lokasi</a>
                 </div>
 
               </li>
@@ -85,22 +85,28 @@
    
     <!-- END section -->
 
-    <section class="site-section bg-light element-animate" id="section-counter">
+    <section class="site-section element-animate">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <figure>
-              <img src="http://localhost/Soerabaja45/assets/images/tempat.jpg" alt="Image placeholder" class="img-fluid"></figure>
-             <a href="https://www.youtube.com/watch?v=Bx323BLGdsk" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+            <div class="block-16">
+              <figure>
+                <img src="http://localhost/Soerabaja45/assets/images/tempat.jpg" alt="Image placeholder" class="img-fluid">
+                <a href="https://www.youtube.com/watch?v=Bx323BLGdsk" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
 
+                <!-- <a href="https://vimeo.com/45830194" class="button popup-vimeo" data-aos="fade-right" data-aos-delay="700"><span class="ion-ios-play"></span></a> -->
+
+              </figure>
+            </div>
           </div>
-          <div class="col-lg-5 ml-auto">
+          <div class="col-md-6 order-md-1">
+
             <div class="block-15">
               <div class="heading">
-                <h2>Profil Soerabaja'45</h2>
+                <h2>Produk Soerabaja'45</h2>
               </div>
               <div class="text mb-5">
-                <p>Bismillah, Assalamu'alaykum teman-teman</p>
+              <p>Bismillah, Assalamu'alaykum teman-teman</p>
 
                     <p>Bingung cari tempat percetakan yang bagus?
                     Mau nyetak dengan banyak harga diskon?</p>
@@ -121,19 +127,18 @@
                     <p>Jalan Kol. Soediono no.3 Bondowoso, Jawa Timur (Bondowoso)
                     </p>
               </div>
-            </div>
-
-            
-                  </div>
-                </div>
-                
-              </div>
+              <p><a href="#" class="btn btn-primary reverse py-2 px-4">Selengkapnya</a></p>
+              
             </div>
 
           </div>
+          
         </div>
+
       </div>
     </section>
+
+   
     
     <!-- END section -->
 
@@ -182,8 +187,8 @@
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">Digital Offset</a></li>
-                  <p><li><a href="#">Offset</a></li></p>
+                  <li><a href="digoffset">Digital Offset</a></li>
+                  <p><li><a href="offset">Offset</a></li></p>
                 </ul>
               </div>
             </div>

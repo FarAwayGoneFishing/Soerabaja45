@@ -240,8 +240,8 @@
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">Digital Offset</a></li>
-                  <p><li><a href="#">Offset</a></li></p>
+                  <li><a href="digoffset">Digital Offset</a></li>
+                  <p><li><a href="offset">Offset</a></li></p>
                 </ul>
               </div>
             </div>

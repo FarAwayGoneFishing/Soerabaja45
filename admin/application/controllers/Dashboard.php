@@ -8,16 +8,13 @@ class Dashboard extends CI_Controller {
 		$this->load->model('Dashboard_Model');
 		$this->model = $this->Dashboard_Model;
 		if(isset($_SESSION['user'])){
-			
-		}else{
-			redirect('Login');}
+              
+        }else{
+          redirect('Login');}
 	}
 	
-	
  	public function index(){
-		$data = array('data' => $this->model->get_news(),
-					  'data_badge'=> $this->model->check_changes(),
-					 'jumlah1' => $this->model->jumlah());
+		$data = array('data' => $this->model->data());
   		$this->load->view('Dashboard', $data);
  	}
 	public function checker(){

@@ -47,8 +47,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">Galeri</a>
-                  <a class="dropdown-item" href="#">Lokasi</a>
+                  <a class="dropdown-item" href="galeri">Galeri</a>
+                  <a class="dropdown-item" href="lokasi">Lokasi</a>
                 </div>
 
               </li>
@@ -101,22 +101,23 @@
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img20.jpg" alt="Image" class="img-fluid">
+                  <img src="http://localhost/Soerabaja45/assets/images/img0.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
-                 <center><h2 class="heading"><a href="#">Kalender</a></h2></center>
-                  <p class="mb-4">Tahun Baru nih...? </p>
-<p>Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...</p>
-<p>Pasti butuh Kalender terbaru kan</p>
-<p>Cocok...!</p>
-<p>Soerabaja'45 lagi ADA PROMO KALENDER !</p>
-<p>Harga hanya Rp 1.000'an</p>
-<p>Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh </p>
+                 <center><h2 class="heading">Kalender</h2></center>
+                  <p class="mb-4">Tahun Baru nih...?
+Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...
+Pasti butuh Kalender terbaru kan
+Cocok...!
+Soerabaja'45 lagi ADA PROMO KALENDER !
+Harga hanya Rp 1.000'an
+Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh</p>
                   <div class="meta d-flex align-items-center">
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="pembayaran">Pesan</a></span></div>
                   </div>
                 </div>
               </div>
@@ -128,7 +129,7 @@
                   <img src="http://localhost/Soerabaja45/assets/images/img21.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
-                 <center><h2 class="heading"><a href="#">Brosur</a></h2></center>
+                 <center><h2 class="heading">Brosur</h2></center>
                   <p class="mb-4">Tidak perlu keluar uang banyak untuk bikin brosur promosi usaha Anda. Yes, cukup 250 rb sdh bisa dapat 1000 lbr brosur fullcolor dg kertas artpaper 120gr ukrn A5 1 sisi. 
 Soal desain, jgn khawatir, kami punya banyak desainer handal yg siap membantu Anda.
 Silahkan hubungi CS online kami
@@ -138,7 +139,8 @@ Senin-sabtu jam 08.00 - 16.00</p>
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Pesan</a></span></div>
                   </div>
                 </div>
               </div>
@@ -152,7 +154,7 @@ Senin-sabtu jam 08.00 - 16.00</p>
                 <img src="http://localhost/Soerabaja45/assets/images/img2.jpg" alt="Image" class="img-fluid">
               </figure>
               <div class="text">
-                <center><h2 class="heading"><a href="#">ID Card</a></h2></center>
+                <center><h2 class="heading">ID Card</h2></center>
                   <p class="mb-4">Beri kesan pertama melalui kartu nama yang mewakili diri anda!
 
                   Sekarang cetak kartu nama hanya 22.000 per box! 
@@ -163,13 +165,14 @@ Senin-sabtu jam 08.00 - 16.00</p>
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Pesan</a></span></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!--<div class="item">
+          <div class="item">
             <div class="block-19">
                 <figure>
                   <img src="http://localhost/Soerabaja45/assets/images/img90.jpg" alt="Image" class="img-fluid">
@@ -183,11 +186,31 @@ Senin-sabtu jam 08.00 - 16.00</p>
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Pesan</a></span></div>
                   </div>
                 </div>
               </div>
-          </div> -->
+          </div>
+
+          <div class="item">
+            <div class="block-19">
+                <figure>
+                  <img src="http://localhost/Soerabaja45/assets/images/img4.jpg" alt="Image" class="img-fluid">
+                </figure>
+                <div class="text">
+                  <center><h2 class="heading"><a href="#">Poster / Flyer A3</a></h2></center>
+                  <p class="mb-4">beri kesan pertama yang tak terlupakan melalui banner dan flyer anda. soerabaja akan membantu mewujudkan kebutuhan anda. tunggu apa lagi? pilih spesifikasi yang anda butuhkan sekarang! </p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Pesan</a></span></div>
+                  </div>
+                </div>
+              </div>
+          </div>
 
 
         </div>
@@ -243,8 +266,8 @@ Senin-sabtu jam 08.00 - 16.00</p>
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="#">Digital Offset</a></li>
-                  <p><li><a href="#">Offset</a></li></p>
+                  <li><a href="digoffset">Digital Offset</a></li>
+                  <p><li><a href="offset">Offset</a></li></p>
                 </ul>
               </div>
             </div>
