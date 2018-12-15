@@ -25,7 +25,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,13 +33,13 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="dashboard">Beranda</a>
+                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="offset">Offset</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
                 </div>
 
               </li>
@@ -47,71 +47,109 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="galeri">Galeri</a>
-                  <a class="dropdown-item" href="lokasi">Lokasi</a>
+                  <a class="dropdown-item" href="#">Galeri</a>
+                  <a class="dropdown-item" href="#">Lokasi</a>
                 </div>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="tentang">Tentang Kami</a>
+                <a class="nav-link" href="<?php echo base_url()?>Tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="kontak">Kontak</a>
+                <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
-              </li>
+				<?php if(isset($_SESSION["id_user"])){ ?>
+				  
+				<li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
+                	<div class="dropdown-menu" aria-labelledby="dropdown04">
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
+						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
+                	</div>
+              	</li>
+				
+				<?php }else {
+                echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
+				}?>
             </ul>
-            
           </div>
         </div>
       </nav>
-    </header>    <!-- END header -->
+    </header>
+    <!-- END header -->
 
-   
-    <!-- END section -->
+    <!-- END header -->
 
-    <div class="site-section bg-light">
+    
+    <section class="site-section">
       <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-          <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Produk Digital Offset</h2>
-            <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <div class="form-wrap">
+              <h2 class="mb-5">Pesan</h2>
+               <div class="row">
+                            <div class="col-lg-12">
+                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                                    <div class="au-card-title" >
+                                        <div class="bg-overlay bg-overlay--blue"></div>
+                                        <h3>
+                                            <i class="zmdi zmdi-comment-text"></i></h3> 
+                                    </div>
+                                    <div class="au-card">
+                                            <div class="au-chat__title">
+                                                <div class="au-chat-info">
+                                                    <span class="nick">
+                                                        <a><?php echo $data[0]->nama ?></a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="au-chat__content">
+												<?php foreach($data as $data){
+														if($data->kepada == "admin"){ ?>
+                                                <div class="recei-mess-wrap">
+                                                    <span class="mess-time"><?php echo $data->waktu ?></span>
+                                                    <div class="recei-mess__inner">
+                                                        <div class="recei-mess-list">
+															
+                                                            <div class="recei-mess"><?php echo $data->isi ?></div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+												<?php }else{ ?>
+                                                <div class="send-mess-wrap">  
+                                                    <div class="send-mess__inner">
+                                                        <div class="send-mess-list">
+                                                            <div class="send-mess"><?php echo $data->isi ?></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+												<?php };}; ?>
+                                            </div>
+                                            <div class="au-chat-textfield">
+                                                <form action="../balas/<?php echo $this->uri->segment(3); ?>" class="au-form-icon" method="post">
+                                                    <input name="isi" class="au-input au-input--full au-input--h65" type="text" placeholder="Tulis Pesan">
+                                                    <button name="btnSubmit" class="au-input-icon">
+                                                        <i class="zmdi zmdi-mail-send"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+				
+              </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid block-11 element-animate">
-        
-
-          <h2 class="heading"></h2>
-                  <p class="mb-4">Tahun Baru nih...?
-Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...
-Pasti butuh Kalender terbaru kan
-Cocok...!
-Soerabaja'45 lagi ADA PROMO KALENDER !
-Harga hanya Rp 1.000'an
-Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh</p>
-                    <div class="price text-center"><del class="mr-3"></del><span><a class="btn btn-primary" href="pembayaran">Pesan</a></span></div>
-
-
-        </div>
-      </div>
-
-      
-    </div>
+    </section>
     
-    <!-- END section -->
-
-    <!-- END section -->
-
-    
-    <!-- END section -->
-
-    
-
-    <div class="py-5 block-22">
+	<div class="py-5 block-22">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
@@ -129,8 +167,8 @@ Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kam
         </div>
       </div>
     </div>
-  
-    <footer class="site-footer">
+	
+     <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4">
@@ -149,8 +187,8 @@ Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kam
               </div>
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="digoffset">Digital Offset</a></li>
-                  <li><a href="offset">Offset</a></li>
+                  <li><a href="#">Digital Offset</a></li>
+                  <p><li><a href="#">Offset</a></li></p>
                 </ul>
               </div>
             </div>
@@ -196,7 +234,7 @@ Indonesia</span></li>
             <p class="float-md-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | FAR AWAY TEAM </p>
             <p class="float-md-right">
-             <a href="https://www.facebook.com/soerabaja45official/" class="fa fa-facebook p-2"></a>
+              <a href="https://www.facebook.com/soerabaja45official/" class="fa fa-facebook p-2"></a>
               <a href="https://www.youtube.com/channel/UCOYNDHL3btOOdoAotspKhlw" class="fa fa-youtube p-2"></a>
               <a href="https://www.instagram.com/soerabaja_45/" class="fa fa-instagram p-2"></a>
             </p>
@@ -204,6 +242,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
       </div>
     </footer>
+
+
     <!-- END footer -->
     
     <!-- loader -->

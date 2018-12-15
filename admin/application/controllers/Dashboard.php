@@ -5,14 +5,22 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->load->library('session');
 		$this->load->helper('url');
+		$this->load->model('Dashboard_Model');
+		$this->model = $this->Dashboard_Model;
+		if(isset($_SESSION['user'])){
+              
+        }else{
+          redirect('Login');}
 	}
+	
  	public function index(){
-<<<<<<< HEAD
-  		$this->load->view('Dashboard');
-=======
 		$data = array('data' => $this->model->data());
   		$this->load->view('Dashboard', $data);
  	}
+	public function checker(){
+		return $this->model->checker();
+	}
+	
 	public function digoffset(){
 		$data = array('data' => $this->model->data_digoffset());
   		$this->load->view('Dashboard2', $data);
@@ -77,9 +85,8 @@ class Dashboard extends CI_Controller {
 	public function delete($id){
 		$this->model->delete($id);
 		redirect('Dashboard');
->>>>>>> 7b232de97b915e5345a05c2d3adfb931d37dbdd0
  	}
-
+	
 }
 
 ?>

@@ -71,16 +71,6 @@ class Dashboard_Model extends CI_Model{
 		return $query->result();
   }
    
-//  public function view_all(){
-//		$this->db->select('*');
-//		$this->db->from('sewa');
-//		$this->db->join('detail_sewa','sewa.id_sewa=detail_sewa.id_sewa');
-//		$this->db->join('pelanggan', 'sewa.id_sewa=pelanggan.id_sewa');
-//		$this->db->group_by('sewa.id_sewa');
-//		$this->db->order_by('sewa.tgl_bongkar', 'DESC');
-//		$query = $this->db->get();
-//		return $query->result();
-//  }
     
     public function option_tahun(){
         $this->db->select('YEAR(tanggal) AS tahun'); // Ambil Tahun dari field tgl
@@ -107,6 +97,46 @@ class Dashboard_Model extends CI_Model{
 	public function delete($id){
 		$sql=sprintf("DELETE FROM tb_pemesanan WHERE id_pesan='$id'");
 		$this->db->query($sql);
+	}
+	
+	public function jumlah(){
+		$sql = sprintf("SELECT * FROM tb_pemesanan WHERE view = 0");
+		$data=$this->db->query($sql);
+//		$data=$this->db->get('cetak');
+    	return $data->num_rows();
+	}
+	
+	public function checker(){
+		//get current counter
+		$data['current'] = $this->check_changes();
+		//set initial value of update to false
+		$data['update'] = false;
+		//check if it's ajax call with POST containing current (for user) counter;
+		//and check if that counter is diffrent from the one in database
+		if(isset($_POST) && !empty($_POST['counter']) && (int)$_POST['counter']!=$data['current']){
+			//the counters are diffrent so get new message list
+			$data['badge'] = $data['current'] - $_POST['counter'];
+			$data['badge'] .= '';
+			$data['news'] = $this->get_news();
+			$data['update'] = true;
+		}
+		//just echo as JSON
+		echo json_encode($data);
+		/* End of file checker.php */
+	}
+	
+	function check_changes(){
+		$result = $this->db->query('SELECT COUNT(*) AS counting FROM tb_pemesanan WHERE tb_pemesanan.status_bayar != "Selesai" ');
+		if($result = $result->result()){
+		foreach($result as $result){
+			return $result->counting;
+		}}
+		return 0;
+	}
+	
+	function get_news(){
+		$query = $this->db->query("SELECT * FROM tb_pemesanan JOIN tb_user JOIN tb_harga JOIN tb_produk JOIN tb_kertas WHERE tb_pemesanan.id_user = tb_user.id_user AND tb_pemesanan.id_harga = tb_harga.id_harga AND tb_harga.id_produk = tb_produk.id_produk AND tb_produk.id_kertas = tb_kertas.id_kertas AND tb_pemesanan.status_bayar != 'Selesai' ");
+		return $query->result();	
 	}
 
 }
