@@ -104,11 +104,11 @@
                 </figure>
                 <div class="text">
                  <center><h2 class="heading">Sertifikat</h2></center>
-                  <p class="mb-4">Cetak sertifikatmu sendiri..</p> 
-  <p>Cetak sertifikat kini nggak perlu ribet dan nggak perlu lama lagi menunggu</p> 
-  <p>So.. ,buat kamu yang sudah kepepet deadline buat cetak sertifikat</p> 
-  <p>Langsung saja hubungi atau datang di Kantor Kami, di JL.Jawa 12 A,SUMBERSARI,JEMBER</p> 
-  <p>Harga mulai Rp 2.500/lembar. Order bersama kami insyaAllah terbaik dan memuaskan deh</p> 
+                  <p class="mb-4">Cetak sertifikatmu sendiri..
+     Cetak sertifikat kini nggak perlu ribet dan nggak perlu lama lagi menunggu 
+     So.. ,buat kamu yang sudah kepepet deadline buat cetak sertifikat
+     Langsung saja hubungi atau datang di Kantor Kami, di JL.Jawa 12 A,SUMBERSARI,JEMBER 
+     Harga mulai Rp 2.500/lembar. Order bersama kami insyaAllah terbaik dan memuaskan deh</p> 
                   <div class="meta d-flex align-items-center">
                     <div class="number">
                       <span></span>
@@ -123,7 +123,7 @@
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img22.jpeg" width="450" height="405" alt="Image">
+                  <img src="http://localhost/Soerabaja45/assets/images/img22.JPG" width="450" height="405" alt="Image">
                 </figure>
                 <div class="text">
                   <center><h2 class="heading">Slip</h2></center>
@@ -146,10 +146,10 @@
           <div class="item">
             <div class="block-19">
               <figure>
-                <img src="http://localhost/Soerabaja45/assets/images/img23.jpg" width="450" height="405" alt="Image">
+                <img src="http://localhost/Soerabaja45/assets/images/img23.JPG" width="450" height="405" alt="Image">
               </figure>
               <div class="text">
-                <center><h2 class="heading">Kalender Meja</h2></center>
+                <center><h2 class="heading">Tiket</h2></center>
                   <p class="mb-4">Cetak Tiket ala sticker hanya di Soerabaja'45..
     Bisa desain sendiri dan gak perlu bingung jika belum punya desain. 
     Kami siap membuat desain tiket sesuai dengan keinginan Customer.
@@ -165,25 +165,27 @@
             </div>
           </div>
 
-          <!--<div class="item">
+          <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img90.jpg" alt="Image" class="img-fluid">
+                  <img src="http://localhost/Soerabaja45/assets/images/img28.PNG" width="450" height="405" alt="Image">
                 </figure>
                 <div class="text">
-                  <center><h2 class="heading"><a href="#">Pin Peniti</a></h2></center>
-                  <p class="mb-4">Harga Rp 4.250/pcs</p>
-                    <p>Minimal order 10 pcs</p>
-                    <p>Diameter 4.4 cm</p>
+                  <center><h2 class="heading">Brosur</h2></center>
+                  <p class="mb-4">Brosur Super Murah
+                     Seharga Rp 250/1.000 lbr (A5 1sisi) jadi nggak usah bingung cari brosur kalo cetaknya disana mahal.
+                        Disini aja lebih murah.
+                        Langsung order di no.telp(08113669009) @soerabaja_45</p>
                   <div class="meta d-flex align-items-center">
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-right"><del class="mr-3"></del><span>Pesan</span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Pesan</a></span></div>
                   </div>
                 </div>
               </div>
-          </div> -->
+          </div>
 
 
         </div>
@@ -192,7 +194,6 @@
       
     </div>
     
-    <!-- END section -->
 
     <!-- END section -->
 
