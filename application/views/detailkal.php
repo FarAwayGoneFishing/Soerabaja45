@@ -150,7 +150,7 @@ Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kam
               <div class="col-md-6">
                 <ul class="list-unstyled">
                   <li><a href="digoffset">Digital Offset</a></li>
-                  <p><li><a href="offset">Offset</a></li></p>
+                  <li><a href="offset">Offset</a></li>
                 </ul>
               </div>
             </div>
