@@ -17,6 +17,10 @@ class Digoffset extends CI_Controller {
   		$this->load->view('Digoffset', $data);
  	}
 	
+	public function get_data(){
+		return $this->model->data();
+	}
+	
 	public function detail($id){
 		$data = array('data' => $this->model->detail($id));
   		$this->load->view('DetailDigoffset', $data);

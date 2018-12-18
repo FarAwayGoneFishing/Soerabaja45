@@ -16,7 +16,7 @@
     <link href="<?php echo base_url('assetsa/vendor/mdi-font/css/material-design-iconic-font.min.css')?>" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="<?php echo base_url('assetsa/vendor/bootstrap-4.1/bootstrap.min.css')?>" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> 
 
     <!-- Vendor CSS-->
     <link href="<?php echo base_url('assetsa/vendor/animsition/animsition.min.css')?>" rel="stylesheet" media="all">
@@ -26,6 +26,7 @@
     <link href="<?php echo base_url('assetsa/vendor/slick/slick.css')?>" rel="stylesheet" media="all">
     <link href="<?php echo base_url('assetsa/vendor/select2/select2.min.css')?>" rel="stylesheet" media="all">
     <link href="<?php echo base_url('assetsa/vendor/perfect-scrollbar/perfect-scrollbar.css')?>" rel="stylesheet" media="all">
+	<link href="<?php echo base_url('assetsa/js/dataTables/dataTables.bootstrap.css')?>" rel="stylesheet" />
 
     <!-- Main CSS-->
     <link href="<?php echo base_url('assetsa/css/theme.css')?>" rel="stylesheet" media="all">
@@ -200,7 +201,7 @@
                             <div class="col-lg-12">
                                 <h2 class="title-1 m-b-25">Daftar Pesanan</h2>
                                 <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
+                                    <table class="table table-borderless table-striped" id="tabel">
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
@@ -261,6 +262,14 @@
     <script src="<?php echo base_url('assetsa/vendor/chartjs/Chart.bundle.min.js')?>"></script>
     <script src="<?php echo base_url('assetsa/vendor/select2/select2.min.js')?>">
     </script>
+	<script src="<?php echo base_url('assetsa/js/dataTables/jquery.dataTables.js')?>"></script>
+    <script src="<?php echo base_url('assetsa/js/dataTables/dataTables.bootstrap.js')?>"></script>
+        <script>
+            $(document).ready(function () {
+                $('#tabel').dataTable();
+            });
+    </script>
+
 
     <!-- Main JS-->
     <script src="<?php echo base_url('assetsa/js/main.js')?>"></script>

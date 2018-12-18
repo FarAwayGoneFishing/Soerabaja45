@@ -210,11 +210,11 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="cc-email" class="control-label mb-1">Email</label>
-                                                <input id="cc-email" name="email" type="text" class="form-control" value="<?php echo $data[0]->email; ?>">
+                                                <input id="cc-email" name="email" type="email" class="form-control" value="<?php echo $data[0]->email; ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="cc-number" class="control-label mb-1">Nomor Telepon</label>
-												<textarea id="yolo" name="telpon" class="form-control" value="<?php echo $data[0]->no_telp; ?>"></textarea>
+												<input id="yolo" name="telpon" class="form-control" value="<?php echo $data[0]->no_telp; ?>">
                                             </div>
                                             <div>
                                                 <button id="save-button" type="submit" name="btnSubmit" class="btn btn-lg btn-info btn-block mb-1">
@@ -243,18 +243,6 @@
 
     </div>
 
-	<script>
-
-	  	ClassicEditor
-    .create( document.querySelector( '#yolo' ) )
-    .then( editor => {
-        console.log( editor );
-    } )
-    .catch( error => {
-        console.error( error );
-    } );
-	
-	  </script>
 	
 	<!-- Jquery JS-->
     <script src="<?php echo base_url('assetsa/vendor/jquery-3.2.1.min.js')?>"></script>

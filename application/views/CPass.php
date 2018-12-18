@@ -73,7 +73,7 @@
               	</li>
 				
 				<?php }else {
-                echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
+                echo '<a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a>';
 				}?>
             </ul>
           </div>
