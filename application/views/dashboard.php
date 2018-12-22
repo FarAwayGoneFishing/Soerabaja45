@@ -60,7 +60,7 @@
               </li>
               <ul class="navbar-nav absolute-right">
               <li>
-<<<<<<< HEAD
+
         <?php if(isset($_SESSION["id_user"])){ ?>
           
         <li class="nav-item dropdown">
@@ -75,7 +75,7 @@
         <?php }else {
                 echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
         }?>
-=======
+
                 <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
               </li>
             </ul>
@@ -97,7 +97,7 @@
 
                 echo '<a href=".'echo base_url()'.login">Masuk Akun</a> / <a href=".'echo base_url()'.register">Daftar Akun</a>';
 				}?>
->>>>>>> 2ef8b02990afd2f1595b0a9898ac1559100ec538
+
             </ul>
           </div>
         </div>

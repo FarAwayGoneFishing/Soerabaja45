@@ -86,16 +86,18 @@
     <div class="container">
       <div class="row m-auto">
         <div class="col-6">
-          <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
+              <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
           <div class="card card-custom bg-white border-white border-0" style="height: 450px">
-            <center><b><h6>Editor</h6></b>
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www167.lunapic.com/editor/?action=newbright" allowfullscreen></iframe>
-              </div>
-              <div class="card-footer" style="background: inherit; border-color: inherit;">
-                <a href="jasa_edit" class="btn btn-primary">Jasa Edit</a></center>
-              </div>
-            </div>
+            <center><b><h6>Jasa Edit</h6></b>
+                <form action="proses.php" method="get">
+                    <p>Deskripsi</p>
+                      <p><textarea name="alamat" rows="10" cols="40"></textarea>
+                        </p>
+                      <div class="card-footer" style="background: inherit; border-color: inherit;">
+                        <a href="#" class="btn btn-primary">Kirim</a></center>
+                      </div>       
+                </form>
+          </div>
             <!--Rightside tampilan-->
             <div class="col-6">
               <div class="card card-custom bg-white border-white border-0">
@@ -113,9 +115,7 @@
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Kertas :</label>
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>--Pilih Item--</option>
                           <option value="1">HVS 70</option>
-                          <option value="2">NCR</option>
                         </select>
                       </div>
                     </div>
@@ -126,9 +126,7 @@
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Ukuran :</label>
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>--Pilih Item--</option>
                           <option value="1">Ukuran 38X53</option>
-                          <option value="2">Ukuran 46X64</option>
                         </select>
                       </div>
                     </div>
@@ -149,21 +147,7 @@
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Jumlah :</label>
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>Ukuran 38X53</option>
                           <option value="1">100 pcs</option>
-                          <option value="2">200 pcs</option>
-                          <option value="3">300 pcs</option>
-                          <option value="4">400 pcs</option>
-                          <option value="5">500 pcs</option>
-                          <option value="6">600 pcs</option>
-                          <option value="7">700 pcs</option>
-                          <option value="8">800 pcs</option>
-                          <option value="9">900 pcs</option>
-                          <option value="10">1000 pcs</option>
-                          <option value="11">1500 pcs</option>
-                          <option value="12">2000 pcs</option>
-                          <option value="13">2500 pcs</option>
-                          <option value="14">3000 pcs</option>
                         </select>
                       </div>
                     </div>
@@ -173,22 +157,7 @@
                     <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>Ukuran 46X64</option>
                           <option value="1">100 pcs</option>
-                          <option value="2">200 pcs</option>
-                          <option value="3">300 pcs</option>
-                          <option value="4">400 pcs</option>
-                          <option value="5">500 pcs</option>
-                          <option value="6">600 pcs</option>
-                          <option value="7">700 pcs</option>
-                          <option value="8">800pcs</option>
-                          <option value="9">900 pcs</option>
-                          <option value="10">1000 pcs</option>
-                          <option value="11">1500 pcs</option>
-                          <option value="12">2000 pcs</option>
-                          <option value="13">2500 pcs</option>
-                          <option value="14">3000 pcs</option>
-                        </select>
                       </div>
                     </div>
                   </form>
@@ -236,9 +205,8 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          dofjgzdrjgozsg
-                          dskfjsjfhwo
-                          dzshzih
+                          Selamat anda melanjutkan 
+                           ke form pembayaran
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
