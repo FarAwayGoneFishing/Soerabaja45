@@ -262,12 +262,14 @@
                                                 </div>
                                             </div>
 											<div class="row">
+<!--
                                                 <div class="col-lg-3">
                                                     <div class="form-group">
                                                        <label class="control-label mb-1">Tambah Warna</label>
                                                        <input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->tambah_warna ?>" readonly>
                                                     </div>
                                                 </div>
+-->
                                                 <div class="col-lg-3">
                                                     <label class="control-label mb-1">Deskripsi</label>
 													<textarea id="produk" name="produk" type="text" class="form-control" readonly><?php echo $data->deskripsi ?></textarea>

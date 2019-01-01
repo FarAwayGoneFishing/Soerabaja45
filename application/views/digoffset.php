@@ -124,6 +124,7 @@ Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kam
               </div>
           </div>
 
+<!--
           <div class="item">
             <div class="block-19">
                 <figure>
@@ -146,6 +147,7 @@ Senin-sabtu jam 08.00 - 16.00</p>
                 </div>
               </div>
           </div>
+-->
 
 
 

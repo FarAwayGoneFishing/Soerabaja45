@@ -213,11 +213,11 @@
                                         <tbody>
 											<?php foreach($data as $row){ ?>
                                             <tr>
-                                                 <td><?php echo $row->id_produk ?></td>
-                                                <td><?php echo $row->nama_produk ?></td>
+                                                 <td><?php echo $row->id_master ?></td>
+                                                <td><?php echo $row->produk ?></td>
                                                 <td><?php echo $row->kertas ?></td>
                                                 <td class="text-right"><?php echo $row->ukuran ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail/1" role="button">Detail</a></td>
+												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail/<?php echo $row->id_master ?>" role="button">Detail</a></td>
                                                 
                                             </tr>
                                             <?php }; ?>

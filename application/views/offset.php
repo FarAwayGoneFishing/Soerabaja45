@@ -99,6 +99,7 @@
         <div class="nonloop-block-11 owl-carousel">
           
 
+<!--
            <div class="item">
             <div class="block-19">
                 <figure>
@@ -121,6 +122,7 @@
                 </div>
               </div>
           </div>
+-->
 
           <div class="item">
             <div class="block-19">
@@ -143,8 +145,32 @@
               </div>
           </div>
 
+			<div class="item">
+            <div class="block-19">
+                <figure>
+                  <img src="<?php echo base_url()?>assets/images/img0.jpg" alt="Image" class="img-fluid">
+                </figure>
+                <div class="text">
+                 <center><h2 class="heading">Kalender</h2></center>
+                  <p class="mb-4">Tahun Baru nih...?
+			Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...
+			Pasti butuh Kalender terbaru kan
+			Cocok...!
+			Soerabaja'45 lagi ADA PROMO KALENDER !
+			Harga hanya Rp 1.000'an
+			Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh</p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
+                  </div>
+                </div>
+              </div>
+          </div>
 
-
+<!--
           <div class="item">
             <div class="block-19">
               <figure>
@@ -166,6 +192,7 @@
               </div>
             </div>
           </div>
+-->
 
           <div class="item">
             <div class="block-19">
