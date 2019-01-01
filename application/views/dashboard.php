@@ -58,10 +58,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
-			</ul>
-              <ul class="navbar-nav absolute-right">
-              
-			<?php if(isset($_SESSION["id_user"])){ ?>
+            </ul>
+            <ul class="navbar-nav absolute-right">
+              <li>
+				<?php if(isset($_SESSION["id_user"])){ ?>
 				  
 				<li class="nav-item dropdown">
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
