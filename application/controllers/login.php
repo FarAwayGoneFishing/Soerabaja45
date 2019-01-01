@@ -30,7 +30,7 @@ class Login extends CI_Controller {
 	}
 
 	public function logout(){
-		if ($this->session->has_userdata('user')) {
+		if ($this->session->has_userdata('id_user')) {
 			$this->session->sess_destroy();
 			redirect('Login');
 		}

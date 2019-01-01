@@ -7,17 +7,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
   </head>
   <body>
     
@@ -25,7 +25,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,13 +33,13 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="dashboard">Beranda</a>
+                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="offset">Offset</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
                 </div>
 
               </li>
@@ -47,24 +47,36 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="galeri">Galeri</a>
-                  <a class="dropdown-item" href="lokasi">Lokasi</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>galeri">Galeri</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>lokasi">Lokasi</a>
                 </div>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="tentang">Tentang Kami</a>
+                <a class="nav-link" href="<?php echo base_url()?>Tentang">Tentang Kami</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="kontak">Kontak</a>
+                <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
+			</ul>
+              <ul class="navbar-nav absolute-right">
+              
+			<?php if(isset($_SESSION["id_user"])){ ?>
+				  
+				<li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
+                	<div class="dropdown-menu" aria-labelledby="dropdown04">
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
+						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
+                	</div>
+              	</li>
+				
+				<?php }else {
+                	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
+				}?> 
+				
             </ul>
-            <ul class="navbar-nav absolute-right">
-              <li>
-                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
-              </li>
-            </ul>
-            
           </div>
         </div>
       </nav>
@@ -87,14 +99,14 @@
         <div class="nonloop-block-11 owl-carousel">
 
 
-<img src="http://localhost/Soerabaja45/assets/images/c1.jpg">
-<img src="http://localhost/Soerabaja45/assets/images/c2.jpg">
-<img src="http://localhost/Soerabaja45/assets/images/c3.jpg">
-<img src="http://localhost/Soerabaja45/assets/images/c4.jpg">
-<img src="http://localhost/Soerabaja45/assets/images/c5.jpg">
-<img src="http://localhost/Soerabaja45/assets/images/c6.jpg">
-<img src="http://localhost/Soerabaja45/assets/images/c8.jpg">
-<img src="http://localhost/Soerabaja45/assets/images/c9.jpg">
+<img src="<?php echo base_url()?>assets/images/c1.jpg">
+<img src="<?php echo base_url()?>assets/images/c2.jpg">
+<img src="<?php echo base_url()?>assets/images/c3.jpg">
+<img src="<?php echo base_url()?>assets/images/c4.jpg">
+<img src="<?php echo base_url()?>assets/images/c5.jpg">
+<img src="<?php echo base_url()?>assets/images/c6.jpg">
+<img src="<?php echo base_url()?>assets/images/c8.jpg">
+<img src="<?php echo base_url()?>assets/images/c9.jpg">
 
 
 
