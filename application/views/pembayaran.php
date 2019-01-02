@@ -7,80 +7,68 @@
 
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
+  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
 </head>
 <body>
 
   <header role="banner">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <div class="container">
+        <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
-                </div>
+        <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="dashboard">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="digoffset">Digital Offset</a>
+                <a class="dropdown-item" href="offset">Offset</a>
+              </div>
 
-              </li>
+            </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="<?php echo base_url()?>galeri">Galeri</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>lokasi">Lokasi</a>
-                </div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown05">
+                <a class="dropdown-item" href="galeri">Galeri</a>
+                <a class="dropdown-item" href="lokasi">Lokasi</a>
+              </div>
 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>Tentang">Tentang Kami</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
-              </li>
-			</ul>
-              <ul class="navbar-nav absolute-right">
-              
-			<?php if(isset($_SESSION["id_user"])){ ?>
-				  
-				<li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
-                	<div class="dropdown-menu" aria-labelledby="dropdown04">
-                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
-                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
-                	</div>
-              	</li>
-				
-				<?php }else {
-                	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
-				}?> 
-				
-            </ul>
-          </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tentang">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontak">Kontak</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav absolute-right">
+            <li>
+              <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
+            </li>
+          </ul>
+
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
   <!-- END header -->
 
   <!-- END section -->
@@ -99,16 +87,29 @@
       <div class="row m-auto">
         <div class="col-6">
           <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
-          
-            <center><b><h6>Editor</h6></b>
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www167.lunapic.com/editor/?action=newbright" allowfullscreen></iframe>
-              </div>
+          <div class="card card-custom bg-white border-white border-0">
+            <br><center><b><h6>Cetak Kalender</h6></b>
+              <div class="embed-responsive">
+                <img src="http://localhost/Soerabaja45/assets/images/z6.jpg" class="img-thumbnail" alt="Kalender" width="300" height="200">
+              </div><br>
+              <p class="text-center"><b><h6>Upload File</h6></b></p><br>
+              <p class="text-sm-left">Yang perlu Anda perhatikan sebelum mengupload desain Anda :</p>
+              <p class="text-sm-left">1. Cek kembali ukuran desain Anda apakah sudah sesuai dengan ukuran jadi produk yang Anda pesan</p>
+              <p class="text-sm-left">2.Pastikan Anda mengirimkan File Final. Hati-hati dengan pengambilan data revisi.</p>
+              <p class="text-sm-left">3. Kirimkan desain High Resolution 300 dpi, CMYK, dan Package link image + font yang digunakan dalam desain Anda.</p><br><br>
 
-              <div class="" style="background: inherit; border-color: inherit;">
+              <p class="text-sm-left">Salah satu metode favorit lainnya adalah Google Drive, dibutuhkan account google drive untuk Anda dapat menggunakan fasilitas ini. Caranya sebagai berikut :</p>
+              <p class="text-sm-left">1. Login Account Anda </p>
+              <p class="text-sm-left">2. Apabila file desain Anda belum terdapat pada folder Google Drive Anda, silahkan Anda upload terlebih dahulu (sebaiknya dalam bentuk Zip, atau file berada dalam satu folder)</p> 
+              <p class="text-sm-left">3. Pilih file / folder yang ingin Anda sharing dan klik kanan dan pilih share</p> 
+              <p class="text-sm-left">4. Pada menu ini pilih get shareable link, copy link yang diberikan oleh system dan input ke dalam kotak dibawah ini</p><br>
+
+              <p>Input Google Drive Link Url</p>
+              <textarea class="form-control" id="message-text"></textarea><br>
+              <div class="card-footer" style="background: inherit; border-color: inherit;">
                 <a href="jasa_edit" class="btn btn-primary">Jasa Edit</a></center>
               </div>
-
+            </div>
             <!--Rightside tampilan-->
             <div class="col-6">
               <div class="card card-custom bg-white border-white border-0">
@@ -146,6 +147,16 @@
                       </div>
                     </div>
                   </form>
+
+                  Warna :
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Ya</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Tidak</label>
+                  </div>
 
                   <form>
                     <div class="form-row align-items-center">
@@ -196,7 +207,8 @@
                     </div>
                   </form>
 
-                  Estimasi : 7 Hari
+                  Estimasi : 7 Hari<br>
+                  Waktu pengerjaan terhitung dari desain telah di approve siap cetak dan pembayaran sudah kami terima
 
                   <div class="block-content uprint-price-container">
                     <div class="unit-price-container uprint-price">
@@ -225,7 +237,7 @@
                 <!-- Button trigger modal -->
                 <center><div class="card-footer" style="background: inherit; border-color: inherit;">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                    Pesan
+                    Bayar
                   </button>
 
                   <!-- Modal -->
@@ -239,7 +251,7 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          
+
                           Nama Produk : Kalender<br>
                           Deskripsi : Ada Gambar Keluarga<br>
                           Kertas : HVS 70<br>
@@ -248,10 +260,11 @@
                           Jumlah : 100 pcs<br>
                           Estimasi :7 Hari<br>
 
+
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                          <button type="button" class="btn btn-primary">Cetak Slip</button>
+                          <a href="HubNo" class="btn btn-primary">OK</a></center>
                         </div>
                       </div>
                     </div>
