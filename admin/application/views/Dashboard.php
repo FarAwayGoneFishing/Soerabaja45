@@ -16,7 +16,7 @@
     <link href="<?php echo base_url('assetsa/vendor/mdi-font/css/material-design-iconic-font.min.css')?>" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="<?php echo base_url('assetsa/vendor/bootstrap-4.1/bootstrap.min.css')?>" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> 
 
     <!-- Vendor CSS-->
     <link href="<?php echo base_url('assetsa/vendor/animsition/animsition.min.css')?>" rel="stylesheet" media="all">
@@ -26,6 +26,7 @@
     <link href="<?php echo base_url('assetsa/vendor/slick/slick.css')?>" rel="stylesheet" media="all">
     <link href="<?php echo base_url('assetsa/vendor/select2/select2.min.css')?>" rel="stylesheet" media="all">
     <link href="<?php echo base_url('assetsa/vendor/perfect-scrollbar/perfect-scrollbar.css')?>" rel="stylesheet" media="all">
+	<link href="<?php echo base_url('assetsa/js/dataTables/dataTables.bootstrap.css')?>" rel="stylesheet" />
 
     <!-- Main CSS-->
     <link href="<?php echo base_url('assetsa/css/theme.css')?>" rel="stylesheet" media="all">
@@ -93,26 +94,6 @@
 
         <!-- MENU SIDEBAR-->
 		 
-		<script>
-		/* AJAX request to checker */
-		function check(){
-			$.ajax({
-				type: 'POST',
-				url: '<?php echo base_url()?>Dashboard/checker',
-				dataType: 'json',
-				data: {
-					counter:$('#belumCetak').data('counter')
-				}
-			}).done(function( response ) {
-				/* update counter */
-				$('#belumCetak').data('counter',response.current);
-				/* check if with response we got a new update */
-				if(response.update==true){
-					$('#belumCetak').html(response.badge);
-				}
-			});
-		}
-		</script>	
 		
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
@@ -125,7 +106,7 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Daftar Pesanan <span id="belumCetak" class="badge badge-primary" data-counter="<?php echo $data_badge;?>"><?php echo $data_badge; ?></span></a>
+                                <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-primary">5</span></a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li class="active has-sub">
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
@@ -222,7 +203,7 @@
                             <div class="col-lg-12">
                                 <h2 class="title-1 m-b-25">Daftar Pesanan</h2>
                                 <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
+                                    <table id="tabel" class="table table-borderless table-striped ">
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
@@ -282,6 +263,13 @@
     <script src="<?php echo base_url('assetsa/vendor/perfect-scrollbar/perfect-scrollbar.js')?>"></script>
     <script src="<?php echo base_url('assetsa/vendor/chartjs/Chart.bundle.min.js')?>"></script>
     <script src="<?php echo base_url('assetsa/vendor/select2/select2.min.js')?>">
+    </script>
+	<script src="<?php echo base_url('assetsa/js/dataTables/jquery.dataTables.js')?>"></script>
+    <script src="<?php echo base_url('assetsa/js/dataTables/dataTables.bootstrap.js')?>"></script>
+        <script>
+            $(document).ready(function () {
+                $('#tabel').dataTable();
+            });
     </script>
 
     <!-- Main JS-->
