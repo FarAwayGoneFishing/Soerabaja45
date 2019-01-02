@@ -7,23 +7,23 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
   </head>
   <body>
     
     <header role="banner">
      
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +47,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">Galeri</a>
-                  <a class="dropdown-item" href="#">Lokasi</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>galeri">Galeri</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>lokasi">Lokasi</a>
                 </div>
 
               </li>
@@ -58,10 +58,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
-            </ul>
-            <ul class="navbar-nav absolute-right">
-              <li>
-				<?php if(isset($_SESSION["id_user"])){ ?>
+			</ul>
+              <ul class="navbar-nav absolute-right">
+              
+			<?php if(isset($_SESSION["id_user"])){ ?>
 				  
 				<li class="nav-item dropdown">
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
@@ -73,8 +73,9 @@
               	</li>
 				
 				<?php }else {
-                echo '<a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a>';
-				}?>
+                	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
+				}?> 
+				
             </ul>
           </div>
         </div>

@@ -7,68 +7,80 @@
 
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
 
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
 
-  <!-- Theme Style -->
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
 </head>
 <body>
 
   <header role="banner">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container">
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="dashboard">Beranda</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="digoffset">Digital Offset</a>
-                <a class="dropdown-item" href="offset">Offset</a>
-              </div>
+          <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
+                </div>
 
-            </li>
+              </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown05">
-                <a class="dropdown-item" href="galeri">Galeri</a>
-                <a class="dropdown-item" href="lokasi">Lokasi</a>
-              </div>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  <a class="dropdown-item" href="<?php echo base_url()?>galeri">Galeri</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>lokasi">Lokasi</a>
+                </div>
 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tentang">Tentang Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="kontak">Kontak</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav absolute-right">
-            <li>
-              <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
-            </li>
-          </ul>
-
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url()?>Tentang">Tentang Kami</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
+              </li>
+			</ul>
+              <ul class="navbar-nav absolute-right">
+              
+			<?php if(isset($_SESSION["id_user"])){ ?>
+				  
+				<li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
+                	<div class="dropdown-menu" aria-labelledby="dropdown04">
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
+						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
+                	</div>
+              	</li>
+				
+				<?php }else {
+                	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
+				}?> 
+				
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
   <!-- END header -->
 
   <!-- END section -->
@@ -87,17 +99,17 @@
       <div class="row m-auto">
         <div class="col-6">
               <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
-          <div class="card card-custom bg-white border-white border-0" style="height: 450px">
+          
             <center><b><h6>Jasa Edit</h6></b>
                 <form action="proses.php" method="get">
-                    <p>Deskripsi</p>
+                    <p>Deskripsikan Desain yang anda inginkan</p>
                       <p><textarea name="alamat" rows="10" cols="40"></textarea>
                         </p>
-                      <div class="card-footer" style="background: inherit; border-color: inherit;">
+                      <div class="" style="background: inherit; border-color: inherit;">
                         <a href="#" class="btn btn-primary">Kirim</a></center>
                       </div>       
                 </form>
-          </div>
+ 
             <!--Rightside tampilan-->
             <div class="col-6">
               <div class="card card-custom bg-white border-white border-0">
@@ -105,17 +117,14 @@
 
                   Nama Produk : Kalender
 
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Deskripsi :</label>
-                    <textarea class="form-control" id="message-text"></textarea>
-                  </div>
-
                   <form>
                     <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Kertas :</label>
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                          <option selected>--Pilih Item--</option>
                           <option value="1">HVS 70</option>
+                          <option value="2">NCR</option>
                         </select>
                       </div>
                     </div>
@@ -126,28 +135,34 @@
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Ukuran :</label>
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                          <option selected>--Pilih Item--</option>
                           <option value="1">Ukuran 38X53</option>
+                          <option value="2">Ukuran 46X64</option>
                         </select>
                       </div>
                     </div>
                   </form>
-
-                  Warna :
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Ya</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Tidak</label>
-                  </div>
 
                   <form>
                     <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Jumlah :</label>
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                          <option selected>Ukuran 38X53</option>
                           <option value="1">100 pcs</option>
+                          <option value="2">200 pcs</option>
+                          <option value="3">300 pcs</option>
+                          <option value="4">400 pcs</option>
+                          <option value="5">500 pcs</option>
+                          <option value="6">600 pcs</option>
+                          <option value="7">700 pcs</option>
+                          <option value="8">800 pcs</option>
+                          <option value="9">900 pcs</option>
+                          <option value="10">1000 pcs</option>
+                          <option value="11">1500 pcs</option>
+                          <option value="12">2000 pcs</option>
+                          <option value="13">2500 pcs</option>
+                          <option value="14">3000 pcs</option>
                         </select>
                       </div>
                     </div>
@@ -157,7 +172,22 @@
                     <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                          <option selected>Ukuran 46X64</option>
                           <option value="1">100 pcs</option>
+                          <option value="2">200 pcs</option>
+                          <option value="3">300 pcs</option>
+                          <option value="4">400 pcs</option>
+                          <option value="5">500 pcs</option>
+                          <option value="6">600 pcs</option>
+                          <option value="7">700 pcs</option>
+                          <option value="8">800pcs</option>
+                          <option value="9">900 pcs</option>
+                          <option value="10">1000 pcs</option>
+                          <option value="11">1500 pcs</option>
+                          <option value="12">2000 pcs</option>
+                          <option value="13">2500 pcs</option>
+                          <option value="14">3000 pcs</option>
+                        </select>
                       </div>
                     </div>
                   </form>
@@ -191,7 +221,7 @@
                 <!-- Button trigger modal -->
                 <center><div class="card-footer" style="background: inherit; border-color: inherit;">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                    Bayar
+                    Pesan
                   </button>
 
                   <!-- Modal -->
@@ -205,8 +235,9 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          Selamat anda melanjutkan 
-                           ke form pembayaran
+                          dofjgzdrjgozsg
+                          dskfjsjfhwo
+                          dzshzih
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
@@ -224,7 +255,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- END section -->
 

@@ -7,17 +7,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
   </head>
   <body>
     
@@ -47,8 +47,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="galeri">Galeri</a>
-                  <a class="dropdown-item" href="lokasi">Lokasi</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>galeri">Galeri</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>lokasi">Lokasi</a>
                 </div>
 
               </li>
@@ -58,33 +58,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
-              <ul class="navbar-nav absolute-right">
-              <li>
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c6b2adecf309d3781b5d2741aa0dd1ed4f2f5bf
-        <?php if(isset($_SESSION["id_user"])){ ?>
-          
-        <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
-                  <div class="dropdown-menu" aria-labelledby="dropdown04">
-                      <a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-            <a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
-                      <a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
-                  </div>
-                </li>
-        
-        <?php }else {
-                echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
-        }?>
-<<<<<<< HEAD
-=======
-
-                <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
-              </li>
             </ul>
-            
+            <ul class="navbar-nav absolute-right">
+              <li>
 				<?php if(isset($_SESSION["id_user"])){ ?>
 				  
 				<li class="nav-item dropdown">
@@ -97,13 +73,8 @@
               	</li>
 				
 				<?php }else {
-                echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
-        }?>
-
-                echo '<a href=".'echo base_url()'.login">Masuk Akun</a> / <a href=".'echo base_url()'.register">Daftar Akun</a>';
-				}?>
-
->>>>>>> 0c6b2adecf309d3781b5d2741aa0dd1ed4f2f5bf
+                	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
+				}?> 
             </ul>
           </div>
         </div>
@@ -181,12 +152,13 @@
           <div class="col-md-7 text-center section-heading">
             <h2 class="text-primary heading">Produk Terbaru dan Populer</h2>
             <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
-            <p><a href="#" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Selengkapnya</a></p>
+            <p><a href="<?php echo base_url()?>Offset" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Selengkapnya</a></p>
           </div>
         </div>
       </div>
       <div class="container-fluid block-11 element-animate">
         <div class="nonloop-block-11 owl-carousel">
+<!--
           <div class="item">
             <div class="block-19">
                 <figure>
@@ -321,6 +293,96 @@
               </div>
             </div>
           </div>  
+-->
+			<div class="item">
+            <div class="block-19">
+                <figure>
+                  <img src="<?php echo base_url()?>assets/images/img5.jpg" width="450" height="405" alt="Image">
+                </figure>
+                <div class="text">
+                 <center><h2 class="heading">Sertifikat</h2></center>
+                  <p class="mb-4">Cetak sertifikatmu sendiri..
+     Cetak sertifikat kini nggak perlu ribet dan nggak perlu lama lagi menunggu 
+     So.. ,buat kamu yang sudah kepepet deadline buat cetak sertifikat
+     Langsung saja hubungi atau datang di Kantor Kami, di JL.Jawa 12 A,SUMBERSARI,JEMBER 
+     Harga mulai Rp 2.500/lembar. Order bersama kami insyaAllah terbaik dan memuaskan deh</p> 
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                    <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="item">
+            <div class="block-19">
+                <figure>
+                  <img src="<?php echo base_url()?>assets/images/img22.JPG" width="450" height="405" alt="Image">
+                </figure>
+                <div class="text">
+                  <center><h2 class="heading">Slip</h2></center>
+                 <p class="mb-4">Tidak perlu bingung dalam mencetak slip untuk rekapan gaji karyawan. 
+    Dan juga mencetak dalam jumlah banyak.Kini Soerabaja'45 bisa membantu anda.
+    Silahkan hubungi CS online kami WA 0811 366 1927</p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                     <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
+                     <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="item">
+            <div class="block-19">
+              <figure>
+                <img src="<?php echo base_url()?>assets/images/img23.JPG" width="450" height="405" alt="Image">
+              </figure>
+              <div class="text">
+                <center><h2 class="heading">Tiket</h2></center>
+                  <p class="mb-4">Cetak Tiket ala sticker hanya di Soerabaja'45..
+    Bisa desain sendiri dan gak perlu bingung jika belum punya desain. 
+    Kami siap membuat desain tiket sesuai dengan keinginan Customer.
+    Pesan sekarang sebelum kebanjiran orderan..</p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                    <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="block-19">
+                <figure>
+                  <img src="<?php echo base_url()?>assets/images/img28.PNG" width="450" height="405" alt="Image">
+                </figure>
+                <div class="text">
+                  <center><h2 class="heading">Brosur</h2></center>
+                  <p class="mb-4">Brosur Super Murah
+                     Seharga Rp 250/1.000 lbr (A5 1sisi) jadi nggak usah bingung cari brosur kalo cetaknya disana mahal.
+                        Disini aja lebih murah.
+                        Langsung order di no.telp(08113669009) @soerabaja_45</p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span></span>
+                    </div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
 
@@ -521,17 +583,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
-    <script src="http://localhost/Soerabaja45/assets/js/jquery-3.2.1.min.js"></script>
-    <script src="http://localhost/Soerabaja45/assets/js/jquery-migrate-3.0.0.js"></script>
-    <script src="http://localhost/Soerabaja45/assets/js/popper.min.js"></script>
-    <script src="http://localhost/Soerabaja45/assets/js/bootstrap.min.js"></script>
-    <script src="http://localhost/Soerabaja45/assets/js/owl.carousel.min.js"></script>
-    <script src="http://localhost/Soerabaja45/assets/js/jquery.waypoints.min.js"></script>
-    <script src="http://localhost/Soerabaja45/assets/js/jquery.stellar.min.js"></script>
-    <script src="http://localhost/Soerabaja45/assets/js/jquery.animateNumber.min.js"></script>
-    
-    <script src="http://localhost/Soerabaja45/assets/js/jquery.magnific-popup.min.js"></script>
+   
+    <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/jquery-migrate-3.0.0.js"></script>
+    <script src="<?php echo base_url()?>assets/js/popper.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/jquery.stellar.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/jquery.animateNumber.min.js"></script>
 
-    <script src="http://localhost/Soerabaja45/assets/js/main.js"></script>
+    <script src="<?php echo base_url()?>assets/js/main.js"></script>
   </body>
 </html>

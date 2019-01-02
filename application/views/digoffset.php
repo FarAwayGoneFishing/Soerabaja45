@@ -7,17 +7,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
   </head>
   <body>
     
@@ -47,8 +47,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="galeri">Galeri</a>
-                  <a class="dropdown-item" href="lokasi">Lokasi</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>galeri">Galeri</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>lokasi">Lokasi</a>
                 </div>
 
               </li>
@@ -58,10 +58,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
-            </ul>
-            <ul class="navbar-nav absolute-right">
-              <li>
-				<?php if(isset($_SESSION["id_user"])){ ?>
+			</ul>
+              <ul class="navbar-nav absolute-right">
+              
+			<?php if(isset($_SESSION["id_user"])){ ?>
 				  
 				<li class="nav-item dropdown">
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
@@ -73,8 +73,9 @@
               	</li>
 				
 				<?php }else {
-                echo '<a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>';
-				}?>
+                	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
+				}?> 
+				
             </ul>
           </div>
         </div>
@@ -101,7 +102,7 @@
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img0.jpg" alt="Image" class="img-fluid">
+                  <img src="<?php echo base_url()?>assets/images/img0.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
                  <center><h2 class="heading">Kalender</h2></center>
@@ -116,17 +117,18 @@ Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kam
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailkal">Detail</a></span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="pembayaran">Pesan</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
                   </div>
                 </div>
               </div>
           </div>
 
+<!--
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="http://localhost/Soerabaja45/assets/images/img21.jpg" alt="Image" class="img-fluid">
+                  <img src="<?php echo base_url()?>assets/images/img21.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
                  <center><h2 class="heading">Brosur</h2></center>
@@ -139,15 +141,17 @@ Senin-sabtu jam 08.00 - 16.00</p>
                     <div class="number">
                       <span></span>
                     </div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="detailbros">Detail</a></span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="pembayaran">Pesan</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
                   </div>
                 </div>
               </div>
           </div>
+-->
 
 
 
+<!--
           <div class="item">
             <div class="block-19">
               <figure>
@@ -211,6 +215,7 @@ Senin-sabtu jam 08.00 - 16.00</p>
                 </div>
               </div>
           </div>
+-->
 
 
         </div>
