@@ -14,7 +14,10 @@ class pembayaran extends CI_Controller {
 	}
 
  public function produk($id){
-	 $data = array('model' => $this->model->data($id));
+	 $data = array(
+	 	'model' => $this->model->data($id),
+	 	
+	 );
   $this->load->view('pembayaran', $data);
  }
 	
@@ -23,27 +26,29 @@ class pembayaran extends CI_Controller {
   		$this->load->view('jasa_edit',$data);
  	}
 	
-	public function harga(){
-		$harga = $this->db->query("SELECT * FROM tb_produk JOIN tb_harga JOIN produk JOIN tb_kertas WHERE produk.id_master = tb_produk.id_master AND tb_produk.id_produk = tb_harga.id_produk AND tb_harga.id_kertas = tb_kertas.id_kertas AND nama_produk = '$_POST[model]' AND tb_kertas.kertas = '$_POST[kertas]' AND tb_kertas.ukuran = '$_POST[ukuran]' AND tb_harga.jumlah = '$_POST[jumlah]'");
-		$data = array('harga'=>  $karyawan['nama_karyawan'],							);
-		 echo json_encode($data_karyawan);
+	public function harga_produk($id_produk){
+		$data_kertas=$this->model->data_kertas_get($_GET['kertas'], $_GET['ukuran']);
+		$harga = $this->db->query("SELECT * FROM tb_produk LEFT JOIN tb_harga ON tb_produk.id_produk=tb_harga.id_produk LEFT JOIN tb_kertas ON tb_harga.id_kertas=tb_kertas.id_kertas WHERE tb_produk.id_produk='$id_produk' and tb_kertas.id_kertas='$data_kertas->id_kertas' and tb_harga.jumlah='$_GET[jumlah]'")->row();
+		$data = array('harga'=>  $harga->harga);
+		 echo json_encode($data);
  	}
 	
 	public function create(){
-		
+		$harga = $this->model->get_harga($_POST['model'], $_POST['jumlah'], $_POST['kertas'], $_POST['ukuran']);
 		if(isset($_POST['pesan'])){
-			$data = $this->Model_Siswaguru->input(array (
-			'model' => $this->input->post('model'),
-			'deskripsi' => $this->input->post('deskripsi'),
-			'id_harga' => 
-			'link' => $this->input->post('link'),
+			$data = $this->model->input(array (
+			'id_pesan' => $this->model->get_id(),	
 			
+			'deskripsi' => $this->input->post('deskripsi'),
+			'id_harga' => $harga->id_harga,
+			'link' => $this->input->post('link'),
+			'jasa_desain' =>"TIDAK",
 			'jumlah_pesan' => $this->input->post('jumlah'),
 			'estimasi' => $this->input->post('estimasi'),
 			'total_harga' => $this->input->post('harga'),
 			'id_user' => $_SESSION['id_user'],
-			)
-			redirect('mapel');
+			));
+			redirect('HubNo');
 		}
 	}
 
