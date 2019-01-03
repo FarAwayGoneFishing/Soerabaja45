@@ -30,11 +30,12 @@ class pembayaran extends CI_Controller {
  	}
 	
 	public function create(){
+		
 		if(isset($_POST['pesan'])){
 			$data = $this->Model_Siswaguru->input(array (
 			'model' => $this->input->post('model'),
 			'deskripsi' => $this->input->post('deskripsi'),
-			
+			'id_harga' => 
 			'link' => $this->input->post('link'),
 			
 			'jumlah_pesan' => $this->input->post('jumlah'),
