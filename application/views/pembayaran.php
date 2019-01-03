@@ -115,14 +115,14 @@
                 <div class="card-body">
 
                   Nama Produk : Kalender
-					<form action="" method="post"> 
+					<form action="<?php echo base_url()?>pembayaran/create" method="post"> 
 					<div class="form-row align-items-center">
  						<div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Model :</label>
-                        <select class="custom-select mr-sm-2" name="model" id="model">
+                        <select class="custom-select mr-sm-2" name="model" id="model" onchange="cek_database()">
                           <option selected>--Pilih Model Kalender--</option>
 						<?php foreach($model as $row){ ?>
-                          <option value="<?php echo $row->nama_produk ?>"><?php echo $row->nama_produk ?></option>
+                          <option value="<?php echo $row->id_produk ?>"><?php echo $row->nama_produk ?></option>
                         <?php } ?>  
                         </select>
 						 </div>
@@ -136,7 +136,7 @@
                     <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Kertas :</label>
-                        <select class="custom-select mr-sm-2" name="kertas" id="kertas">
+                        <select class="custom-select mr-sm-2" name="kertas" id="kertas" onchange="cek_database()">
                           <option value="AP120" selected>AP.120</option>
                           <option value="AP150">AP.150</option>
                         </select>
@@ -146,7 +146,7 @@
 					  <div class="form-row align-items-center">
  						<div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Ukuran :</label>
-                        <select class="custom-select mr-sm-2" name="ukuran" id="ukuran">
+                        <select class="custom-select mr-sm-2" name="ukuran" id="ukuran" onchange="cek_database()">
                           <option value="38X53" selected>Ukuran 38X53</option>
                           <option value="46X64">Ukuran 46X64</option>
                         </select>
@@ -156,7 +156,7 @@
 					  <div class="form-row align-items-center">
 						<div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Jumlah :</label>
-                        <select class="custom-select mr-sm-2" name="jumlah" id="jumlah">
+                        <select class="custom-select mr-sm-2" name="jumlah" id="jumlah" onchange="cek_database()">
                           <option value="100" selected>100 pcs</option>
                           <option value="200">200 pcs</option>
                           <option value="300">300 pcs</option>
@@ -194,9 +194,7 @@
                     <div class="unit-price-container uprint-price">
                       <div class="unit-price-text uprice">Harga :</div>
                       <div class="unit-price uprice"><div class="price-box"> 
-                        <span class="regular-price"> 
-                          <span class="price" id="hargapcs" data-unit="pcs">Rp 40.640,-pcs</span>
-                        </span>
+                        <input type="text" name="hargapcs" id="hargapcs" value="" readonly>
                       </div>
                     </div>
                   </div>
@@ -222,10 +220,10 @@
               4. Pada menu ini pilih get shareable link, copy link yang diberikan oleh system dan input ke dalam kotak dibawah ini</p>
 
               <p>Input Google Drive Link Url</p>
-              <input type="text" class="form-control" id="link"><br>
+              <input type="text" class="form-control" name="link" id="link"><br>
                 <!-- Button trigger modal -->
                 <center><div class="" style="background: inherit; border-color: inherit;">
-                  <input type="button" class="btn btn-primary" name="pesan" value="Pesan" id="pesan" >
+                  <input type="submit" class="btn btn-primary" name="pesan" value="Pesan" id="pesan" >
                     
 					</div>
 				</center>
@@ -423,18 +421,20 @@
 					var model = $("#model").val();
 					var kertas = $("#kertas").val();
 					var ukuran = $("#ukuran").val();
-					var jumlah = $("#jumlah").val();
+          var jumlah = $("#jumlah").val();
+
+
 					
 					$.ajax({
 						type: 'POST',
-						url: '<?php echo base_url()?>pembayaran/harga',
-						data:"model="+model ,
+						url: '<?php echo base_url()?>pembayaran/harga_produk/'+model+'<?php echo "?kertas="; ?>'+kertas+'<?php echo "&ukuran="; ?>'+ukuran+'<?php echo "&jumlah="; ?>'+jumlah,
+						dataType:'JSON'
 						
 					}).success(function (data) {
-						var json = data,
-						obj = JSON.parse(json);
-						$('#hargapcs').val(obj.nama_karyawan);
-						$('#harga').val(obj.address);
+						$('#hargapcs').val(data.harga);
+            $('#harga').val(data.harga*jumlah);
+          });
+        }
 			</script>
 
              <!-- loader -->
