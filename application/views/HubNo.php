@@ -60,13 +60,13 @@
              <?php if(isset($_SESSION["id_user"])){ ?>
              
              <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
-               <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-                <a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
-                <a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
-              </div>
-            </li>
+                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
+                	<div class="dropdown-menu" aria-labelledby="dropdown04">
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
+<!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
+                	</div>
+              	</li>
             
             <?php }else {
             echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';

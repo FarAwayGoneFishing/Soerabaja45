@@ -67,7 +67,7 @@
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
                 	<div class="dropdown-menu" aria-labelledby="dropdown04">
                   		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+<!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
                   		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
                 	</div>
               	</li>
@@ -91,7 +91,7 @@
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
             <h2 class="text-primary heading">Produk Digital Offset</h2>
-            <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
+            
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@
                       <span></span>
                     </div>
                     <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
+                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran/produk/MS001">Pesan</a></span></div>
                   </div>
                 </div>
               </div>

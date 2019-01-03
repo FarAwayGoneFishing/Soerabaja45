@@ -58,16 +58,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
-			</ul>
-              <ul class="navbar-nav absolute-right">
-              
-			<?php if(isset($_SESSION["id_user"])){ ?>
+            </ul>
+            <ul class="navbar-nav absolute-right">
+              <li>
+				<?php if(isset($_SESSION["id_user"])){ ?>
 				  
 				<li class="nav-item dropdown">
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
                 	<div class="dropdown-menu" aria-labelledby="dropdown04">
                   		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+<!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
                   		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
                 	</div>
               	</li>
@@ -75,7 +75,6 @@
 				<?php }else {
                 	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
 				}?> 
-				
             </ul>
           </div>
         </div>
@@ -89,7 +88,7 @@
     <div class="container">
       <div class="row justify-content-center mb-5 element-animate">
         <div class="col-md-7 text-center section-heading">
-          <h2 class="text-primary heading">Pembayaran</h2>
+          <h2 class="text-primary heading">Pemesanan (jasa desain)</h2>
           <p>Soerabaja'45</p>
         </div>
       </div>
@@ -98,57 +97,65 @@
     <div class="container">
       <div class="row m-auto">
         <div class="col-6">
-              <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
-          
-            <center><b><h6>Jasa Edit</h6></b>
-                <form action="proses.php" method="get">
-                    <p>Deskripsikan Desain yang anda inginkan</p>
-                      <p><textarea name="alamat" rows="10" cols="40"></textarea>
-                        </p>
-                      <div class="" style="background: inherit; border-color: inherit;">
-                        <a href="#" class="btn btn-primary">Kirim</a></center>
-                      </div>       
-                </form>
- 
+          <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
+          <div class="">
+            <br><center><b><h6>Cetak Kalender</h6></b>
+              <div class="embed-responsive">
+                <img src="http://localhost/Soerabaja45/assets/images/z6.jpg" class="img-thumbnail" alt="Kalender" width="300" height="200"></center>
+              </div><br>
+              
+            </div>
             <!--Rightside tampilan-->
             <div class="col-6">
               <div class="card card-custom bg-white border-white border-0">
                 <div class="card-body">
 
                   Nama Produk : Kalender
-
-                  <form>
+					 
+					<div class="form-row align-items-center">
+ 						<div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Model :</label>
+                        <select class="custom-select mr-sm-2" name="ukuran" id="inlineFormCustomSelect">
+                          <option selected>--Pilih Model Kalender--</option>
+						<?php foreach($model as $row){ ?>
+                          <option value="<?php echo $row->nama_produk ?>"><?php echo $row->nama_produk ?></option>
+                        <?php } ?>  
+                        </select>
+						 </div>
+					  </div>
+					 
+					<div class="form-group">
+                    	<label for="message-text" class="col-form-label">Deskripsi :</label>
+                    	<textarea class="form-control" id="message-text"></textarea>
+                  	</div>
+					  
                     <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Kertas :</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>--Pilih Item--</option>
-                          <option value="1">HVS 70</option>
-                          <option value="2">NCR</option>
+                        <select class="custom-select mr-sm-2" name="kertas" id="inlineFormCustomSelect">
+                          <option selected>--Pilih Kertas--</option>
+                          <option value="1">AP.120</option>
+                          <option value="2">AP.150</option>
                         </select>
-                      </div>
-                    </div>
-                  </form>
-
-                  <form>
-                    <div class="form-row align-items-center">
-                      <div class="col-auto my-1">
+						</div>
+					  </div>
+						
+					  <div class="form-row align-items-center">
+ 						<div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Ukuran :</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>--Pilih Item--</option>
+                        <select class="custom-select mr-sm-2" name="ukuran" id="inlineFormCustomSelect">
+                          <option selected>--Pilih Ukuran--</option>
                           <option value="1">Ukuran 38X53</option>
                           <option value="2">Ukuran 46X64</option>
                         </select>
-                      </div>
-                    </div>
-                  </form>
-
-                  <form>
-                    <div class="form-row align-items-center">
-                      <div class="col-auto my-1">
+						 </div>
+					  </div>
+						
+					  <div class="form-row align-items-center">
+						<div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Jumlah :</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>Ukuran 38X53</option>
+                        <select class="custom-select mr-sm-2" name="jumlah" id="inlineFormCustomSelect">
+                          <option selected>Pilih Jumlah</option>
                           <option value="1">100 pcs</option>
                           <option value="2">200 pcs</option>
                           <option value="3">300 pcs</option>
@@ -164,39 +171,23 @@
                           <option value="13">2500 pcs</option>
                           <option value="14">3000 pcs</option>
                         </select>
-                      </div>
-                    </div>
-                  </form>
-
-                  <form>
-                    <div class="form-row align-items-center">
-                      <div class="col-auto my-1">
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>Ukuran 46X64</option>
-                          <option value="1">100 pcs</option>
-                          <option value="2">200 pcs</option>
-                          <option value="3">300 pcs</option>
-                          <option value="4">400 pcs</option>
-                          <option value="5">500 pcs</option>
-                          <option value="6">600 pcs</option>
-                          <option value="7">700 pcs</option>
-                          <option value="8">800pcs</option>
-                          <option value="9">900 pcs</option>
-                          <option value="10">1000 pcs</option>
-                          <option value="11">1500 pcs</option>
-                          <option value="12">2000 pcs</option>
-                          <option value="13">2500 pcs</option>
-                          <option value="14">3000 pcs</option>
+						</div>
+					  </div>
+					  
+					  <div class="form-row align-items-center">
+						<div class="col-auto my-1">
+						<label class="mr-sm-2" for="inlineFormCustomSelect">Finishing :</label>
+                        <select class="custom-select mr-sm-2" name="finishing" id="inlineFormCustomSelect">
+                          <option selected>Klep</option>
                         </select>
                       </div>
-                    </div>
-                  </form>
 
-                  Estimasi : 7 Hari
+					Estimasi : <br>
+					<input type="text" name="estimasi" value="7 hari" readonly><br>
+                  	<p>Waktu pengerjaan terhitung dari desain telah di approve siap cetak dan pembayaran sudah kami terima</p>
 
                   <div class="block-content uprint-price-container">
                     <div class="unit-price-container uprint-price">
-                      <p>Harga akan menjadi lebih murah, ketika Anda memilih quantity lebih banyak</p>
                       <div class="unit-price-text uprice">Harga :</div>
                       <div class="unit-price uprice"><div class="price-box"> 
                         <span class="regular-price"> 
@@ -215,46 +206,91 @@
                       </div>
                     </div>
                   </div>
-
-                </div>
-
+                </div> <br>
+				
                 <!-- Button trigger modal -->
-                <center><div class="card-footer" style="background: inherit; border-color: inherit;">
+                <center><div class="" style="background: inherit; border-color: inherit;">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                     Pesan
                   </button>
+					</div>
+				</center>
+					
 
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Rekap Pembayaran</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle">Rekap Pemesanan</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-                          dofjgzdrjgozsg
-                          dskfjsjfhwo
-                          dzshzih
+						<form action="" method="post">
+							<table>
+							<tbody>
+							<tr>
+                               	<td>Nama Produk</td>
+								<td>:</td>
+                         		<td><input type="text" name="produk" value="7 hari" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Model</td>
+								<td>:</td>
+                         		<td><input type="text" name="nama_produk" value="7 hari" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Deskripsi</td>
+								<td>:</td>
+								<td><textarea type="text" name="deskripsi" readonly>7 hari</textarea></td>
+							</tr>
+							<tr>
+                               	<td>Kertas</td>
+								<td>:</td>
+                         		<td><input type="text" name="kertas" value="7 hari" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Ukuran</td>
+								<td>:</td>
+                         		<td><input type="text" name="ukuran" value="7 hari" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Jumlah</td>
+								<td>:</td>
+                         		<td><input type="text" name="jumlah" value="7 hari" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Estimasi</td>
+								<td>:</td>
+                         		<td><input type="text" name="estimasi" value="7 hari" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Total Harga</td>
+								<td>:</td>
+                         		<td><input type="text" name="harga" value="7 hari" readonly></td>
+							</tr>
+							</tbody>
+							</table>
+						</form>
+
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                          <button type="button" class="btn btn-primary">Cetak Slip</button>
+                          <a href="HubNo" class="btn btn-primary">OK</a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </center>
-
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 
   <!-- END section -->
 

@@ -67,7 +67,7 @@
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
                 	<div class="dropdown-menu" aria-labelledby="dropdown04">
                   		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+<!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
                   		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
                 	</div>
               	</li>
@@ -91,7 +91,7 @@
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
             <h2 class="text-primary heading">Produk Offset</h2>
-            <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
+            
           </div>
         </div>
       </div>
@@ -148,17 +148,13 @@
 			<div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="<?php echo base_url()?>assets/images/img0.jpg" alt="Image" class="img-fluid">
+                  <img src="<?php echo base_url()?>assets/images/z5.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
                  <center><h2 class="heading">Kalender</h2></center>
-                  <p class="mb-4">Tahun Baru nih...?
-			Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...
-			Pasti butuh Kalender terbaru kan
-			Cocok...!
-			Soerabaja'45 lagi ADA PROMO KALENDER !
-			Harga hanya Rp 1.000'an
-			Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh</p>
+                  <p class="mb-4">Tidak perlu bingung dalam mencetak Kalender Tahun Baru. 
+    Dan juga mencetak dalam jumlah banyak.Kini Soerabaja'45 bisa membantu anda.
+    Silahkan hubungi CS online kami WA 0811 366 1927</p>
                   <div class="meta d-flex align-items-center">
                     <div class="number">
                       <span></span>

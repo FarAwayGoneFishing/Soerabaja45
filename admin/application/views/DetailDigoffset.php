@@ -199,42 +199,7 @@
                             <div class="col-lg-12">
                                 <h2 class="title-1 m-b-25">Daftar Produk Digital Offset</h2>
                                 <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>Id Produk</th>
-                                                <th>Nama</th>
-                                                <th>Kertas</th>
-                                                <th class="text-right">Ukuran</th>
-												<th class="text-right">Jumlah</th>
-												<th class="text-right">Harga</th>
-                                                <th class="text-right">Pilihan</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-											
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>iPhone X 64Gb Grey</td>
-                                                <td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail" role="button">Ubah Harga</a></td>
-                                                
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-28 01:22</td>
-                                                <td>100397</td>
-                                                <td>Samsung S8 Black</td>
-                                                <td class="text-right">$756.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right">$999.00</td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Digoffset/Detail" role="button">Ubah Harga</a></td>
-                                                
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <img src="http://localhost/Soerabaja45/assets/images/z2.jpeg" alt="..." class="img-thumbnail">
                                 </div>
                             </div>
 						</div>

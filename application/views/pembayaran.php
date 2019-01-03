@@ -7,68 +7,79 @@
 
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/bootstrap.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/animate.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
 
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
 
-  <!-- Theme Style -->
-  <link rel="stylesheet" href="http://localhost/Soerabaja45/assets/css/style.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
 </head>
 <body>
 
   <header role="banner">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a></img>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container">
+          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="dashboard">Beranda</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="digoffset">Digital Offset</a>
-                <a class="dropdown-item" href="offset">Offset</a>
-              </div>
+          <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
+                </div>
 
-            </li>
+              </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown05">
-                <a class="dropdown-item" href="galeri">Galeri</a>
-                <a class="dropdown-item" href="lokasi">Lokasi</a>
-              </div>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  <a class="dropdown-item" href="<?php echo base_url()?>galeri">Galeri</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>lokasi">Lokasi</a>
+                </div>
 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tentang">Tentang Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="kontak">Kontak</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav absolute-right">
-            <li>
-              <a href="login">Masuk Akun</a> / <a href="register">Daftar Akun</a>
-            </li>
-          </ul>
-
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url()?>Tentang">Tentang Kami</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav absolute-right">
+              <li>
+				<?php if(isset($_SESSION["id_user"])){ ?>
+				  
+				<li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
+                	<div class="dropdown-menu" aria-labelledby="dropdown04">
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
+<!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
+                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
+                	</div>
+              	</li>
+				
+				<?php }else {
+                	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
+				}?> 
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
   <!-- END header -->
 
   <!-- END section -->
@@ -77,7 +88,7 @@
     <div class="container">
       <div class="row justify-content-center mb-5 element-animate">
         <div class="col-md-7 text-center section-heading">
-          <h2 class="text-primary heading">Pembayaran</h2>
+          <h2 class="text-primary heading">Pemesanan</h2>
           <p>Soerabaja'45</p>
         </div>
       </div>
@@ -87,27 +98,15 @@
       <div class="row m-auto">
         <div class="col-6">
           <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
-          <div class="card card-custom bg-white border-white border-0">
+          <div class="">
             <br><center><b><h6>Cetak Kalender</h6></b>
               <div class="embed-responsive">
                 <img src="http://localhost/Soerabaja45/assets/images/z6.jpg" class="img-thumbnail" alt="Kalender" width="300" height="200">
               </div><br>
-              <p class="text-center"><b><h6>Upload File</h6></b></p><br>
-              <p class="text-sm-left">Yang perlu Anda perhatikan sebelum mengupload desain Anda :</p>
-              <p class="text-sm-left">1. Cek kembali ukuran desain Anda apakah sudah sesuai dengan ukuran jadi produk yang Anda pesan</p>
-              <p class="text-sm-left">2.Pastikan Anda mengirimkan File Final. Hati-hati dengan pengambilan data revisi.</p>
-              <p class="text-sm-left">3. Kirimkan desain High Resolution 300 dpi, CMYK, dan Package link image + font yang digunakan dalam desain Anda.</p><br><br>
-
-              <p class="text-sm-left">Salah satu metode favorit lainnya adalah Google Drive, dibutuhkan account google drive untuk Anda dapat menggunakan fasilitas ini. Caranya sebagai berikut :</p>
-              <p class="text-sm-left">1. Login Account Anda </p>
-              <p class="text-sm-left">2. Apabila file desain Anda belum terdapat pada folder Google Drive Anda, silahkan Anda upload terlebih dahulu (sebaiknya dalam bentuk Zip, atau file berada dalam satu folder)</p> 
-              <p class="text-sm-left">3. Pilih file / folder yang ingin Anda sharing dan klik kanan dan pilih share</p> 
-              <p class="text-sm-left">4. Pada menu ini pilih get shareable link, copy link yang diberikan oleh system dan input ke dalam kotak dibawah ini</p><br>
-
-              <p>Input Google Drive Link Url</p>
-              <textarea class="form-control" id="message-text"></textarea><br>
-              <div class="card-footer" style="background: inherit; border-color: inherit;">
-                <a href="jasa_edit" class="btn btn-primary">Jasa Edit</a></center>
+              
+              <div class="" style="background: inherit; border-color: inherit;">
+				  <p> Apabila Anda tidak Bisa mendesain sendiri, kami sediakan layanan pendesainan </p>
+                <a href="<?php echo base_url()?>pembayaran/jasa_desain/MS001" class="btn btn-primary">Jasa Desain</a></center>
               </div>
             </div>
             <!--Rightside tampilan-->
@@ -116,107 +115,87 @@
                 <div class="card-body">
 
                   Nama Produk : Kalender
-
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Deskripsi :</label>
-                    <textarea class="form-control" id="message-text"></textarea>
-                  </div>
-
-                  <form>
+					<form action="" method="post"> 
+					<div class="form-row align-items-center">
+ 						<div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Model :</label>
+                        <select class="custom-select mr-sm-2" name="model" id="model">
+                          <option selected>--Pilih Model Kalender--</option>
+						<?php foreach($model as $row){ ?>
+                          <option value="<?php echo $row->nama_produk ?>"><?php echo $row->nama_produk ?></option>
+                        <?php } ?>  
+                        </select>
+						 </div>
+					  </div>
+					 
+					<div class="form-group">
+                    	<label for="message-text" class="col-form-label">Deskripsi :</label>
+                    	<textarea class="form-control" name="deskripsi" id="deskripsi"></textarea>
+                  	</div>
+					  
                     <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Kertas :</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>--Pilih Item--</option>
-                          <option value="1">HVS 70</option>
-                          <option value="2">NCR</option>
+                        <select class="custom-select mr-sm-2" name="kertas" id="kertas">
+                          <option value="AP120" selected>AP.120</option>
+                          <option value="AP150">AP.150</option>
                         </select>
-                      </div>
-                    </div>
-                  </form>
-
-                  <form>
-                    <div class="form-row align-items-center">
-                      <div class="col-auto my-1">
+						</div>
+					  </div>
+						
+					  <div class="form-row align-items-center">
+ 						<div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Ukuran :</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>--Pilih Item--</option>
-                          <option value="1">Ukuran 38X53</option>
-                          <option value="2">Ukuran 46X64</option>
+                        <select class="custom-select mr-sm-2" name="ukuran" id="ukuran">
+                          <option value="38X53" selected>Ukuran 38X53</option>
+                          <option value="46X64">Ukuran 46X64</option>
                         </select>
-                      </div>
-                    </div>
-                  </form>
-
-                  Warna :
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Ya</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Tidak</label>
-                  </div>
-
-                  <form>
-                    <div class="form-row align-items-center">
-                      <div class="col-auto my-1">
+						 </div>
+					  </div>
+						
+					  <div class="form-row align-items-center">
+						<div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Jumlah :</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>Ukuran 38X53</option>
-                          <option value="1">100 pcs</option>
-                          <option value="2">200 pcs</option>
-                          <option value="3">300 pcs</option>
-                          <option value="4">400 pcs</option>
-                          <option value="5">500 pcs</option>
-                          <option value="6">600 pcs</option>
-                          <option value="7">700 pcs</option>
-                          <option value="8">800 pcs</option>
-                          <option value="9">900 pcs</option>
-                          <option value="10">1000 pcs</option>
-                          <option value="11">1500 pcs</option>
-                          <option value="12">2000 pcs</option>
-                          <option value="13">2500 pcs</option>
-                          <option value="14">3000 pcs</option>
+                        <select class="custom-select mr-sm-2" name="jumlah" id="jumlah">
+                          <option value="100" selected>100 pcs</option>
+                          <option value="200">200 pcs</option>
+                          <option value="300">300 pcs</option>
+                          <option value="400">400 pcs</option>
+<!--
+                          <option value="500">500 pcs</option>
+                          <option value="600">600 pcs</option>
+                          <option value="700">700 pcs</option>
+                          <option value="800">800 pcs</option>
+                          <option value="900">900 pcs</option>
+                          <option value="1000">1000 pcs</option>
+                          <option value="1500">1500 pcs</option>
+                          <option value="2000">2000 pcs</option>
+                          <option value="2500">2500 pcs</option>
+                          <option value="3000">3000 pcs</option>
+-->
+                        </select>
+						</div>
+					  </div>
+					  
+					  <div class="form-row align-items-center">
+						<div class="col-auto my-1">
+						<label class="mr-sm-2" for="inlineFormCustomSelect">Finishing :</label>
+                        <select class="custom-select mr-sm-2" name="finishing" id="finishing">
+                          <option selected>Klep</option>
                         </select>
                       </div>
                     </div>
-                  </form>
 
-                  <form>
-                    <div class="form-row align-items-center">
-                      <div class="col-auto my-1">
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                          <option selected>Ukuran 46X64</option>
-                          <option value="1">100 pcs</option>
-                          <option value="2">200 pcs</option>
-                          <option value="3">300 pcs</option>
-                          <option value="4">400 pcs</option>
-                          <option value="5">500 pcs</option>
-                          <option value="6">600 pcs</option>
-                          <option value="7">700 pcs</option>
-                          <option value="8">800pcs</option>
-                          <option value="9">900 pcs</option>
-                          <option value="10">1000 pcs</option>
-                          <option value="11">1500 pcs</option>
-                          <option value="12">2000 pcs</option>
-                          <option value="13">2500 pcs</option>
-                          <option value="14">3000 pcs</option>
-                        </select>
-                      </div>
-                    </div>
-                  </form>
-
-                  Estimasi : 7 Hari<br>
-                  Waktu pengerjaan terhitung dari desain telah di approve siap cetak dan pembayaran sudah kami terima
+					Estimasi : <br>
+					<input type="text" name="estimasi" id="estimasi" value="7 hari" readonly><br>
+                  	<p>Waktu pengerjaan terhitung dari desain telah di approve siap cetak dan pembayaran sudah kami terima</p>
 
                   <div class="block-content uprint-price-container">
                     <div class="unit-price-container uprint-price">
-                      <p>Harga akan menjadi lebih murah, ketika Anda memilih quantity lebih banyak</p>
                       <div class="unit-price-text uprice">Harga :</div>
                       <div class="unit-price uprice"><div class="price-box"> 
                         <span class="regular-price"> 
-                          <span class="price" data-unit="pcs">Rp 40.640,-pcs</span>
+                          <span class="price" id="hargapcs" data-unit="pcs">Rp 40.640,-pcs</span>
                         </span>
                       </div>
                     </div>
@@ -225,53 +204,107 @@
                     <div class="total-price-text uprice">Harga Total:</div>
                     <div class="total-price uprice ">
                       <div class="price-box"> 
-                        <span class="regular-price" id="product-price-2656"> 
-                          <span class="price">Rp 406.400,-</span> 
-                        </span>
+                        <input type="text" name="harga" id="harga" value="" readonly>
                       </div>
                     </div>
                   </div>
+                </div> <br>
+					<p class="text-center"><b><h6>Upload File</h6></b></p>
+              <p class="text-sm-left">Yang perlu Anda perhatikan sebelum mengupload desain Anda :<br>
+              1. Cek kembali ukuran desain Anda apakah sudah sesuai dengan ukuran jadi produk yang Anda pesan<br>
+              2. Pastikan Anda mengirimkan File Final.<br>
+              3. Kirimkan desain High Resolution 300 dpi, CMYK, dan Package link image + font yang digunakan dalam desain Anda.</p><br>
 
-                </div>
+              <p class="text-sm-left">Dibutuhkan account google drive untuk Anda dapat mengupload desain anda. Caranya sebagai berikut :</p>
+              <p class="text-sm-left">1. Login Account Anda <br>
+              2. Apabila file desain Anda belum terdapat pada folder Google Drive Anda, silahkan Anda upload terlebih dahulu (sebaiknya dalam bentuk Zip, atau file berada dalam satu folder)<br> 
+              3. Pilih file / folder yang ingin Anda sharing dan klik kanan dan pilih share<br> 
+              4. Pada menu ini pilih get shareable link, copy link yang diberikan oleh system dan input ke dalam kotak dibawah ini</p>
 
+              <p>Input Google Drive Link Url</p>
+              <input type="text" class="form-control" id="link"><br>
                 <!-- Button trigger modal -->
-                <center><div class="card-footer" style="background: inherit; border-color: inherit;">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                    Bayar
-                  </button>
+                <center><div class="" style="background: inherit; border-color: inherit;">
+                  <input type="button" class="btn btn-primary" name="pesan" value="Pesan" id="pesan" >
+                    
+					</div>
+				</center>
+					</form>
 
                   <!-- Modal -->
+<!--
                   <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Rekap Pembayaran</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle">Rekap Pemesanan</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-
-                          Nama Produk : Kalender<br>
-                          Deskripsi : Ada Gambar Keluarga<br>
-                          Kertas : HVS 70<br>
-                          Ukuran : 38X53<br>
-                          Warna : Ya<br>
-                          Jumlah : 100 pcs<br>
-                          Estimasi :7 Hari<br>
-
+						
+							<table>
+							<tbody>
+							<tr>
+                               	<td>Nama Produk</td>
+								<td>:</td>
+                         		<td><input type="text" name="produk" id="produk1" value="" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Model</td>
+								<td>:</td>
+                         		<td><input type="text" name="nama_produk" id="model1" value="" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Deskripsi</td>
+								<td>:</td>
+								<td><textarea type="text" name="deskripsi" id="deskripsi1" readonly></textarea></td>
+							</tr>
+							<tr>
+                               	<td>Kertas</td>
+								<td>:</td>
+                         		<td><input type="text" name="kertas" id="kertas1" value="" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Ukuran</td>
+								<td>:</td>
+                         		<td><input type="text" name="ukuran" id="ukuran1" value="" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Jumlah</td>
+								<td>:</td>
+                         		<td><input type="text" name="jumlah" id="jumlah1" value="" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Estimasi</td>
+								<td>:</td>
+                         		<td><input type="text" name="estimasi" id="estimasi1" value="" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Total Harga</td>
+								<td>:</td>
+                         		<td><input type="text" name="harga" id="harga1" value="" readonly></td>
+							</tr>
+							<tr>
+                               	<td>Link</td>
+								<td>:</td>
+                         		<td><input type="text" name="link" id="link1" value="" readonly></td>
+							</tr>
+							</tbody>
+							</table>
+						
 
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                          <a href="HubNo" class="btn btn-primary">OK</a></center>
+                          <a href="HubNo" class="btn btn-primary">OK</a>
                         </div>
                       </div>
                     </div>
                   </div>
+-->
                 </div>
-              </center>
-
             </div>
           </div>
         </div>
@@ -383,6 +416,26 @@
                </div>
              </footer>
              <!-- END footer -->
+	
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script type="text/javascript">
+				function cek_database(){
+					var model = $("#model").val();
+					var kertas = $("#kertas").val();
+					var ukuran = $("#ukuran").val();
+					var jumlah = $("#jumlah").val();
+					
+					$.ajax({
+						type: 'POST',
+						url: '<?php echo base_url()?>pembayaran/harga',
+						data:"model="+model ,
+						
+					}).success(function (data) {
+						var json = data,
+						obj = JSON.parse(json);
+						$('#hargapcs').val(obj.nama_karyawan);
+						$('#harga').val(obj.address);
+			</script>
 
              <!-- loader -->
              <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>

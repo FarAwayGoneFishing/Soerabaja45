@@ -63,7 +63,7 @@
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
                 	<div class="dropdown-menu" aria-labelledby="dropdown04">
                   		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+<!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
                   		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
                 	</div>
               	</li>
@@ -109,7 +109,7 @@
   <center><p><div class="container example2">
     <div class="row">
         <div class="col-md-2 col-xs-2 col1 center-block"> 
-          <a href="pembayaran"><button class="btn btn-primary center-block">Pesan</button></a>
+          <a href="pembayaran/produk/MS001"><button class="btn btn-primary center-block">Pesan</button></a>
         </div></center>
     </div></div></p>
 </div>

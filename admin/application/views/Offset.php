@@ -204,8 +204,6 @@
                                            <tr>
                                                 <th>Id Produk</th>
                                                 <th>Nama</th>
-                                                <th>Kertas</th>
-                                                <th class="text-right">Ukuran</th>
 												<th class="text-right">Detail Harga</th>
                                                 
                                             </tr>
@@ -215,8 +213,6 @@
                                             <tr>
                                                  <td><?php echo $row->id_master ?></td>
                                                 <td><?php echo $row->produk ?></td>
-                                                <td><?php echo $row->kertas ?></td>
-                                                <td class="text-right"><?php echo $row->ukuran ?></td>
 												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Offset/Detail/<?php echo $row->id_master ?>" role="button">Detail</a></td>
                                                 
                                             </tr>

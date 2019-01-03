@@ -67,7 +67,7 @@
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
                 	<div class="dropdown-menu" aria-labelledby="dropdown04">
                   		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>
+<!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
                   		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
                 	</div>
               	</li>
@@ -150,9 +150,8 @@
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Produk Terbaru dan Populer</h2>
-            <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
-            <p><a href="<?php echo base_url()?>Offset" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Selengkapnya</a></p>
+            <h2 class="text-primary heading">Promo Terbaru</h2>
+
           </div>
         </div>
       </div>
@@ -294,75 +293,28 @@
             </div>
           </div>  
 -->
+			
+
 			<div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="<?php echo base_url()?>assets/images/img5.jpg" width="450" height="405" alt="Image">
+                  <img src="<?php echo base_url()?>assets/images/img0.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
-                 <center><h2 class="heading">Sertifikat</h2></center>
-                  <p class="mb-4">Cetak sertifikatmu sendiri..
-     Cetak sertifikat kini nggak perlu ribet dan nggak perlu lama lagi menunggu 
-     So.. ,buat kamu yang sudah kepepet deadline buat cetak sertifikat
-     Langsung saja hubungi atau datang di Kantor Kami, di JL.Jawa 12 A,SUMBERSARI,JEMBER 
-     Harga mulai Rp 2.500/lembar. Order bersama kami insyaAllah terbaik dan memuaskan deh</p> 
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                    <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
-                  </div>
+                 <center><h2 class="heading">Kalender</h2></center>
+                  <p class="mb-4">Tahun Baru nih...?
+			Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...
+			Pasti butuh Kalender terbaru kan
+			Cocok...!
+			Soerabaja'45 lagi ADA PROMO KALENDER !
+			Harga hanya Rp 1.000'an
+			Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh</p>
+                  
                 </div>
               </div>
           </div>
-
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="<?php echo base_url()?>assets/images/img22.JPG" width="450" height="405" alt="Image">
-                </figure>
-                <div class="text">
-                  <center><h2 class="heading">Slip</h2></center>
-                 <p class="mb-4">Tidak perlu bingung dalam mencetak slip untuk rekapan gaji karyawan. 
-    Dan juga mencetak dalam jumlah banyak.Kini Soerabaja'45 bisa membantu anda.
-    Silahkan hubungi CS online kami WA 0811 366 1927</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                     <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
-                     <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="<?php echo base_url()?>assets/images/img23.JPG" width="450" height="405" alt="Image">
-              </figure>
-              <div class="text">
-                <center><h2 class="heading">Tiket</h2></center>
-                  <p class="mb-4">Cetak Tiket ala sticker hanya di Soerabaja'45..
-    Bisa desain sendiri dan gak perlu bingung jika belum punya desain. 
-    Kami siap membuat desain tiket sesuai dengan keinginan Customer.
-    Pesan sekarang sebelum kebanjiran orderan..</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                    <div class="price text-left"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
+			
+		<div class="item">
             <div class="block-19">
                 <figure>
                   <img src="<?php echo base_url()?>assets/images/img28.PNG" width="450" height="405" alt="Image">
@@ -373,18 +325,10 @@
                      Seharga Rp 250/1.000 lbr (A5 1sisi) jadi nggak usah bingung cari brosur kalo cetaknya disana mahal.
                         Disini aja lebih murah.
                         Langsung order di no.telp(08113669009) @soerabaja_45</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span></span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>detailkal">Detail</a></span></div>
-                    <div class="price text-right"><del class="mr-3"></del><span><a class="btn btn-primary" href="<?php echo base_url()?>pembayaran">Pesan</a></span></div>
-                  </div>
+                  
                 </div>
               </div>
           </div>
-        </div>
-      </div>
 
       
     </div>
