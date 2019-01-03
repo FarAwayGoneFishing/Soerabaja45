@@ -207,7 +207,7 @@
                     </div>
                   </div>
                 </div> <br>
-					<p class="text-center"><b><h6>Upload File</h6></b></p>
+					<p class="text-center"><b><h6>Upload File Desain Anda (wajib)</h6></b></p>
               <p class="text-sm-left">Yang perlu Anda perhatikan sebelum mengupload desain Anda :<br>
               1. Cek kembali ukuran desain Anda apakah sudah sesuai dengan ukuran jadi produk yang Anda pesan<br>
               2. Pastikan Anda mengirimkan File Final.<br>

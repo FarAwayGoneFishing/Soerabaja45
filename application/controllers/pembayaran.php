@@ -52,6 +52,25 @@ class pembayaran extends CI_Controller {
 		}
 	}
 
+	public function create_jasa(){
+		$harga = $this->model->get_harga($_POST['model'], $_POST['jumlah'], $_POST['kertas'], $_POST['ukuran']);
+		if(isset($_POST['pesan'])){
+			$data = $this->model->input(array (
+			'id_pesan' => $this->model->get_id(),	
+			
+			'deskripsi' => $this->input->post('deskripsi'),
+			'id_harga' => $harga->id_harga,
+			'link' => $this->input->post('link'),
+			'jasa_desain' =>"YA",
+			'jumlah_pesan' => $this->input->post('jumlah'),
+			'estimasi' => $this->input->post('estimasi'),
+			'total_harga' => $this->input->post('harga'),
+			'id_user' => $_SESSION['id_user'],
+			));
+			redirect('HubNo');
+		}
+	}
+
 }
 
 ?>

@@ -283,8 +283,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3">
-                                                    <label class="control-label mb-1">Desain yang Diminta</label>
-													<textarea id="produk" name="produk" type="text" class="form-control" readonly><?php echo $data->desain_yang_diminta ?></textarea>
+                                                    <label class="control-label mb-1">Link Gambar</label>
+													<input id="produk" name="produk" type="text" class="form-control" value="<?php echo $data->link ?>" readonly>
                                                 </div>
                                             </div>
 											<br/><br/>

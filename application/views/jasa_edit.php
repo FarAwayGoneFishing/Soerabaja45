@@ -112,87 +112,86 @@
 
                   Nama Produk : Kalender
 					 
-					<div class="form-row align-items-center">
- 						<div class="col-auto my-1">
+					<form action="<?php echo base_url()?>pembayaran/create_jasa" method="post"> 
+          <div class="form-row align-items-center">
+            <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Model :</label>
-                        <select class="custom-select mr-sm-2" name="ukuran" id="inlineFormCustomSelect">
+                        <select class="custom-select mr-sm-2" name="model" id="model" onchange="cek_database()">
                           <option selected>--Pilih Model Kalender--</option>
-						<?php foreach($model as $row){ ?>
-                          <option value="<?php echo $row->nama_produk ?>"><?php echo $row->nama_produk ?></option>
+            <?php foreach($model as $row){ ?>
+                          <option value="<?php echo $row->id_produk ?>"><?php echo $row->nama_produk ?></option>
                         <?php } ?>  
                         </select>
-						 </div>
-					  </div>
-					 
-					<div class="form-group">
-                    	<label for="message-text" class="col-form-label">Deskripsi :</label>
-                    	<textarea class="form-control" id="message-text"></textarea>
-                  	</div>
-					  
+             </div>
+            </div>
+           
+          <div class="form-group">
+                      <label for="message-text" class="col-form-label">Deskripsi :</label>
+                      <textarea class="form-control" name="deskripsi" id="deskripsi"></textarea>
+                    </div>
+            
                     <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Kertas :</label>
-                        <select class="custom-select mr-sm-2" name="kertas" id="inlineFormCustomSelect">
-                          <option selected>--Pilih Kertas--</option>
-                          <option value="1">AP.120</option>
-                          <option value="2">AP.150</option>
+                        <select class="custom-select mr-sm-2" name="kertas" id="kertas" onchange="cek_database()">
+                          <option value="AP120" selected>AP.120</option>
+                          <option value="AP150">AP.150</option>
                         </select>
-						</div>
-					  </div>
-						
-					  <div class="form-row align-items-center">
- 						<div class="col-auto my-1">
+            </div>
+            </div>
+            
+            <div class="form-row align-items-center">
+            <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Ukuran :</label>
-                        <select class="custom-select mr-sm-2" name="ukuran" id="inlineFormCustomSelect">
-                          <option selected>--Pilih Ukuran--</option>
-                          <option value="1">Ukuran 38X53</option>
-                          <option value="2">Ukuran 46X64</option>
+                        <select class="custom-select mr-sm-2" name="ukuran" id="ukuran" onchange="cek_database()">
+                          <option value="38X53" selected>Ukuran 38X53</option>
+                          <option value="46X64">Ukuran 46X64</option>
                         </select>
-						 </div>
-					  </div>
-						
-					  <div class="form-row align-items-center">
-						<div class="col-auto my-1">
+             </div>
+            </div>
+            
+            <div class="form-row align-items-center">
+            <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Jumlah :</label>
-                        <select class="custom-select mr-sm-2" name="jumlah" id="inlineFormCustomSelect">
-                          <option selected>Pilih Jumlah</option>
-                          <option value="1">100 pcs</option>
-                          <option value="2">200 pcs</option>
-                          <option value="3">300 pcs</option>
-                          <option value="4">400 pcs</option>
-                          <option value="5">500 pcs</option>
-                          <option value="6">600 pcs</option>
-                          <option value="7">700 pcs</option>
-                          <option value="8">800 pcs</option>
-                          <option value="9">900 pcs</option>
-                          <option value="10">1000 pcs</option>
-                          <option value="11">1500 pcs</option>
-                          <option value="12">2000 pcs</option>
-                          <option value="13">2500 pcs</option>
-                          <option value="14">3000 pcs</option>
+                        <select class="custom-select mr-sm-2" name="jumlah" id="jumlah" onchange="cek_database()">
+                          <option value="100" selected>100 pcs</option>
+                          <option value="200">200 pcs</option>
+                          <option value="300">300 pcs</option>
+                          <option value="400">400 pcs</option>
+<!--
+                          <option value="500">500 pcs</option>
+                          <option value="600">600 pcs</option>
+                          <option value="700">700 pcs</option>
+                          <option value="800">800 pcs</option>
+                          <option value="900">900 pcs</option>
+                          <option value="1000">1000 pcs</option>
+                          <option value="1500">1500 pcs</option>
+                          <option value="2000">2000 pcs</option>
+                          <option value="2500">2500 pcs</option>
+                          <option value="3000">3000 pcs</option>
+-->
                         </select>
-						</div>
-					  </div>
-					  
-					  <div class="form-row align-items-center">
-						<div class="col-auto my-1">
-						<label class="mr-sm-2" for="inlineFormCustomSelect">Finishing :</label>
-                        <select class="custom-select mr-sm-2" name="finishing" id="inlineFormCustomSelect">
+            </div>
+            </div>
+            
+            <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Finishing :</label>
+                        <select class="custom-select mr-sm-2" name="finishing" id="finishing">
                           <option selected>Klep</option>
                         </select>
                       </div>
+                    </div>
 
-					Estimasi : <br>
-					<input type="text" name="estimasi" value="7 hari" readonly><br>
-                  	<p>Waktu pengerjaan terhitung dari desain telah di approve siap cetak dan pembayaran sudah kami terima</p>
+          Estimasi : <br>
+          <input type="text" name="estimasi" id="estimasi" value="7 hari" readonly><br>
+                    <p>Waktu pengerjaan terhitung dari desain telah di approve siap cetak dan pembayaran sudah kami terima</p>
 
                   <div class="block-content uprint-price-container">
                     <div class="unit-price-container uprint-price">
                       <div class="unit-price-text uprice">Harga :</div>
                       <div class="unit-price uprice"><div class="price-box"> 
-                        <span class="regular-price"> 
-                          <span class="price" data-unit="pcs">Rp 40.640,-pcs</span>
-                        </span>
+                        <input type="text" name="hargapcs" id="hargapcs" value="" readonly>
                       </div>
                     </div>
                   </div>
@@ -200,89 +199,35 @@
                     <div class="total-price-text uprice">Harga Total:</div>
                     <div class="total-price uprice ">
                       <div class="price-box"> 
-                        <span class="regular-price" id="product-price-2656"> 
-                          <span class="price">Rp 406.400,-</span> 
-                        </span>
+                        <input type="text" name="harga" id="harga" value="" readonly><br>
+                        <h6><b>NB : Biaya tambahan untuk jasa desain akan diberitahukan setelah desain fix</b></h6>
                       </div>
                     </div>
                   </div>
                 </div> <br>
-				
+          <p class="text-center"><b><h6>Upload File tambahan (bila ada)</h6></b></p>
+              <p class="text-sm-left">Yang perlu Anda perhatikan sebelum mengupload desain Anda :<br>
+              1. Cek kembali ukuran desain Anda apakah sudah sesuai dengan ukuran jadi produk yang Anda pesan<br>
+              2. Pastikan Anda mengirimkan File Final.<br>
+              3. Kirimkan desain High Resolution 300 dpi, CMYK, dan Package link image + font yang digunakan dalam desain Anda.</p><br>
+
+              <p class="text-sm-left">Dibutuhkan account google drive untuk Anda dapat mengupload desain anda. Caranya sebagai berikut :</p>
+              <p class="text-sm-left">1. Login Account Anda <br>
+              2. Apabila file desain Anda belum terdapat pada folder Google Drive Anda, silahkan Anda upload terlebih dahulu (sebaiknya dalam bentuk Zip, atau file berada dalam satu folder)<br> 
+              3. Pilih file / folder yang ingin Anda sharing dan klik kanan dan pilih share<br> 
+              4. Pada menu ini pilih get shareable link, copy link yang diberikan oleh system dan input ke dalam kotak dibawah ini</p>
+
+              <p>Input Google Drive Link Url</p>
+              <input type="text" class="form-control" name="link" id="link"><br>
                 <!-- Button trigger modal -->
                 <center><div class="" style="background: inherit; border-color: inherit;">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                    Pesan
-                  </button>
-					</div>
-				</center>
-					
+                  <input type="submit" class="btn btn-primary" name="pesan" value="Pesan" id="pesan" >
+                    
+          </div>
+        </center>
+          </form>
 
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Rekap Pemesanan</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-						<form action="" method="post">
-							<table>
-							<tbody>
-							<tr>
-                               	<td>Nama Produk</td>
-								<td>:</td>
-                         		<td><input type="text" name="produk" value="7 hari" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Model</td>
-								<td>:</td>
-                         		<td><input type="text" name="nama_produk" value="7 hari" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Deskripsi</td>
-								<td>:</td>
-								<td><textarea type="text" name="deskripsi" readonly>7 hari</textarea></td>
-							</tr>
-							<tr>
-                               	<td>Kertas</td>
-								<td>:</td>
-                         		<td><input type="text" name="kertas" value="7 hari" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Ukuran</td>
-								<td>:</td>
-                         		<td><input type="text" name="ukuran" value="7 hari" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Jumlah</td>
-								<td>:</td>
-                         		<td><input type="text" name="jumlah" value="7 hari" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Estimasi</td>
-								<td>:</td>
-                         		<td><input type="text" name="estimasi" value="7 hari" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Total Harga</td>
-								<td>:</td>
-                         		<td><input type="text" name="harga" value="7 hari" readonly></td>
-							</tr>
-							</tbody>
-							</table>
-						</form>
-
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                          <a href="HubNo" class="btn btn-primary">OK</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                
                 </div>
             </div>
           </div>
@@ -395,6 +340,28 @@
                </div>
              </footer>
              <!-- END footer -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script type="text/javascript">
+        function cek_database(){
+          var model = $("#model").val();
+          var kertas = $("#kertas").val();
+          var ukuran = $("#ukuran").val();
+          var jumlah = $("#jumlah").val();
+
+
+          
+          $.ajax({
+            type: 'POST',
+            url: '<?php echo base_url()?>pembayaran/harga_produk/'+model+'<?php echo "?kertas="; ?>'+kertas+'<?php echo "&ukuran="; ?>'+ukuran+'<?php echo "&jumlah="; ?>'+jumlah,
+            dataType:'JSON'
+            
+          }).success(function (data) {
+            $('#hargapcs').val(data.harga);
+            $('#harga').val(data.harga*jumlah);
+          });
+        }
+      </script>
 
              <!-- loader -->
              <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>

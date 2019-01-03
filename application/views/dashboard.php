@@ -110,7 +110,7 @@
           <div class="col-md-6 order-md-2">
             <div class="block-16">
               <figure>
-                <img src="http://localhost/Soerabaja45/assets/images/imgvideo.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="http://localhost/Soerabaja45/assets/images/z8.jpg" alt="Image placeholder" class="img-fluid">
                 <a href="https://www.youtube.com/watch?v=TOSxLrsSXmA" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
 
                 <!-- <a href="https://vimeo.com/45830194" class="button popup-vimeo" data-aos="fade-right" data-aos-delay="700"><span class="ion-ios-play"></span></a> -->
@@ -299,33 +299,27 @@
 			<div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="<?php echo base_url()?>assets/images/img0.jpg" alt="Image" class="img-fluid">
+                  <img src="<?php echo base_url()?>assets/images/z5.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
                  <center><h2 class="heading">Kalender</h2></center>
-                  <p class="mb-4">Tahun Baru nih...?
-			Kamu, tokomu, sekolahmu, perusaha'an atau siapa aja...
-			Pasti butuh Kalender terbaru kan
-			Cocok...!
-			Soerabaja'45 lagi ADA PROMO KALENDER !
-			Harga hanya Rp 1.000'an
-			Kamu bisa order satuan bahkan ribuan... wih keren... Yuk yuk.. Order bersama kami insyaAllah terbaik dan memuaskan deh</p>
-                  
-                </div>
+                  <p class="mb-4">Tidak perlu bingung dalam mencetak Kalender Tahun Baru. 
+    Dan juga mencetak dalam jumlah banyak.Kini Soerabaja'45 bisa membantu anda.
+    Silahkan hubungi CS online kami WA 0811 366 1927</div>
               </div>
           </div>
 			
 		<div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="<?php echo base_url()?>assets/images/img28.PNG" width="450" height="405" alt="Image">
+                  <img src="<?php echo base_url()?>assets/images/z7.jpg" width="450" height="405" alt="Image">
                 </figure>
                 <div class="text">
                   <center><h2 class="heading">Brosur</h2></center>
                   <p class="mb-4">Brosur Super Murah
-                     Seharga Rp 250/1.000 lbr (A5 1sisi) jadi nggak usah bingung cari brosur kalo cetaknya disana mahal.
-                        Disini aja lebih murah.
-                        Langsung order di no.telp(08113669009) @soerabaja_45</p>
+                     Tidak perlu bingung dalam mencetak Brosur. 
+    Dan juga mencetak dalam jumlah banyak.Kini Soerabaja'45 bisa membantu anda.
+    Silahkan hubungi CS online kami WA 0811 366 1927</p>
                   
                 </div>
               </div>

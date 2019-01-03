@@ -8,7 +8,7 @@ class Pembayaran_Model extends CI_Model{
 	}
 	
 	function get_id(){
-    $this->db->select('RIGHT(tb_pemesanan.id_user,4) as kode', FALSE);
+    $this->db->select('RIGHT(tb_pemesanan.id_pesan,4) as kode', FALSE);
     $this->db->order_by('id_pesan','DESC');    
     $this->db->limit(1);    
     $query = $this->db->get('tb_pemesanan');     

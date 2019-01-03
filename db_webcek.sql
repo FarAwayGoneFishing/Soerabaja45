@@ -1,46 +1,6 @@
--- phpMyAdmin SQL Dump
--- version 4.7.7
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Waktu pembuatan: 03 Jan 2019 pada 05.30
--- Versi server: 10.1.30-MariaDB
--- Versi PHP: 7.2.2
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `db_webcek`
 --
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `produk`
---
-
-CREATE TABLE `produk` (
-  `id_master` varchar(5) NOT NULL,
-  `produk` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `produk`
---
-
-INSERT INTO `produk` (`id_master`, `produk`) VALUES
-('MS001', 'Kalender'),
-('MS002', 'Brosur'),
-('MS003', 'Slip');
 
 -- --------------------------------------------------------
 
@@ -466,7 +426,6 @@ CREATE TABLE `tb_pemesanan` (
   `jumlah_pesan` int(11) NOT NULL,
   `status_bayar` varchar(20) NOT NULL DEFAULT 'belum',
   `deskripsi` text NOT NULL,
-  `desain_yang_diminta` text NOT NULL,
   `jasa_desain` varchar(5) NOT NULL,
   `link` text NOT NULL,
   `total_harga` int(11) NOT NULL
@@ -476,63 +435,12 @@ CREATE TABLE `tb_pemesanan` (
 -- Dumping data untuk tabel `tb_pemesanan`
 --
 
-INSERT INTO `tb_pemesanan` (`id_pesan`, `id_user`, `id_harga`, `tanggal`, `estimasi`, `jumlah_pesan`, `status_bayar`, `deskripsi`, `desain_yang_diminta`, `jasa_desain`, `link`, `total_harga`) VALUES
-('PS0001', 'US0002', 'HK030', '2019-01-03 11:27:44', '7 hari', 100, 'belum', 'awdwad', '', 'TIDAK', 'wadawdwda', 3235400);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_pesan`
---
-
-CREATE TABLE `tb_pesan` (
-  `id_pesan` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `telpon` int(11) NOT NULL,
-  `kepada` varchar(50) NOT NULL,
-  `isi` text NOT NULL,
-  `waktu` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_pesan`
---
-
-INSERT INTO `tb_pesan` (`id_pesan`, `nama`, `telpon`, `kepada`, `isi`, `waktu`) VALUES
-(1, 'Ahira Labata', 98990, 'admin', 'dadsdwa', '2018-12-02 23:04:02'),
-(2, 'joe', 8213455, 'Ahira Labata', 'yuhuu', '2018-12-03 00:32:53'),
-(3, 'joe', 8213455, 'joe', 'boooooo', '2018-12-03 18:40:24'),
-(4, 'joe', 8213455, 'joe', 'boooooo', '2018-12-03 18:41:04'),
-(5, 'joe', 8213455, 'Ahira Labata', 'boooooo', '2018-12-03 18:53:30'),
-(6, 'joe', 8213455, 'Ahira Labata', 'weleh', '2018-12-03 19:42:17'),
-(7, 'joe', 85667777, 'Ahira Labata', 'aw', '2018-12-03 22:06:25'),
-(8, 'joe', 85667777, 'Ahira Labata', 'xdffhgj', '2018-12-05 11:22:49');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_produk`
---
-
-CREATE TABLE `tb_produk` (
-  `id_master` varchar(5) NOT NULL,
-  `id_produk` varchar(5) NOT NULL,
-  `nama_produk` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_produk`
---
-
-INSERT INTO `tb_produk` (`id_master`, `id_produk`, `nama_produk`) VALUES
-('MS002', 'PDB01', 'brosur'),
-('MS001', 'PDK01', 'kalender 12 Lembar'),
-('MS001', 'PDK05', 'kalender 6 Lembar'),
-('MS001', 'PDK09', 'kalender 4 Lembar'),
-('MS001', 'PDK13', 'kalender 3 Lembar'),
-('MS001', 'PDK17', 'kalender 2 Lembar'),
-('MS001', 'PDK21', 'kalender 1 Lembar'),
-('MS003', 'PDS01', 'slip');
+INSERT INTO `tb_pemesanan` (`id_pesan`, `id_user`, `id_harga`, `tanggal`, `estimasi`, `jumlah_pesan`, `status_bayar`, `deskripsi`, `jasa_desain`, `link`, `total_harga`) VALUES
+('PS0001', 'US0002', 'HK030', '2019-01-03 11:27:44', '7 hari', 100, 'lunas', 'awdwad', 'TIDAK', 'wadawdwda', 3235400),
+('PS0003', 'US0002', 'HK173', '2019-01-03 12:41:24', '7 hari', 300, 'belum', 'ytuyg', 'TIDAK', '', 12078000),
+('PS0004', 'US0002', 'HK002', '2019-01-03 12:43:21', '7 hari', 100, 'belum', 'fff', 'YA', 'jhkjhkh', 6435800),
+('PS0005', 'US0002', 'HK008', '2019-01-03 12:44:44', '7 hari', 400, 'belum', '', 'TIDAK', '', 9060800),
+('PS0006', 'US0002', 'HK287', '2019-01-03 12:45:14', '7 hari', 400, 'belum', '', 'YA', '', 2468000);
 
 -- --------------------------------------------------------
 
@@ -563,19 +471,13 @@ INSERT INTO `tb_user` (`id_user`, `nama_user`, `username`, `no_telp`, `alamat`, 
 --
 
 --
--- Indeks untuk tabel `produk`
---
-ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id_master`);
-
---
--- Indeks untuk tabel `tb_admin`
+-- Indexes for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indeks untuk tabel `tb_harga`
+-- Indexes for table `tb_harga`
 --
 ALTER TABLE `tb_harga`
   ADD PRIMARY KEY (`id_harga`),
@@ -583,13 +485,13 @@ ALTER TABLE `tb_harga`
   ADD KEY `id_kertas` (`id_kertas`);
 
 --
--- Indeks untuk tabel `tb_kertas`
+-- Indexes for table `tb_kertas`
 --
 ALTER TABLE `tb_kertas`
   ADD PRIMARY KEY (`id_kertas`);
 
 --
--- Indeks untuk tabel `tb_pemesanan`
+-- Indexes for table `tb_pemesanan`
 --
 ALTER TABLE `tb_pemesanan`
   ADD PRIMARY KEY (`id_pesan`),
@@ -597,33 +499,10 @@ ALTER TABLE `tb_pemesanan`
   ADD KEY `id_harga` (`id_harga`);
 
 --
--- Indeks untuk tabel `tb_pesan`
---
-ALTER TABLE `tb_pesan`
-  ADD PRIMARY KEY (`id_pesan`);
-
---
--- Indeks untuk tabel `tb_produk`
---
-ALTER TABLE `tb_produk`
-  ADD PRIMARY KEY (`id_produk`),
-  ADD KEY `id_master` (`id_master`);
-
---
--- Indeks untuk tabel `tb_user`
+-- Indexes for table `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id_user`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `tb_pesan`
---
-ALTER TABLE `tb_pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -642,13 +521,6 @@ ALTER TABLE `tb_harga`
 ALTER TABLE `tb_pemesanan`
   ADD CONSTRAINT `tb_pemesanan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_pemesanan_ibfk_2` FOREIGN KEY (`id_harga`) REFERENCES `tb_harga` (`id_harga`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Ketidakleluasaan untuk tabel `tb_produk`
---
-ALTER TABLE `tb_produk`
-  ADD CONSTRAINT `tb_produk_ibfk_1` FOREIGN KEY (`id_master`) REFERENCES `produk` (`id_master`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

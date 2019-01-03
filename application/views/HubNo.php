@@ -84,8 +84,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5 element-animate">
       <div class="col-md-7 text-center section-heading">
-        <h2 class="text-primary heading">Produk Digital Offset</h2>
-        <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
+       
       </div>
     </div>
   </div>
