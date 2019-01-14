@@ -104,17 +104,17 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-primary">5</span></a>
+                                <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-primary" id="count"></span></a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset <span class="badge badge-primary" id="count1"></span></a>
                                 </li>
                                 <li class="active has-sub">
-                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset <span class="badge badge-primary" id="count2"></span></a>
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard/Riwayat">Riwayat Transaksi</a>
@@ -213,7 +213,7 @@
 												<th class="text-right">Verifikasi</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="body-table">
 											<?php $no = "1"; foreach($data as $row){ ?>
                                             <tr>
                                                 <td><?php echo $no; $no = $no+1;  ?></td>
@@ -221,7 +221,11 @@
                                                 <td><?php echo $row->nama_produk ?></td>
 												<td class="text-right"><?php echo $row->jumlah_pesan ?></td>
 												<td class="text-right"><?php echo $row->total_harga ?></td>
-												<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail/<?php echo $row->id_pesan ?>" role="button">Detail</a></td>
+												<?php if($row->view == "0"){ ?>
+														<td class="text-right"><a class="btn btn-success" href="<?php echo base_url()?>Dashboard/Detail/<?php echo $row->id_pesan ?>" id="detail" role="button">Detail</a></td>
+													<?php } else { ?>
+														<td class="text-right"><a class="btn btn-primary" href="<?php echo base_url()?>Dashboard/Detail/<?php echo $row->id_pesan ?>" id="detail" role="button">Detail</a></td>
+												<?php }; ?>
 												
 												<?php if($row->status_bayar == "belum"){ ?>
 													<td class="text-right"><a class="btn btn-success" href="<?php echo base_url()?>Dashboard/bayar/<?php echo $row->id_pesan ?>" role="button">Bayar</a></td>
@@ -268,6 +272,41 @@
             $(document).ready(function () {
                 $('#tabel').dataTable();
             });
+			
+			function load_unseen_notification(view = '')
+			 {
+			  $.ajax({
+			   url:'<?php echo base_url()?>Dashboard/fetch2',
+			   method:"POST",
+			   data:{view:view},
+			   dataType:"json",
+			   success:function(data)
+			   {
+				  	if(data.notification != ""){
+						$('#body-table').html(data.notification);
+					} else {
+						$('#body-table').html();
+					}
+					if(data.unseen_notification > 0)
+					{
+						$('#count').html(data.unseen_notification);
+						$('#count1').html(data.unseen_notification1);
+						$('#count2').html(data.unseen_notification2);
+					}
+			   }
+			  });
+			 }
+
+			 load_unseen_notification();
+
+			 $(document).on('click', '.dropdown-toggle', function(){
+			  $('.count').html('');
+			  load_unseen_notification('yes');
+			 });
+
+			 setInterval(function(){ 
+			  load_unseen_notification();; 
+			 }, 2000);
     </script>
 
 

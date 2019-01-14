@@ -1,46 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Percetakan Online</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <title>Percetakan Online</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/magnific-popup.css">
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
-  </head>
-  <body>
-    
-    <header role="banner">
-     
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
+</head>
+<body>
+  
+  <header role="banner">
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
-                  <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
-                </div>
+        <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="<?php echo base_url()?>Dashboard">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk/Barang</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="<?php echo base_url()?>Digoffset">Digital Offset</a>
+                <a class="dropdown-item" href="<?php echo base_url()?>Offset">Offset</a>
+              </div>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tempat</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
@@ -53,16 +53,16 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
-                <li class="nav-item">
+              </li>
+              <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url()?>carapesan">Info Pemesanan</a>
             </li>
-              </li>
-			</ul>
-              <ul class="navbar-nav absolute-right">
+            </ul>
+            <ul class="navbar-nav absolute-right">
               
-			<?php if(isset($_SESSION["id_user"])){ ?>
-				  
-				<li class="nav-item dropdown">
+             <?php if(isset($_SESSION["id_user"])){ ?>
+             
+             <li class="nav-item dropdown">
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
                 	<div class="dropdown-menu" aria-labelledby="dropdown04">
                   		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
@@ -70,51 +70,38 @@
                   		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
                 	</div>
               	</li>
-				
-				<?php }else {
-                	echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
-				}?> 
-				
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>    <!-- END header -->
-  
-
-  <!-- END section -->
-  <div class="site-section bg-light">
-    <div class="container">
-      <div class="row justify-content-center mb-5 element-animate">
-        <div class="col-md-7 text-center section-heading">
-          <h2 class="text-primary heading">Produk Digital Offset</h2>
-          <p>Kami menawarkan produk yang terupdate dan sering dipesan</p>
-        </div>
+            
+            <?php }else {
+            echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
+          }?> 
+          
+        </ul>
       </div>
     </div>
+  </nav>
+</header>    <!-- END header -->
 
-    <div class="container">
-      <div class="row m-auto">
-        <div class="col-6">
-          <!-- Add a style="height: XYZpx" to div.card to limit the card height and display scrollbar instead -->
-          <img src="http://localhost/Soerabaja45/assets/images/z2.jpeg" alt="..." class="img-thumbnail">
-        </div>
-        <!--Rightside tampilan-->
-        <div class="col-6">
-          <div class="card card-custom bg-white border-white border-0">
-            <div class="card-body">
-             <img src="http://localhost/Soerabaja45/assets/images/z3.jpeg" alt="..." class="img-thumbnail">
-           </div>
-         </div>
-       </div>
-     </div>
+
+<!-- END section -->
+<div class="site-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-5 element-animate">
+      <div class="col-md-7 text-center section-heading">
+       
+      </div>
+    </div>
   </div>
-  <center><p><div class="container example2">
-    <div class="row">
-        <div class="col-md-2 col-xs-2 col1 center-block"> 
-          <a href="pembayaran/produk/MS001"><button class="btn btn-primary center-block">Pesan</button></a>
-        </div></center>
-    </div></div></p>
+
+  <center><h1><b>CARA MEMESAN PRODUK</b></h1></p></center><br><
+  <p class="text-xl-center">1. Masuk Akun terlebih dahulu (Jika belum mempunyai akun, pilih Daftar Akun)</p>
+  <p class="text-xl-center">2. Isi Form seperti saat Anda mendaftarkan Akun, lalu klik Login (Otomatis masuk ke Beranda)</p>
+  <p class="text-xl-center">3. Pada Beranda, geser kursor pada produk/barang lalu pilih Digital Offset atau Offset</p>
+  <p class="text-xl-center">4. Jika memilih Digital Offset,  maka akan muncul produk Digital Offset yaitu Kalender</p>
+  <p class="text-xl-center">5. Untuk produk Kalener, jika memilih detail maka akan muncul detail bahan kertas untuk mencetak kalender dan jika memilih pesan maka akan langsung ke proses pemesanan</p>
+  <p class="text-xl-center">6. Dalam Pemesenan, wajib memilih dan mengisi sesuai dengan form yang sudah disediakan atau juga anda bisa memakai jasa desain dari tim kami</p>
+  <p class="text-xl-center">7. Setelah anda yakin dengan data yang anda inputkan serta harga yang sudah tertera, lalu klik Pesan</p>
+  <p class="text-xl-center">8. Untuk pemrosesan pembayaran akan kami hubungi dan selalu cek notifikasi untuk menegetahui proses produk yang anda pesan</p>
+  
 </div>
 </div>
 </div>
