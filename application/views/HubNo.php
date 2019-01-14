@@ -20,9 +20,9 @@
   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
 </head>
 <body>
-  
+
   <header role="banner">
-   
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
@@ -56,108 +56,177 @@
               </li>
             </ul>
             <ul class="navbar-nav absolute-right">
-              
+
              <?php if(isset($_SESSION["id_user"])){ ?>
              
              <li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
-                	<div class="dropdown-menu" aria-labelledby="dropdown04">
-                  		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
-<!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
-                  		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
-                	</div>
-              	</li>
+               <a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
+               <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
+                <!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
+                <a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
+              </div>
+            </li>
             
             <?php }else {
-            echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
-          }?> 
-          
-        </ul>
+              echo '<li><a href="'.base_url().'login">Masuk Akun</a> / <a href="'.base_url().'register">Daftar Akun</a></li>';
+            }?> 
+
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>    <!-- END header -->
+    </nav>
+  </header>    
+  <!-- END header -->
 
-
-<!-- END section -->
-<div class="site-section bg-light">
-  <div class="container">
-    <div class="row justify-content-center mb-5 element-animate">
-      <div class="col-md-7 text-center section-heading">
-       
-      </div>
-    </div>
-  </div>
-
-  <center><h1><b>" Silahkan tunggu untuk pemrosesan pembayaran dan akan dihubungi oleh pihak KAMI "</b></h1></p></center>
+  <!-- END section -->
   
-</div>
-</div>
-</div>
-</div>
-<!-- END section -->
-
-<!-- END section -->
-
-
-<!-- END section -->
-
-
-
-<div class="py-5 block-22">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
-        <h2 class="heading"></h2>
-        <p></p>
+<div class="site-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 element-animate">
+        <div class="col-md-7 text-center section-heading">
+          <h2 class="text-primary heading">Halaman Checkout</h2>
+          <p>Silahkan mengisi kolom dibawah ini dan tekan pesan sekarang</p>
+        </div>
       </div>
-      <div class="col-md-6">
-        <form action="#" class="subscribe">
-          <div class="form-group">
-                <!--<input type="email" class="form-control email" placeholder="Enter email">
-                  <input type="submit" class="btn btn-primary submit" value="Subscribe"> -->
+    </div>
+
+    <div class="container">
+      <div class="row m-auto">
+        <div class="col-6">
+              <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <h3><div class="card-header">Metode Pengiriman</div></h3>
+                  <div class="card-body">
+
+
+                      <dl class="sp-methods" id="checkout-payment-method-load">
+                        <label for="p_method_banktransfer"> <span class="no-display"></span>
+                        <dt> Store Pickup </dt>
+                      <dd id="container_payment_method_banktransfer" class="payment-method">
+                        <ul class="form-list checkout-agreements" id="payment_form_banktransfer">     
+                          <label for="s_method_flatrate1_flatrate1">Ambil ditempat kami "PERCETAKAN SOERABAJA'45"</label>
+                        </ul>
+                      </dd>  
+                      </dl>
+                    </div>
+                  </div>
                 </div>
-              </form>
-            </div>
+   
+             
+            <!--Rightside tampilan-->
+
+            <div class="col-6">
+                  <div class="card bg-light mb-3" style="max-width: 18rem;">
+                    <h3><div class="card-header">Metode Pembayaran</div></h3>
+                      <div class="card-body">
+                          
+                            <dl class="sp-methods" id="checkout-payment-method-load">
+                              <label for="p_method_banktransfer"> <span class="no-display"></span>
+                                <dt> Bank Transfer Payment </dt>
+                                <dd id="container_payment_method_banktransfer" class="payment-method">
+                                   <ul class="form-list checkout-agreements" id="payment_form_banktransfer">
+                                <li>
+                                  <div class="banktransfer-instructions-content agreement-content"> Bank BCA <br /> No Rek : 488 79 88888<br /> An : PT. Percetakan Soerabaja'45
+                                </li>
+                                   </ul>  
+                                </dd>
+                            </dl>  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+  <div class="card text-center">
+          <div class="card-header">
+            Order Review
+          </div>
+          <div id="checkout-review-table-wrapper">
+            <table class="data-anable" id="checkout-review-table"></table>
+
+            <td>
+              <a class="remove-icon" style="float:left; margin-right: 10px; line-height: 10px;"></a>
+              <div class="osc-product-image">
+                <h4 class="product-name">Kalender - Digital Offset</h4>
+                <dl class="item-options item-options-hasimage">
+                 <dt> Ukuran </dt>
+                 <dd> 38 x 53 </dd>
+
+                 <dt> Jumlah Lembar dan Cetak </dt>
+                 <dd> 200 pcs </dd>
+
+                 <dt> Fnishing </dt>
+                 <dd> Klep </dd>
+
+                 <dt> Estimasi </dt>
+                 <dd> 7 hari </dd>
+               
+               </dl> 
+             </td>
+           </div>
+           </div>
+         </div>
+           <!-- END section -->
+
+           <!-- END section -->
+
+
+           <div class="py-5 block-22">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
+                  <h2 class="heading"></h2>
+                  <p></p>
+                </div>
+                <div class="col-md-6">
+                  <form action="#" class="subscribe">
+                    <div class="form-group">
+                <!--<input type="email" class="form-control email" placeholder="Enter email">
+                <input type="submit" class="btn btn-primary submit" value="Subscribe"> -->
+              </div>
+            </form>
           </div>
         </div>
       </div>
+    </div>
 
-      <footer class="site-footer">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-md-4">
-              <center><h3>SOERABAJA'45</h3></center>
-              <p>Perusahaan percetakan dan garment yang menyediakan produk atau barang yang dapat dipesan secara online dan costumer dapat mengedit produk yang akan di pesan </p>
-            </div>
-            <div class="col-md-2">
-              <center><h3 class="heading">Tautan</h3></center>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li><a href="dashboard">Beranda</a></li>
-                    <p><li><a href="tentang">Tentang</a></li></p>
-                    <p><li><a href="kontak">Kontak</a></li></p>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li><a href="digoffset">Digital Offset</a></li>
-                    <p><li><a href="offset">Offset</a></li></p>
-                  </ul>
-                </div>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-4">
+            <center><h3>SOERABAJA'45</h3></center>
+            <p>Perusahaan percetakan dan garment yang menyediakan produk atau barang yang dapat dipesan secara online dan costumer dapat mengedit produk yang akan di pesan </p>
+          </div>
+          <div class="col-md-2">
+            <center><h3 class="heading">Tautan</h3></center>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li><a href="dashboard">Beranda</a></li>
+                  <p><li><a href="tentang">Tentang</a></li></p>
+                  <p><li><a href="kontak">Kontak</a></li></p>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li><a href="digoffset">Digital Offset</a></li>
+                  <p><li><a href="offset">Offset</a></li></p>
+                </ul>
               </div>
             </div>
+          </div>
 
-            <div class="col-md-6">
-              <center><h3 class="heading">Informasi Kontak</h3></center>
-              <div class="row block-23">
-                <div class="col-md-5">
-                  <ul>
-                    <li><span class="icon ion-android-pin"></span><span class="text">Jalan Jawa No.28
-                      Sumbersari
-                      Kabupaten Jember
-                      Jawa Timur 68121
+          <div class="col-md-6">
+            <center><h3 class="heading">Informasi Kontak</h3></center>
+            <div class="row block-23">
+              <div class="col-md-5">
+                <ul>
+                  <li><span class="icon ion-android-pin"></span><span class="text">Jalan Jawa No.28
+                    Sumbersari
+                    Kabupaten Jember
+                    Jawa Timur 68121
                     Indonesia</span></li>
                     <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text"><p>0811-3661-927</p>
                       <p>(0331) 333000</p></span></a></li>
@@ -199,18 +268,40 @@
              </footer>
              <!-- END footer -->
 
-             <!-- loader -->
-             <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+             <script type="text/javascript">
+             function cek_database(){
+              var model = $("#model").val();
+              var kertas = $("#kertas").val();
+              var ukuran = $("#ukuran").val();
+              var jumlah = $("#jumlah").val();
 
-             <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
-             <script src="<?php echo base_url()?>assets/js/jquery-migrate-3.0.0.js"></script>
-             <script src="<?php echo base_url()?>assets/js/popper.min.js"></script>
-             <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
-             <script src="<?php echo base_url()?>assets/js/owl.carousel.min.js"></script>
-             <script src="<?php echo base_url()?>assets/js/jquery.waypoints.min.js"></script>
-             <script src="<?php echo base_url()?>assets/js/jquery.stellar.min.js"></script>
-             <script src="<?php echo base_url()?>assets/js/jquery.animateNumber.min.js"></script>
 
-             <script src="<?php echo base_url()?>assets/js/main.js"></script>
-           </body>
-           </html>
+
+              $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url()?>pembayaran/harga_produk/'+model+'<?php echo "?kertas="; ?>'+kertas+'<?php echo "&ukuran="; ?>'+ukuran+'<?php echo "&jumlah="; ?>'+jumlah,
+                dataType:'JSON'
+
+              }).success(function (data) {
+                $('#hargapcs').val(data.harga);
+                $('#harga').val(data.harga*jumlah);
+              });
+            }
+            </script>
+
+            <!-- loader -->
+            <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+            <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
+            <script src="<?php echo base_url()?>assets/js/jquery-migrate-3.0.0.js"></script>
+            <script src="<?php echo base_url()?>assets/js/popper.min.js"></script>
+            <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+            <script src="<?php echo base_url()?>assets/js/owl.carousel.min.js"></script>
+            <script src="<?php echo base_url()?>assets/js/jquery.waypoints.min.js"></script>
+            <script src="<?php echo base_url()?>assets/js/jquery.stellar.min.js"></script>
+            <script src="<?php echo base_url()?>assets/js/jquery.animateNumber.min.js"></script>
+
+            <script src="<?php echo base_url()?>assets/js/main.js"></script>
+          </body>
+          </html>
