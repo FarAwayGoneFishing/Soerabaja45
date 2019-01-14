@@ -102,17 +102,17 @@
                     <ul class="list-unstyled navbar__list">
                         <li>
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-primary">5</span></a>
+                                <i class="fas fa-table"></i>Daftar Pesanan <span class="badge badge-success" id="count"></span></a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard">Daftar Pesanan</a>
                                 </li>
 
 								<li>
-                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/digoffset">Digital Offset <span class="badge badge-success" id="count1"></span></a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset</a>
+                                    <a href="<?php echo base_url()?>Dashboard/offset">Offset <span class="badge badge-success" id="count2"></span></a>
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url()?>Dashboard/Riwayat">Riwayat Transaksi</a>
@@ -269,6 +269,38 @@
     <script src="<?php echo base_url('assetsa/vendor/perfect-scrollbar/perfect-scrollbar.js')?>"></script>
     <script src="<?php echo base_url('assetsa/vendor/chartjs/Chart.bundle.min.js')?>"></script>
     <script src="<?php echo base_url('assetsa/vendor/select2/select2.min.js')?>">
+    </script>
+	
+	<script>
+            $(document).ready(function () {
+                
+			 function load_unseen_notification(view = '')
+			 {
+			  $.ajax({
+			   url:'<?php echo base_url()?>Dashboard/fetch',
+			   method:"POST",
+			   data:{view:view},
+			   dataType:"json",
+			   success:function(data)
+			   {
+					if(data.unseen_notification > 0)
+					{
+						$('#count').html(data.unseen_notification);
+						$('#count1').html(data.unseen_notification1);
+						$('#count2').html(data.unseen_notification2);
+					}
+			   }
+			  });
+			 }
+
+			 load_unseen_notification();
+
+			 setInterval(function(){ 
+			  load_unseen_notification();; 
+			 }, 2000);
+
+			});
+
     </script>
 
     <!-- Main JS-->
