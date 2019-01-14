@@ -58,6 +58,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
               </li>
+              <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url()?>carapesan">Info Pemesanan</a>
+            </li>
 			<?php if(isset($_SESSION["id_user"])){ ?>
           
         <li class="nav-item dropdown">

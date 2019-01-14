@@ -92,7 +92,15 @@
     </div>
   </div>
 
-  <center><h1><b>" Silahkan tunggu untuk pemrosesan pembayaran dan akan dihubungi oleh pihak KAMI "</b></h1></p></center>
+  <center><h1><b>CARA MEMESAN PRODUK</b></h1></p></center><br><
+  <p class="text-xl-center">1. Masuk Akun terlebih dahulu (Jika belum mempunyai akun, pilih Daftar Akun)</p>
+  <p class="text-xl-center">2. Isi Form seperti saat Anda mendaftarkan Akun, lalu klik Login (Otomatis masuk ke Beranda)</p>
+  <p class="text-xl-center">3. Pada Beranda, geser kursor pada produk/barang lalu pilih Digital Offset atau Offset</p>
+  <p class="text-xl-center">4. Jika memilih Digital Offset,  maka akan muncul produk Digital Offset yaitu Kalender</p>
+  <p class="text-xl-center">5. Untuk produk Kalener, jika memilih detail maka akan muncul detail bahan kertas untuk mencetak kalender dan jika memilih pesan maka akan langsung ke proses pemesanan</p>
+  <p class="text-xl-center">6. Dalam Pemesenan, wajib memilih dan mengisi sesuai dengan form yang sudah disediakan atau juga anda bisa memakai jasa desain dari tim kami</p>
+  <p class="text-xl-center">7. Setelah anda yakin dengan data yang anda inputkan serta harga yang sudah tertera, lalu klik Pesan</p>
+  <p class="text-xl-center">8. Untuk pemrosesan pembayaran akan kami hubungi dan selalu cek notifikasi untuk menegetahui proses produk yang anda pesan</p>
   
 </div>
 </div>

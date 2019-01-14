@@ -53,6 +53,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url()?>Kontak">Kontak</a>
+                <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url()?>carapesan">Info Pemesanan</a>
+            </li>
               </li>
 			</ul>
               <ul class="navbar-nav absolute-right">
