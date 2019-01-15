@@ -48,7 +48,7 @@ class pembayaran extends CI_Controller {
 			'total_harga' => $this->input->post('harga'),
 			'id_user' => $_SESSION['id_user'],
 			));
-			redirect('HubNo');
+			redirect('Dashboard');
 		}
 	}
 
@@ -58,7 +58,7 @@ class pembayaran extends CI_Controller {
 			$data = $this->model->input(array (
 			'id_pesan' => $this->model->get_id(),	
 			
-			'deskripsi' => $this->input->post('deskripsi'),
+			'desain_yang_diminta' => $this->input->post('deskripsi'),
 			'id_harga' => $harga->id_harga,
 			'link' => $this->input->post('link'),
 			'jasa_desain' =>"YA",
@@ -69,6 +69,28 @@ class pembayaran extends CI_Controller {
 			));
 			redirect('HubNo');
 		}
+	}
+	
+	public function review(){
+		$produk = $this->model->get_produk($_POST['model']);
+		if(isset($_POST['pesan'])){
+			$data = array (
+			'produk' => $produk->nama_produk,	
+			'model' => $this->input->post('model'),
+			'kertas' => $this->input->post('kertas'),
+			'ukuran' => $this->input->post('ukuran'),
+			'deskripsi' => $this->input->post('deskripsi'),
+			'finishing' => $this->input->post('finishing'),
+			'link' => $this->input->post('link'),
+			'hargapcs' => $this->input->post('hargapcs'),
+			'jumlah' => $this->input->post('jumlah'),
+			'estimasi' => $this->input->post('estimasi'),
+			'total_harga' => $this->input->post('harga'),
+			
+			);
+			
+			$this->load->view('HubNo', $data);
+ 	}
 	}
 
 }

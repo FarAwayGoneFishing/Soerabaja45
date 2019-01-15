@@ -118,7 +118,7 @@
                 <div class="card-body">
 
                   Nama Produk : Kalender
-					<form action="<?php echo base_url()?>pembayaran/create" method="post"> 
+					<form action="<?php echo base_url()?>pembayaran/review" method="post"> 
 					<div class="form-row align-items-center">
  						<div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Model :</label>
@@ -184,7 +184,7 @@
 						<div class="col-auto my-1">
 						<label class="mr-sm-2" for="inlineFormCustomSelect">Finishing :</label>
                         <select class="custom-select mr-sm-2" name="finishing" id="finishing">
-                          <option selected>Klep</option>
+                          <option value="Klep" selected>Klep</option>
                         </select>
                       </div>
                     </div>
@@ -232,79 +232,6 @@
 				</center>
 					</form>
 
-                  <!-- Modal -->
-<!--
-                  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Rekap Pemesanan</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-						
-							<table>
-							<tbody>
-							<tr>
-                               	<td>Nama Produk</td>
-								<td>:</td>
-                         		<td><input type="text" name="produk" id="produk1" value="" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Model</td>
-								<td>:</td>
-                         		<td><input type="text" name="nama_produk" id="model1" value="" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Deskripsi</td>
-								<td>:</td>
-								<td><textarea type="text" name="deskripsi" id="deskripsi1" readonly></textarea></td>
-							</tr>
-							<tr>
-                               	<td>Kertas</td>
-								<td>:</td>
-                         		<td><input type="text" name="kertas" id="kertas1" value="" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Ukuran</td>
-								<td>:</td>
-                         		<td><input type="text" name="ukuran" id="ukuran1" value="" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Jumlah</td>
-								<td>:</td>
-                         		<td><input type="text" name="jumlah" id="jumlah1" value="" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Estimasi</td>
-								<td>:</td>
-                         		<td><input type="text" name="estimasi" id="estimasi1" value="" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Total Harga</td>
-								<td>:</td>
-                         		<td><input type="text" name="harga" id="harga1" value="" readonly></td>
-							</tr>
-							<tr>
-                               	<td>Link</td>
-								<td>:</td>
-                         		<td><input type="text" name="link" id="link1" value="" readonly></td>
-							</tr>
-							</tbody>
-							</table>
-						
-
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                          <a href="HubNo" class="btn btn-primary">OK</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
--->
                 </div>
             </div>
           </div>

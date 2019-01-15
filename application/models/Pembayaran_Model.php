@@ -42,5 +42,10 @@ class Pembayaran_Model extends CI_Model{
         $query = $this->db->query("SELECT * FROM tb_produk LEFT JOIN tb_harga ON tb_produk.id_produk=tb_harga.id_produk LEFT JOIN tb_kertas ON tb_harga.id_kertas=tb_kertas.id_kertas WHERE tb_produk.id_produk='$model' and tb_kertas.id_kertas='$data_kertas->id_kertas' and tb_harga.jumlah='$jumlah'");
         return $query->row();
     }
+	
+	function get_produk($model){
+        $query = $this->db->query("SELECT * FROM tb_produk WHERE id_produk='$model'");
+        return $query->row();
+    }
 }
 ?>

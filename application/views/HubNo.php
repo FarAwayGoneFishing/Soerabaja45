@@ -97,7 +97,7 @@
     <div class="container">
       <div class="row m-auto">
         <div class="col-6">
-              <div class="card bg-light mb-3" style="max-width: 18rem;">
+              <div class="card bg-light mb-3" style="width: 500px; height: 300px">
                 <h3><div class="card-header">Metode Pengiriman</div></h3>
                   <div class="card-body">
 
@@ -119,7 +119,7 @@
             <!--Rightside tampilan-->
 
             <div class="col-6">
-                  <div class="card bg-light mb-3" style="max-width: 18rem;">
+                  <div class="card bg-light mb-3" style="width: 500px; height: 300px">
                     <h3><div class="card-header">Metode Pembayaran</div></h3>
                       <div class="card-body">
                           
@@ -138,39 +138,136 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                
+            
 
 
-  <div class="card text-center">
-          <div class="card-header">
+  
+	  <div class="col-12">
+		  <div class="card bg-light mb-3" style="width: 1050px">
+          <h3><div class="card-header">
             Order Review
-          </div>
+          </div></h3>
+			  <div class="card-body">
           <div id="checkout-review-table-wrapper">
             <table class="data-anable" id="checkout-review-table"></table>
 
             <td>
               <a class="remove-icon" style="float:left; margin-right: 10px; line-height: 10px;"></a>
               <div class="osc-product-image">
-                <h4 class="product-name">Kalender - Digital Offset</h4>
-                <dl class="item-options item-options-hasimage">
-                 <dt> Ukuran </dt>
-                 <dd> 38 x 53 </dd>
+				  
+                <h4 class="product-name" style="padding-left: 40px"><?php echo $produk ?> - Digital Offset</h4><br>
+			<div style="padding-left: 90px">
+				<form action="<?php echo base_url()?>pembayaran/create" method="post">
+				
+					<input type="hidden" name="model" value="<?php echo $model ?>">
+					<input type="hidden" class="form-control" name="link" id="link" value="<?php echo $link ?>">
+                <div class="form-group col-lg-3">
+                   <label class="control-label mb-1">Deskripsi</label>
+					<textarea id="nama" name="deskripsi" type="text" class="form-control" readonly><?php echo $deskripsi ?> </textarea>
+                </div>
+                <div class="form-group col-lg-3">
+                   <label class="control-label mb-1">Kertas</label>
+                   <input id="waktu" name="kertas" type="text" class="form-control" value="<?php echo $kertas ?>" readonly>
+                </div>
+                <div class="form-group col-lg-3">
+                   <label class="control-label mb-1">Ukuran</label>
+                   <input id="produk" name="ukuran" type="text" class="form-control" value="<?php echo $ukuran ?>" readonly>
+                </div>
+                <div class="row">
+                   <div class="col-lg-3">
+                       <div class="form-group">
+                           <label class="control-label mb-1">Finishing</label>
+                           <input id="produk" name="finishing" type="text" class="form-control" value="<?php echo $finishing ?>" readonly>
+                       </div>
+                   </div>
+                   <div class="col-lg-3">
+                           <label class="control-label mb-1">Harga /pcs</label>
+                           <input id="produk" name="hargapcs" type="text" class="form-control" value="<?php echo $hargapcs ?>" readonly>
+                   </div>
+                </div>
+				<div class="row">
+                   <div class="col-lg-3">
+                       <div class="form-group">
+                           <label class="control-label mb-1">Jumlah</label>
+                           <input id="produk" name="jumlah" type="text" class="form-control" value="<?php echo $jumlah ?>" readonly>
+                       </div>
+                   </div>
+                   <div class="col-lg-3">
+                           <label class="control-label mb-1">Estimasi</label>
+                           <input id="produk" name="estimasi" type="text" class="form-control" value="<?php echo $estimasi ?>" readonly>
+                   </div>
+					<div class="col-lg-3">
+                           <label class="control-label mb-1">Harga Total</label>
+                           <input id="produk" name="harga" type="text" class="form-control" value="<?php echo $total_harga ?>" readonly>
+                   </div>
+                </div>
+				
+				<br/><br/>
+											
+										
+											<div class="row">
+                                                <div class="col-lg-3">
+                                                    
+                                                </div>
+												<div class="col-lg-3"></div>
+												<div class="col-lg-3"></div>
+                                                <div class="col-lg-3">
+                                                    <div>
 
-                 <dt> Jumlah Lembar dan Cetak </dt>
-                 <dd> 200 pcs </dd>
-
-                 <dt> Fnishing </dt>
-                 <dd> Klep </dd>
-
-                 <dt> Estimasi </dt>
-                 <dd> 7 hari </dd>
-               
-               </dl> 
-             </td>
+													<a class="btn btn-lg btn-success btn-block" data-toggle="modal" data-target="#modal_new" role="button" style="color: white">Pesan</a>
+														
+                                            		</div>
+                                                </div>
+                                            </div>
+					
+				
+				  </div>
+				
            </div>
            </div>
          </div>
+	    </div>
+		</div>
+		  </div>
+		  
+		  <div class="modal fade bs-example-modal-sm" id="modal_new" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h4>Notifikasi</h4>
+					  <button type="button" class="close" data-dismiss="modal">✕</button>
+                  </div>
+                  
+                  <div class="modal-body" style="text-align:center;">
+                    <div class="row-fluid">
+                     <div class="span10 offset1">
+                       <div id="modalTab">
+                         <div class="tab-content">
+                           <div class="tab-pane active" id="about">
+
+                            <center>
+                             <p class="text-left">
+                              Apakah anda yakin data sudah benar dan ingin melakukan pemesanan? <br />
+                              
+                             </p>
+                             <br>
+								
+								<button type="submit" name="pesan" class="btn btn-success">Ya</button>
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+                           </center>
+						
+							   </form> 
+                  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
            <!-- END section -->
 
            <!-- END section -->
