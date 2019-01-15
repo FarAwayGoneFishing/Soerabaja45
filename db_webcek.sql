@@ -1,3 +1,21 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 15, 2019 at 07:27 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 7.0.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
 -- Database: `db_webcek`
 --
@@ -5,7 +23,27 @@
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_admin`
+-- Table structure for table `produk`
+--
+
+CREATE TABLE `produk` (
+  `id_master` varchar(5) NOT NULL,
+  `produk` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_master`, `produk`) VALUES
+('MS001', 'Kalender'),
+('MS002', 'Brosur'),
+('MS003', 'Slip');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_admin`
 --
 
 CREATE TABLE `tb_admin` (
@@ -19,7 +57,7 @@ CREATE TABLE `tb_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_admin`
+-- Dumping data for table `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `nama_user`, `email`, `no_telp`, `cabang`, `password`, `level`) VALUES
@@ -28,7 +66,7 @@ INSERT INTO `tb_admin` (`id_admin`, `nama_user`, `email`, `no_telp`, `cabang`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_harga`
+-- Table structure for table `tb_harga`
 --
 
 CREATE TABLE `tb_harga` (
@@ -42,7 +80,7 @@ CREATE TABLE `tb_harga` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_harga`
+-- Dumping data for table `tb_harga`
 --
 
 INSERT INTO `tb_harga` (`id_produk`, `id_harga`, `jenis_produk`, `id_kertas`, `jumlah`, `finishing`, `harga`) VALUES
@@ -386,7 +424,7 @@ INSERT INTO `tb_harga` (`id_produk`, `id_harga`, `jenis_produk`, `id_kertas`, `j
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_kertas`
+-- Table structure for table `tb_kertas`
 --
 
 CREATE TABLE `tb_kertas` (
@@ -396,7 +434,7 @@ CREATE TABLE `tb_kertas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_kertas`
+-- Dumping data for table `tb_kertas`
 --
 
 INSERT INTO `tb_kertas` (`id_kertas`, `kertas`, `ukuran`) VALUES
@@ -414,7 +452,7 @@ INSERT INTO `tb_kertas` (`id_kertas`, `kertas`, `ukuran`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_pemesanan`
+-- Table structure for table `tb_pemesanan`
 --
 
 CREATE TABLE `tb_pemesanan` (
@@ -426,26 +464,84 @@ CREATE TABLE `tb_pemesanan` (
   `jumlah_pesan` int(11) NOT NULL,
   `status_bayar` varchar(20) NOT NULL DEFAULT 'belum',
   `deskripsi` text NOT NULL,
+  `desain_yang_diminta` text NOT NULL,
   `jasa_desain` varchar(5) NOT NULL,
   `link` text NOT NULL,
-  `total_harga` int(11) NOT NULL
+  `total_harga` int(11) NOT NULL,
+  `view` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_pemesanan`
+-- Dumping data for table `tb_pemesanan`
 --
 
-INSERT INTO `tb_pemesanan` (`id_pesan`, `id_user`, `id_harga`, `tanggal`, `estimasi`, `jumlah_pesan`, `status_bayar`, `deskripsi`, `jasa_desain`, `link`, `total_harga`) VALUES
-('PS0001', 'US0002', 'HK030', '2019-01-03 11:27:44', '7 hari', 100, 'lunas', 'awdwad', 'TIDAK', 'wadawdwda', 3235400),
-('PS0003', 'US0002', 'HK173', '2019-01-03 12:41:24', '7 hari', 300, 'belum', 'ytuyg', 'TIDAK', '', 12078000),
-('PS0004', 'US0002', 'HK002', '2019-01-03 12:43:21', '7 hari', 100, 'belum', 'fff', 'YA', 'jhkjhkh', 6435800),
-('PS0005', 'US0002', 'HK008', '2019-01-03 12:44:44', '7 hari', 400, 'belum', '', 'TIDAK', '', 9060800),
-('PS0006', 'US0002', 'HK287', '2019-01-03 12:45:14', '7 hari', 400, 'belum', '', 'YA', '', 2468000);
+INSERT INTO `tb_pemesanan` (`id_pesan`, `id_user`, `id_harga`, `tanggal`, `estimasi`, `jumlah_pesan`, `status_bayar`, `deskripsi`, `desain_yang_diminta`, `jasa_desain`, `link`, `total_harga`, `view`) VALUES
+('PS0001', 'US0002', 'HK227', '2019-01-14 09:24:25', '7 hari', 200, 'belum', 'lala', '', 'TIDAK', 'qwqs', 3516000, 1),
+('PS0002', 'US0002', 'HK036', '2019-01-14 10:01:21', '7 hari', 400, 'Selesai', 'lala', '', 'TIDAK', 'qweqw', 4600400, 1),
+('PS0003', 'US0002', 'HK114', '2019-01-14 13:58:49', '7 hari', 100, 'Selesai', 'lala', '', 'TIDAK', 'adw', 1101800, 1),
+('PS0004', 'US0002', 'HK030', '2019-01-15 12:16:46', '7 hari', 100, 'belum', 'hjfyf ', '', 'TIDAK', 'nnvhj', 3235400, 0),
+('PS0005', 'US0002', 'HK030', '2019-01-15 12:42:01', '7 hari', 100, 'belum', ' ', '', 'TIDAK', 'qwew', 3235400, 0),
+('PS0006', 'US0002', 'HK030', '2019-01-15 12:43:51', '7 hari', 100, 'belum', ' ', '', 'TIDAK', '', 3235400, 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_user`
+-- Table structure for table `tb_pesan`
+--
+
+CREATE TABLE `tb_pesan` (
+  `id_pesan` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `telpon` int(11) NOT NULL,
+  `kepada` varchar(50) NOT NULL,
+  `isi` text NOT NULL,
+  `waktu` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_pesan`
+--
+
+INSERT INTO `tb_pesan` (`id_pesan`, `nama`, `telpon`, `kepada`, `isi`, `waktu`) VALUES
+(1, 'Ahira Labata', 98990, 'admin', 'dadsdwa', '2018-12-02 23:04:02'),
+(2, 'joe', 8213455, 'Ahira Labata', 'yuhuu', '2018-12-03 00:32:53'),
+(3, 'joe', 8213455, 'joe', 'boooooo', '2018-12-03 18:40:24'),
+(4, 'joe', 8213455, 'joe', 'boooooo', '2018-12-03 18:41:04'),
+(5, 'joe', 8213455, 'Ahira Labata', 'boooooo', '2018-12-03 18:53:30'),
+(6, 'joe', 8213455, 'Ahira Labata', 'weleh', '2018-12-03 19:42:17'),
+(7, 'joe', 85667777, 'Ahira Labata', 'aw', '2018-12-03 22:06:25'),
+(8, 'joe', 85667777, 'Ahira Labata', 'xdffhgj', '2018-12-05 11:22:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_produk`
+--
+
+CREATE TABLE `tb_produk` (
+  `id_master` varchar(5) NOT NULL,
+  `id_produk` varchar(5) NOT NULL,
+  `nama_produk` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_produk`
+--
+
+INSERT INTO `tb_produk` (`id_master`, `id_produk`, `nama_produk`) VALUES
+('MS002', 'PDB01', 'brosur'),
+('MS001', 'PDK01', 'kalender 12 Lembar'),
+('MS001', 'PDK05', 'kalender 6 Lembar'),
+('MS001', 'PDK09', 'kalender 4 Lembar'),
+('MS001', 'PDK13', 'kalender 3 Lembar'),
+('MS001', 'PDK17', 'kalender 2 Lembar'),
+('MS001', 'PDK21', 'kalender 1 Lembar'),
+('MS003', 'PDS01', 'slip');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_user`
 --
 
 CREATE TABLE `tb_user` (
@@ -458,7 +554,7 @@ CREATE TABLE `tb_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_user`
+-- Dumping data for table `tb_user`
 --
 
 INSERT INTO `tb_user` (`id_user`, `nama_user`, `username`, `no_telp`, `alamat`, `password`) VALUES
@@ -469,6 +565,12 @@ INSERT INTO `tb_user` (`id_user`, `nama_user`, `username`, `no_telp`, `alamat`, 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`id_master`);
 
 --
 -- Indexes for table `tb_admin`
@@ -499,28 +601,56 @@ ALTER TABLE `tb_pemesanan`
   ADD KEY `id_harga` (`id_harga`);
 
 --
+-- Indexes for table `tb_pesan`
+--
+ALTER TABLE `tb_pesan`
+  ADD PRIMARY KEY (`id_pesan`);
+
+--
+-- Indexes for table `tb_produk`
+--
+ALTER TABLE `tb_produk`
+  ADD PRIMARY KEY (`id_produk`),
+  ADD KEY `id_master` (`id_master`);
+
+--
 -- Indexes for table `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `tb_harga`
+-- AUTO_INCREMENT for table `tb_pesan`
+--
+ALTER TABLE `tb_pesan`
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tb_harga`
 --
 ALTER TABLE `tb_harga`
   ADD CONSTRAINT `tb_harga_ibfk_1` FOREIGN KEY (`id_produk`) REFERENCES `tb_produk` (`id_produk`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_harga_ibfk_2` FOREIGN KEY (`id_kertas`) REFERENCES `tb_kertas` (`id_kertas`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `tb_pemesanan`
+-- Constraints for table `tb_pemesanan`
 --
 ALTER TABLE `tb_pemesanan`
   ADD CONSTRAINT `tb_pemesanan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_pemesanan_ibfk_2` FOREIGN KEY (`id_harga`) REFERENCES `tb_harga` (`id_harga`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tb_produk`
+--
+ALTER TABLE `tb_produk`
+  ADD CONSTRAINT `tb_produk_ibfk_1` FOREIGN KEY (`id_master`) REFERENCES `produk` (`id_master`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

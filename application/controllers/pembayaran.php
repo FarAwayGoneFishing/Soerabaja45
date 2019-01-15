@@ -48,7 +48,7 @@ class pembayaran extends CI_Controller {
 			'total_harga' => $this->input->post('harga'),
 			'id_user' => $_SESSION['id_user'],
 			));
-			redirect('Dashboard');
+			$this->load->view('trims');
 		}
 	}
 
@@ -67,7 +67,7 @@ class pembayaran extends CI_Controller {
 			'total_harga' => $this->input->post('harga'),
 			'id_user' => $_SESSION['id_user'],
 			));
-			redirect('HubNo');
+			$this->load->view('trims');
 		}
 	}
 	
