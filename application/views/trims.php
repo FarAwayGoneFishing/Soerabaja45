@@ -98,7 +98,7 @@
   <center>2. Akan di hubungi kembali ketika produk yang anda pesan fix</center>
   <center>3. Jika selesai melakukan transaksi pembayaran, maka tidak dapat membatalkan pemesanan</center>
   <center>4. Untuk melakukan transaksi pembayaran sampai batas waktu 3x24 jam</center><br><br>
-  <center><a href="dashboard"><button class="btn btn-primary center-block">Kembali ke Beranda</button></a></center>  
+  <center><a href="<?php echo base_url()?>dashboard"><button class="btn btn-primary center-block">Kembali ke Beranda</button></a></center>  
 </div>
 </div>
 </div>
