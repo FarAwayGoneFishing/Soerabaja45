@@ -93,73 +93,64 @@
     <section class="site-section">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-7">
-            <div class="form-wrap">
-              <h2 class="mb-5">Akun Anda</h2>
-              <form action="<?php echo base_url()?>Akun/save" method="post">
-                  
-                  <div class="row">
-					  <?php foreach($data as $data){ ?>
-                    <div class="col-md-12 form-group">
-                      <label for="name">Nama Lengkap</label>
-                      <input type="text" name="nama" class="form-control py-2" value="<?php echo $data->nama_user ?>">
-                    </div>
-                  </div>
-				  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Username</label>
-                      <input type="text" name="username" class="form-control py-2 " value="<?php echo $data->username ?>">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Nomor HP</label>
-                      <input type="text" name="telpon" class="form-control py-2 " value="<?php echo $data->no_telp ?>">
-                    </div>
-                  </div>
-				  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Alamat</label>
-                      <input type="text" name="alamat" class="form-control py-2 " value="<?php echo $data->alamat ?>">
-                    </div>
-                  </div>
-                  
-                  <?php }; ?>
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input type="submit" value="Simpan" name="btnSubmit" class="btn btn-primary px-5 py-2">
-                    </div>
-                  </div>
-                </form>
-				<div class="row">
-                    <div class="col-md-6 form-group">
-						<a name="gantipass" class="btn btn-primary px-5 py-2" href="<?php echo base_url()?>Akun/gantiPassword">Ganti Password</a>
-                    </div>
-                  </div>
-              </div>
+                            <div class="col-lg-12">
+                                <h2 class="title-1 m-b-25">Riwayat Pemesanan</h2>
+                                <div class="table-responsive table--no-card m-b-40">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Produk</th>
+                                                <th>Jumlah</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th class="text-center">Aksi</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php foreach($data as $row){ ?>
+                                            <tr>
+                                                <td><?php echo $row->nama_produk ?></td>
+                                                <td><?php echo $row->jumlah ?></td>
+                                                <td><?php echo $row->total_harga ?></td>
+                                                <td><?php if($row->status_bayar == "belum" ) {echo "Belum Lunas";} else if($row->status_bayar == "lunas" ) {echo "Sudah Lunas";} else if($row->status_bayar == "selesai" ) {echo "Telah selesai dan bisa diambil";} else {echo "Telah diambil";} ?></td>
+                                                <td class="text-center"><a class="btn btn-primary" href="<?php echo base_url()?>Riwayat/Detail/<?php echo $row->id_pesan ?>" role="button">Detail</a>
+
+                                                  <?php if($row->status_bayar == "belum") { ?>
+                                                <a class="btn btn-success" href="<?php echo base_url()?>Riwayat/bukti/<?php echo $row->id_pesan ?>" role="button">Upload Bukti Pembayaran</a></td>
+                                                <?php } ?>
+                                            </tr>
+                                           <?php }; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+            </div>
           </div>
         </div>
+      </div> <br> 
+
+
+
+<div class="py-5 block-22">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
+        <h2 class="heading"></h2>
+        <p></p>
       </div>
-    </section>
-    
-	<div class="py-5 block-22">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
-            <h2 class="heading"></h2>
-            <p></p>
-          </div>
-          <div class="col-md-6">
-            <form action="#" class="subscribe">
-              <div class="form-group">
+      <div class="col-md-6">
+        <form action="#" class="subscribe">
+          <div class="form-group">
                 <!--<input type="email" class="form-control email" placeholder="Enter email">
-                <input type="submit" class="btn btn-primary submit" value="Subscribe"> -->
-              </div>
-            </form>
+                  <input type="submit" class="btn btn-primary submit" value="Subscribe"> -->
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
 	
      <footer class="site-footer">
       <div class="container">

@@ -23,7 +23,7 @@
     
     <header role="banner">
      
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand absolute" href="dashboard"><img src="http://localhost/Soerabaja45/assets/images/logo.jpg" width="100" height="100"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,47 +95,53 @@
         <div class="row justify-content-center">
           <div class="col-md-7">
             <div class="form-wrap">
-              <h2 class="mb-5">Akun Anda</h2>
-              <form action="<?php echo base_url()?>Akun/save" method="post">
+              <h2 class="mb-5">Upload Bukti Pembayaran</h2>
+              <form action="<?php echo base_url()?>Riwayat/bukti_pemesanan" method="post">
                   
-                  <div class="row">
-					  <?php foreach($data as $data){ ?>
+                  <div class="row">  
                     <div class="col-md-12 form-group">
-                      <label for="name">Nama Lengkap</label>
-                      <input type="text" name="nama" class="form-control py-2" value="<?php echo $data->nama_user ?>">
+                      <label for="name">Id Pesan</label>
+                      <input type="text" name="passnow" class="form-control py-2" value="<?php echo $this->uri->segment(3) ?>" readonly>
                     </div>
                   </div>
 				  <div class="row">
                     <div class="col-md-12 form-group">
-                      <label for="name">Username</label>
-                      <input type="text" name="username" class="form-control py-2 " value="<?php echo $data->username ?>">
+                      <label for="name">Tanggal Pembayaran</label>
+                      <input type="text" name="passnew" class="form-control py-2 ">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <label for="name">Nomor HP</label>
-                      <input type="text" name="telpon" class="form-control py-2 " value="<?php echo $data->no_telp ?>">
+                      <label for="name">Nama</label>
+                      <input type="text" name="repass" class="form-control py-2 ">
                     </div>
-                  </div>
-				  <div class="row">
+				  </div>
+          <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="name">Alamat</label>
-                      <input type="text" name="alamat" class="form-control py-2 " value="<?php echo $data->alamat ?>">
+                      <input type="text" name="repass" class="form-control py-2 ">
                     </div>
-                  </div>
-                  
-                  <?php }; ?>
+          </div>
+          <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Nama Bank</label>
+                      <input type="text" name="repass" class="form-control py-2 ">
+                    </div>
+          </div>
+          <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Upload file</label>
+                      <input type="file" name="repass" class="form-control py-2 ">
+                    </div>
+          </div>
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="submit" value="Simpan" name="btnSubmit" class="btn btn-primary px-5 py-2">
+                      <input type="submit" value="Upload" name="btnSubmit" class="btn btn-primary px-5 py-2">
                     </div>
+                  </div>
+			
                   </div>
                 </form>
-				<div class="row">
-                    <div class="col-md-6 form-group">
-						<a name="gantipass" class="btn btn-primary px-5 py-2" href="<?php echo base_url()?>Akun/gantiPassword">Ganti Password</a>
-                    </div>
-                  </div>
               </div>
           </div>
         </div>

@@ -66,6 +66,7 @@
                 	<a class="nav-link dropdown-toggle" href="courses" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nama_user'] ?></a>
                 	<div class="dropdown-menu" aria-labelledby="dropdown04">
                   		<a class="dropdown-item" href="<?php echo base_url()?>Akun">Akun</a>
+                      <a class="dropdown-item" href="<?php echo base_url()?>Riwayat">Riwayat</a>
 <!--						<a class="dropdown-item" href="<?php echo base_url()?>Pesan">Pesan</a>-->
                   		<a class="dropdown-item" href="<?php echo base_url()?>Login/logout">Keluar</a>
                 	</div>
@@ -98,7 +99,7 @@
   <center>2. Akan di hubungi kembali ketika produk yang anda pesan fix</center>
   <center>3. Jika selesai melakukan transaksi pembayaran, maka tidak dapat membatalkan pemesanan</center>
   <center>4. Untuk melakukan transaksi pembayaran sampai batas waktu 3x24 jam</center><br><br>
-  <center><a href="dashboard"><button class="btn btn-primary center-block">Kembali ke Beranda</button></a></center>  
+  <center><a href="<?php echo base_url()?>dashboard"><button class="btn btn-primary center-block">Kembali ke Beranda</button></a></center>  
 </div>
 </div>
 </div>

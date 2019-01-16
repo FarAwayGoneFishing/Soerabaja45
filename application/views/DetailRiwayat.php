@@ -86,68 +86,13 @@
   <!-- END section -->
   
 <div class="site-section bg-light">
-    <div class="container">
-      <div class="row justify-content-center mb-5 element-animate">
-        <div class="col-md-7 text-center section-heading">
-          <h2 class="text-primary heading">Halaman Checkout</h2>
-          <p>Silahkan mengisi kolom dibawah ini dan tekan pesan sekarang</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="row m-auto">
-        <div class="col-6">
-              <div class="card bg-light mb-3" style="width: 500px; height: 300px">
-                <h3><div class="card-header">Metode Pengiriman</div></h3>
-                  <div class="card-body">
-
-
-                      <dl class="sp-methods" id="checkout-payment-method-load">
-                        <label for="p_method_banktransfer"> <span class="no-display"></span>
-                        <dt> Store Pickup </dt>
-                      <dd id="container_payment_method_banktransfer" class="payment-method">
-                        <ul class="form-list checkout-agreements" id="payment_form_banktransfer">     
-                          <label for="s_method_flatrate1_flatrate1">Ambil ditempat kami "PERCETAKAN SOERABAJA'45"</label>
-                        </ul>
-                      </dd>  
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-   
-             
-            <!--Rightside tampilan-->
-
-            <div class="col-6">
-                  <div class="card bg-light mb-3" style="width: 500px; height: 300px">
-                    <h3><div class="card-header">Metode Pembayaran</div></h3>
-                      <div class="card-body">
-                          
-                            <dl class="sp-methods" id="checkout-payment-method-load">
-                              <label for="p_method_banktransfer"> <span class="no-display"></span>
-                                <dt> Bank Transfer Payment </dt>
-                                <dd id="container_payment_method_banktransfer" class="payment-method">
-                                   <ul class="form-list checkout-agreements" id="payment_form_banktransfer">
-                                <li>
-                                  <div class="banktransfer-instructions-content agreement-content"> Bank BCA <br /> No Rek : 488 79 88888<br /> An : PT. Percetakan Soerabaja'45
-                                </li>
-                                   </ul>  
-                                </dd>
-                            </dl>  
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                
-            
-
-
+<div class="container">
   
 	  <div class="col-12">
 		  <div class="card bg-light mb-3" style="width: 1050px">
           <h3><div class="card-header">
-            Order Review
+            Detail Pesanan
           </div></h3>
 			  <div class="card-body">
           <div id="checkout-review-table-wrapper">
@@ -156,57 +101,49 @@
             <td>
               <a class="remove-icon" style="float:left; margin-right: 10px; line-height: 10px;"></a>
               <div class="osc-product-image">
-				  
-                <h4 class="product-name" style="padding-left: 40px"><?php echo $produk ?> - Digital Offset</h4><br>
+				  <?php foreach($data as $data) { ?>
+                <h4 class="product-name" style="padding-left: 40px"><?php echo $data->nama_produk ?> - Digital Offset</h4><br>
 			<div style="padding-left: 90px">
-				<form action="<?php echo base_url()?>pembayaran/create" method="post">
-				
-					<input type="hidden" name="model" value="<?php echo $model ?>">
-					<input type="hidden" class="form-control" name="link" id="link" value="<?php echo $link ?>">
-                <div class="form-group col-lg-3">
+			<div class="form-group col-lg-3">
                    <label class="control-label mb-1">Deskripsi</label>
-					<textarea id="nama" name="deskripsi" type="text" class="form-control" readonly><?php echo $deskripsi ?> </textarea>
+					<textarea id="nama" name="deskripsi" type="text" class="form-control" readonly><?php echo $data->deskripsi ?> </textarea>
                 </div>
                 <div class="form-group col-lg-3">
                    <label class="control-label mb-1">Kertas</label>
-                   <input id="waktu" name="kertas" type="text" class="form-control" value="<?php echo $kertas ?>" readonly>
+                   <input id="waktu" name="kertas" type="text" class="form-control" value="<?php echo $data->kertas ?>" readonly>
                 </div>
                 <div class="form-group col-lg-3">
                    <label class="control-label mb-1">Ukuran</label>
-                   <input id="produk" name="ukuran" type="text" class="form-control" value="<?php echo $ukuran ?>" readonly>
+                   <input id="produk" name="ukuran" type="text" class="form-control" value="<?php echo $data->ukuran ?>" readonly>
                 </div>
                 <div class="row">
                    <div class="col-lg-3">
                        <div class="form-group">
                            <label class="control-label mb-1">Finishing</label>
-                           <input id="produk" name="finishing" type="text" class="form-control" value="<?php echo $finishing ?>" readonly>
+                           <input id="produk" name="finishing" type="text" class="form-control" value="<?php echo $data->finishing ?>" readonly>
                        </div>
                    </div>
-                   <div class="col-lg-3">
-                           <label class="control-label mb-1">Harga /pcs</label>
-                           <input id="produk" name="hargapcs" type="text" class="form-control" value="<?php echo $hargapcs ?>" readonly>
-                   </div>
-                </div>
+                 
 				<div class="row">
                    <div class="col-lg-3">
                        <div class="form-group">
                            <label class="control-label mb-1">Jumlah</label>
-                           <input id="produk" name="jumlah" type="text" class="form-control" value="<?php echo $jumlah ?>" readonly>
+                           <input id="produk" name="jumlah" type="text" class="form-control" value="<?php echo $data->jumlah ?>" readonly>
                        </div>
                    </div>
                    <div class="col-lg-3">
                            <label class="control-label mb-1">Estimasi</label>
-                           <input id="produk" name="estimasi" type="text" class="form-control" value="<?php echo $estimasi ?>" readonly>
+                           <input id="produk" name="estimasi" type="text" class="form-control" value="<?php echo $data->estimasi ?>" readonly>
                    </div>
 					<div class="col-lg-3">
                            <label class="control-label mb-1">Harga Total</label>
-                           <input id="produk" name="harga" type="text" class="form-control" value="<?php echo $total_harga ?>" readonly>
+                           <input id="produk" name="harga" type="text" class="form-control" value="<?php echo $data->total_harga ?>" readonly>
                    </div>
-                </div>
+        </div>
 				
 				<br/><br/>
 											
-										
+										<?php if($data->status_bayar == "selesai") { ?>
 											<div class="row">
                                                 <div class="col-lg-3">
                                                     
@@ -216,15 +153,31 @@
                                                 <div class="col-lg-3">
                                                     <div>
 
-													<a class="btn btn-lg btn-success btn-block" data-toggle="modal" data-target="#modal_new" role="button" style="color: white">Pesan</a>
+													<a class="btn btn-lg btn-danger btn-block" data-toggle="modal" data-target="#modal_new" role="button" style="color: white">Hapus</a>
 														
                                             		</div>
                                                 </div>
                                             </div>
-					
+                    <?php ;} else if($data->status_bayar == "belum"){ ?>
+                        <div class="row">
+                                                <div class="col-lg-3">
+                                                    
+                                                </div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3"></div>
+                                                <div class="col-lg-3">
+                                                    <div>
+
+                          <a class="btn btn-lg btn-danger btn-block" data-toggle="modal" data-target="#modal_new" role="button" style="color: white">Batalkan Pesanan</a>
+                            
+                                                </div>
+                                                </div>
+                                            </div>
+                    <?php ;} ?>
+					<?php } ?>
 				
-				  </div>
-				
+			</div>
+				</div>
            </div>
            </div>
          </div>
@@ -246,20 +199,33 @@
                        <div id="modalTab">
                          <div class="tab-content">
                            <div class="tab-pane active" id="about">
+                      <?php if($data->status_bayar == "belum") { ?>
 
                             <center>
                              <p class="text-left">
-                              Apakah anda yakin data sudah benar dan ingin melakukan pemesanan? <br />
+                              Apakah anda yakin ingin membatalkan pemesanan? <br />
                               
                              </p>
                              <br>
 								
-								<button type="submit" name="pesan" class="btn btn-success">Ya</button>
+								<a role="button" name="pesan" href="<?php echo base_url()?>Riwayat/delete/<?php echo $this->uri->segment(3) ?>" class="btn btn-success">Ya</a>
 								<button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
                            </center>
-						
-							   </form> 
-                  
+
+                           <?php ;} else if($data->status_bayar == "selesai") { ?>
+
+                          <center>
+                             <p class="text-left">
+                              Apakah anda yakin ingin membatalkan pemesanan? <br />
+                              
+                             </p>
+                             <br>
+                
+                <a role="button" name="pesan" href="<?php echo base_url()?>Riwayat/delete_riwayat/<?php echo $this->uri->segment(3) ?>" class="btn btn-success">Ya</a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+                           </center>
+
+          <?php } ?>
                         </div>
                       </div>
                     </div>
